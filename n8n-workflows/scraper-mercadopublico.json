@@ -1,0 +1,83 @@
+{
+  "name": "OportunidadesAmigo - Scraper MercadoPublico",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{ "field": "minutes", "minutesInterval": 30 }]
+        }
+      },
+      "name": "Cada 30 minutos",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "url": "=https://api.mercadopublico.cl/servicios/v1/publico/licitaciones.json?ticket={{$env.MERCADOPUBLICO_TICKET}}&estado=publicada&palabra_clave={{$json.keyword}}",
+        "options": { "timeout": 15000 }
+      },
+      "name": "API MercadoPublico",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            { "name": "keyword", "value": "construccion" }
+          ]
+        }
+      },
+      "name": "Keyword Construccion",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3,
+      "position": [460, 200]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            { "name": "keyword", "value": "software desarrollo" }
+          ]
+        }
+      },
+      "name": "Keyword Software",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3,
+      "position": [460, 400]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Transformar licitaciones al formato de OportunidadesAmigo\nconst items = $input.all();\nconst results = [];\n\nfor (const item of items) {\n  const data = item.json;\n  if (!data.Listado) continue;\n  \n  for (const lic of data.Listado) {\n    results.push({\n      json: {\n        id: lic.CodigoExterno,\n        title: lic.Nombre,\n        source: 'MercadoPublico',\n        type: lic.Tipo === 'SE' ? 'compra_agil' : 'licitacion_publica',\n        region: lic.RegionUnidad || '',\n        budget: lic.MontoEstimado || 0,\n        deadline: lic.FechaCierre,\n        publishDate: lic.FechaPublicacion,\n        description: lic.Descripcion,\n        entity: lic.NombreOrganismo,\n        url: `https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=${lic.CodigoExterno}`\n      }\n    });\n  }\n}\n\nreturn results;"
+      },
+      "name": "Transformar Datos",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [900, 300]
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:3001/api/webhook/opportunities",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": []
+        },
+        "options": {}
+      },
+      "name": "Enviar a OportunidadesAmigo",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [1120, 300]
+    }
+  ],
+  "connections": {
+    "Cada 30 minutos": { "main": [[{ "node": "Keyword Construccion", "type": "main", "index": 0 }, { "node": "Keyword Software", "type": "main", "index": 0 }]] },
+    "Keyword Construccion": { "main": [[{ "node": "API MercadoPublico", "type": "main", "index": 0 }]] },
+    "Keyword Software": { "main": [[{ "node": "API MercadoPublico", "type": "main", "index": 0 }]] },
+    "API MercadoPublico": { "main": [[{ "node": "Transformar Datos", "type": "main", "index": 0 }]] },
+    "Transformar Datos": { "main": [[{ "node": "Enviar a OportunidadesAmigo", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" }
+}

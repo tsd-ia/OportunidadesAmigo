@@ -1,0 +1,68 @@
+{
+  "name": "OportunidadesAmigo - LinkedIn Jobs Scraper",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{ "field": "hours", "hoursInterval": 1 }]
+        }
+      },
+      "name": "Cada 1 hora",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://www.linkedin.com/jobs/search/?keywords={{$json.keyword}}&location=Chile&f_TPR=r86400",
+        "options": {
+          "response": { "response": { "fullResponse": true } }
+        }
+      },
+      "name": "Scrape LinkedIn",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            { "name": "keyword", "value": "construccion ingeniero civil" }
+          ]
+        }
+      },
+      "name": "Keywords",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extraer jobs del HTML de LinkedIn\n// NOTA: LinkedIn puede bloquear scraping, considerar usar LinkedIn API oficial o RapidAPI\nconst html = $input.first().json.body || '';\nconst jobs = [];\n\n// Regex simple para extraer títulos y links\nconst titleRegex = /class=\"base-card__full-link\"[^>]*href=\"([^\"]+)\"[^>]*>([^<]+)/g;\nlet match;\n\nwhile ((match = titleRegex.exec(html)) !== null) {\n  jobs.push({\n    json: {\n      id: `li-${Date.now()}-${jobs.length}`,\n      title: match[2].trim(),\n      source: 'LinkedIn',\n      type: 'oferta_privada',\n      url: match[1],\n      region: 'Chile',\n      budget: 0,\n      description: match[2].trim()\n    }\n  });\n}\n\nreturn jobs.length > 0 ? jobs : [{ json: { message: 'No se encontraron resultados' } }];"
+      },
+      "name": "Extraer Jobs",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [900, 300]
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:3001/api/webhook/opportunities",
+        "sendBody": true,
+        "options": {}
+      },
+      "name": "Enviar a OportunidadesAmigo",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [1120, 300]
+    }
+  ],
+  "connections": {
+    "Cada 1 hora": { "main": [[{ "node": "Keywords", "type": "main", "index": 0 }]] },
+    "Keywords": { "main": [[{ "node": "Scrape LinkedIn", "type": "main", "index": 0 }]] },
+    "Scrape LinkedIn": { "main": [[{ "node": "Extraer Jobs", "type": "main", "index": 0 }]] },
+    "Extraer Jobs": { "main": [[{ "node": "Enviar a OportunidadesAmigo", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" }
+}

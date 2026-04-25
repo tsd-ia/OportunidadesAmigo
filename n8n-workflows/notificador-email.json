@@ -1,0 +1,61 @@
+{
+  "name": "OportunidadesAmigo - Notificador Email",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "notify-opportunity",
+        "options": {}
+      },
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            { "value1": "={{$json.matchScore}}", "operation": "largerEqual", "value2": 80 }
+          ]
+        }
+      },
+      "name": "Match > 80%?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "fromEmail": "oportunidadesamigo@gmail.com",
+        "toEmail": "={{$env.USER_EMAIL}}",
+        "subject": "🎯 Nueva oportunidad con {{$json.matchScore}}% match: {{$json.title}}",
+        "text": "Se encontró una nueva oportunidad:\n\nTítulo: {{$json.title}}\nFuente: {{$json.source}}\nPresupuesto: ${{$json.budget}}\nRegión: {{$json.region}}\nFecha límite: {{$json.deadline}}\n\nMatch Score: {{$json.matchScore}}%\n\nVer detalle: {{$json.url}}\n\n---\nOportunidadesAmigo Bot",
+        "options": {}
+      },
+      "name": "Enviar Email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [680, 200]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Log de oportunidades descartadas\nconst item = $input.first().json;\nconsole.log(`Oportunidad descartada (score: ${item.matchScore}): ${item.title}`);\nreturn [{ json: { status: 'skipped', reason: 'low_match' } }];"
+      },
+      "name": "Log Descartados",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 400]
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": { "main": [[{ "node": "Match > 80%?", "type": "main", "index": 0 }]] },
+    "Match > 80%?": {
+      "main": [
+        [{ "node": "Enviar Email", "type": "main", "index": 0 }],
+        [{ "node": "Log Descartados", "type": "main", "index": 0 }]
+      ]
+    }
+  },
+  "settings": { "executionOrder": "v1" }
+}
