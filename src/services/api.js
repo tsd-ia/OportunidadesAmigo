@@ -61,6 +61,16 @@ export async function searchAll() {
   }
 }
 
+export async function getMercadoPublicoDetail(codigo) {
+  try {
+    const res = await fetch(`${API_BASE}/mercadopublico/detail/${codigo}`);
+    if (!res.ok) return null;
+    return await res.json();
+  } catch {
+    return null;
+  }
+}
+
 // --- OPORTUNIDADES ---
 export async function getOpportunities() {
   try {
@@ -111,7 +121,7 @@ export async function getStatus() {
 
 export default {
   loadProfile, saveProfile,
-  searchMercadoPublico, searchAll,
+  searchMercadoPublico, searchAll, getMercadoPublicoDetail,
   getOpportunities, getSources, saveSources,
   getNotifications, getStatus,
 };

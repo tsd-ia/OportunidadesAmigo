@@ -12,10 +12,30 @@ function Explorer() {
 
   // Expanded state for cards
   const [expandedId, setExpandedId] = useState(null);
+  const [details, setDetails] = useState({});
+  const [loadingDetail, setLoadingDetail] = useState(false);
 
   useEffect(() => {
     loadSavedData();
   }, []);
+
+  const handleExpand = async (id, source) => {
+    if (expandedId === id) {
+      setExpandedId(null);
+      return;
+    }
+    setExpandedId(id);
+    
+    // Si ya lo tenemos en caché o no es MercadoPublico, no hacer fetch
+    if (details[id] || source !== 'MercadoPublico') return;
+
+    setLoadingDetail(true);
+    const detailData = await api.getMercadoPublicoDetail(id);
+    if (detailData && detailData.result) {
+      setDetails(prev => ({ ...prev, [id]: detailData.result }));
+    }
+    setLoadingDetail(false);
+  };
 
   const loadSavedData = async () => {
     setLoading(true);
@@ -156,7 +176,7 @@ function Explorer() {
                 key={opp.id} 
                 className={`opp-card ${opp.isOutsideRubro ? 'opp-card--outside' : ''}`}
                 style={{ cursor: 'pointer' }}
-                onClick={() => setExpandedId(isExpanded ? null : opp.id)}
+                onClick={() => handleExpand(opp.id, opp.source)}
               >
                 <div className="opp-card__header">
                   <div className={`score-badge score-badge--${getScoreClass(opp.matchScore)}`}>
@@ -180,7 +200,7 @@ function Explorer() {
                   </div>
                 </div>
 
-                <div className="opp-card__desc">{opp.description || 'Sin descripción detallada.'}</div>
+                <div className="opp-card__desc">{(isExpanded && details[opp.id]) ? details[opp.id].description : opp.description || 'Sin descripción detallada. Haz clic para cargar.'}</div>
 
                 {isExpanded && (
                   <div style={{ 
@@ -189,82 +209,91 @@ function Explorer() {
                     background: 'rgba(0,0,0,0.2)', 
                     borderRadius: 8,
                     border: '1px solid var(--border-color)',
-                    display: 'grid',
-                    gridTemplateColumns: '1fr 1fr',
+                    display: 'flex',
+                    flexDirection: 'column',
                     gap: 16
                   }}>
-                    {/* Fechas */}
-                    <div>
-                      <h4 style={{ fontSize: 12, color: 'var(--text-secondary)', marginBottom: 8, display: 'flex', alignItems: 'center', gap: 6 }}>
-                        <Calendar size={14} /> Cronograma
-                      </h4>
-                      <div style={{ fontSize: 13, display: 'flex', flexDirection: 'column', gap: 4 }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                          <span style={{ color: 'var(--text-muted)' }}>Publicación:</span> 
-                          <span>{formatDate(opp.publishDate)}</span>
-                        </div>
-                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                          <span style={{ color: 'var(--text-muted)' }}>Cierre:</span> 
-                          <span style={{ color: 'var(--text-danger)' }}>{formatDate(opp.deadline)}</span>
-                        </div>
-                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                          <span style={{ color: 'var(--text-muted)' }}>Adjudicación:</span> 
-                          <span>{formatDate(opp.fechaAdjudicacion)}</span>
-                        </div>
-                        {opp.tieneVisitaTerreno && (
-                          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                            <span style={{ color: 'var(--warning-color)' }}>Visita Terreno:</span> 
-                            <span>{formatDate(opp.fechaVisitaTerreno)}</span>
-                          </div>
-                        )}
-                        {opp.fechaEntregaAntecedentes && (
-                          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                            <span style={{ color: 'var(--text-muted)' }}>Antecedentes:</span> 
-                            <span>{formatDate(opp.fechaEntregaAntecedentes)}</span>
-                          </div>
-                        )}
+                    {loadingDetail && !details[opp.id] ? (
+                      <div style={{ textAlign: 'center', padding: 20, color: 'var(--text-muted)' }}>
+                        <RefreshCw size={20} className="spinner" style={{ marginBottom: 10 }} />
+                        <p>Obteniendo bases completas de Mercado Público...</p>
                       </div>
-                    </div>
+                    ) : (
+                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+                        {/* Fechas */}
+                        <div>
+                          <h4 style={{ fontSize: 12, color: 'var(--text-secondary)', marginBottom: 8, display: 'flex', alignItems: 'center', gap: 6 }}>
+                            <Calendar size={14} /> Cronograma
+                          </h4>
+                          <div style={{ fontSize: 13, display: 'flex', flexDirection: 'column', gap: 4 }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                              <span style={{ color: 'var(--text-muted)' }}>Publicación:</span> 
+                              <span>{formatDate(details[opp.id]?.publishDate || opp.publishDate)}</span>
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                              <span style={{ color: 'var(--text-muted)' }}>Cierre:</span> 
+                              <span style={{ color: 'var(--text-danger)' }}>{formatDate(details[opp.id]?.deadline || opp.deadline)}</span>
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                              <span style={{ color: 'var(--text-muted)' }}>Adjudicación:</span> 
+                              <span>{formatDate(details[opp.id]?.fechaAdjudicacion || opp.fechaAdjudicacion)}</span>
+                            </div>
+                            {(details[opp.id]?.tieneVisitaTerreno || opp.tieneVisitaTerreno) && (
+                              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                <span style={{ color: 'var(--warning-color)' }}>Visita Terreno:</span> 
+                                <span>{formatDate(details[opp.id]?.fechaVisitaTerreno || opp.fechaVisitaTerreno)}</span>
+                              </div>
+                            )}
+                            {(details[opp.id]?.fechaEntregaAntecedentes || opp.fechaEntregaAntecedentes) && (
+                              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                <span style={{ color: 'var(--text-muted)' }}>Antecedentes:</span> 
+                                <span>{formatDate(details[opp.id]?.fechaEntregaAntecedentes || opp.fechaEntregaAntecedentes)}</span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
 
-                    {/* Entidad y Ubicación */}
-                    <div>
-                      <h4 style={{ fontSize: 12, color: 'var(--text-secondary)', marginBottom: 8, display: 'flex', alignItems: 'center', gap: 6 }}>
-                        <Building size={14} /> Entidad Compradora
-                      </h4>
-                      <div style={{ fontSize: 13, display: 'flex', flexDirection: 'column', gap: 4 }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                          <span style={{ color: 'var(--text-muted)' }}>Organismo:</span> 
-                          <span style={{ textAlign: 'right', maxWidth: '70%' }}>{opp.entity}</span>
-                        </div>
-                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                          <span style={{ color: 'var(--text-muted)' }}>Comuna:</span> 
-                          <span>{opp.comuna || 'No especificada'}</span>
-                        </div>
-                        {opp.direccionVisita && (
-                          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                            <span style={{ color: 'var(--text-muted)' }}>Dirección Visita:</span> 
-                            <span style={{ textAlign: 'right', maxWidth: '70%' }}>{opp.direccionVisita}</span>
+                        {/* Entidad y Ubicación */}
+                        <div>
+                          <h4 style={{ fontSize: 12, color: 'var(--text-secondary)', marginBottom: 8, display: 'flex', alignItems: 'center', gap: 6 }}>
+                            <Building size={14} /> Entidad Compradora
+                          </h4>
+                          <div style={{ fontSize: 13, display: 'flex', flexDirection: 'column', gap: 4 }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                              <span style={{ color: 'var(--text-muted)' }}>Organismo:</span> 
+                              <span style={{ textAlign: 'right', maxWidth: '70%' }}>{details[opp.id]?.entity || opp.entity}</span>
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                              <span style={{ color: 'var(--text-muted)' }}>Comuna:</span> 
+                              <span>{details[opp.id]?.comuna || opp.comuna || 'No especificada'}</span>
+                            </div>
+                            {(details[opp.id]?.direccionVisita || opp.direccionVisita) && (
+                              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                <span style={{ color: 'var(--text-muted)' }}>Dirección Visita:</span> 
+                                <span style={{ textAlign: 'right', maxWidth: '70%' }}>{details[opp.id]?.direccionVisita || opp.direccionVisita}</span>
+                              </div>
+                            )}
+                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                              <span style={{ color: 'var(--text-muted)' }}>Contacto:</span> 
+                              <span>{details[opp.id]?.contactName || opp.contactName || 'No especificado'}</span>
+                            </div>
                           </div>
-                        )}
-                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                          <span style={{ color: 'var(--text-muted)' }}>Contacto:</span> 
-                          <span>{opp.contactName || 'No especificado'}</span>
+                        </div>
+                        
+                        {/* Botón de acción si está expandido */}
+                        <div style={{ gridColumn: '1 / -1', display: 'flex', justifyContent: 'flex-end', marginTop: 8 }}>
+                          <a 
+                            href={opp.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="btn btn--primary" 
+                            onClick={e => e.stopPropagation()}
+                          >
+                            Ir al Portal Oficial <ExternalLink size={16} style={{ marginLeft: 6 }} />
+                          </a>
                         </div>
                       </div>
-                    </div>
-                    
-                    {/* Botón de acción si está expandido */}
-                    <div style={{ gridColumn: '1 / -1', display: 'flex', justifyContent: 'flex-end', marginTop: 8 }}>
-                      <a 
-                        href={opp.url} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="btn btn--primary" 
-                        onClick={e => e.stopPropagation()}
-                      >
-                        Ir al Portal Oficial <ExternalLink size={16} style={{ marginLeft: 6 }} />
-                      </a>
-                    </div>
+                    )}
                   </div>
                 )}
 

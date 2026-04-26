@@ -421,21 +421,28 @@ app.get('/api/search/all', async (req, res) => {
       await new Promise(r => setTimeout(r, 300));
     }
 
+    // Filtrar expiradas
+    const now = new Date();
+    const validResults = allResults.filter(opp => {
+      if (!opp.deadline) return true;
+      return new Date(opp.deadline) >= now;
+    });
+
     // Ordenar por match
-    allResults.sort((a, b) => b.matchScore - a.matchScore);
+    validResults.sort((a, b) => b.matchScore - a.matchScore);
 
     // Guardar resultados
     writeJSON('last_search.json', {
       timestamp: new Date().toISOString(),
-      total: allResults.length,
-      results: allResults,
+      total: validResults.length,
+      results: validResults,
     });
 
-    console.log(`[Search] Total final: ${allResults.length} oportunidades únicas`);
+    console.log(`[Search] Total final: ${validResults.length} oportunidades únicas (filtradas activas)`);
 
     res.json({
-      results: allResults,
-      total: allResults.length,
+      results: validResults,
+      total: validResults.length,
       source: 'mercadopublico',
       realData: true,
       keywords_searched: keywords.slice(0, 3),
