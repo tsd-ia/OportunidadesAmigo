@@ -79,6 +79,28 @@ function categorizeOpportunity(name, desc) {
   return { category: 'other', sub: 'general' };
 }
 
+// Formatear fecha como ddmmaaaa para la API
+function formatDateForAPI(date) {
+  const d = date || new Date();
+  const dd = String(d.getDate()).padStart(2, '0');
+  const mm = String(d.getMonth() + 1).padStart(2, '0');
+  const yyyy = d.getFullYear();
+  return `${dd}${mm}${yyyy}`;
+}
+
+// Obtener detalle de una licitación específica
+async function fetchLicitacionDetail(codigo) {
+  try {
+    const url = `${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}&codigo=${codigo}`;
+    const response = await fetchWithTimeout(url, 10000);
+    const data = await response.json();
+    if (data.Listado && data.Listado.length > 0) return data.Listado[0];
+    return null;
+  } catch {
+    return null;
+  }
+}
+
 // Transformar licitación de MercadoPublico al formato de nuestra app
 function transformLicitacion(lic) {
   const cat = categorizeOpportunity(lic.Nombre || '', lic.Descripcion || '');
@@ -105,7 +127,7 @@ function transformLicitacion(lic) {
     description: lic.Descripcion || '',
     url: `https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=${lic.CodigoExterno}`,
     entity: lic.NombreOrganismo || lic.Organismo || '',
-    matchScore: 0, // Se calcula después con el perfil
+    matchScore: 0,
     matchReasons: [],
     isOutsideRubro: false,
   };
@@ -209,16 +231,22 @@ app.get('/api/mercadopublico/search', async (req, res) => {
 
     if (keyword) url += `&palabra_clave=${encodeURIComponent(keyword)}`;
     if (estado) url += `&estado=${estado}`;
-    if (fecha) url += `&fecha=${fecha}`;
-    // Estado: publicada, cerrada, adjudicada, etc.
+    // Si no se pasa fecha ni keyword, buscar por fecha de hoy para obtener resultados
+    if (fecha) {
+      url += `&fecha=${fecha}`;
+    } else if (!keyword) {
+      url += `&fecha=${formatDateForAPI()}`;
+    }
 
-    console.log(`[MercadoPublico] Buscando: ${keyword || 'todas'}`);
+    console.log(`[MercadoPublico] Buscando: ${keyword || 'por fecha'} | URL: ${url.replace(MP_TICKET, '***')}`);
     const response = await fetchWithTimeout(url);
     const data = await response.json();
 
     if (!data.Listado) {
-      return res.json({ results: [], total: 0, source: 'mercadopublico' });
+      return res.json({ results: [], total: 0, source: 'mercadopublico', apiResponse: data });
     }
+
+    console.log(`[MercadoPublico] ${data.Cantidad} resultados encontrados`);
 
     const profile = readJSON('profile.json');
     let results = data.Listado.map(transformLicitacion);
@@ -236,10 +264,22 @@ app.get('/api/mercadopublico/search', async (req, res) => {
     // Ordenar por match
     results.sort((a, b) => b.matchScore - a.matchScore);
 
-    res.json({ results, total: results.length, source: 'mercadopublico' });
+    res.json({ results, total: results.length, source: 'mercadopublico', realData: true });
   } catch (err) {
     console.error('[MercadoPublico] Error:', err.message);
     res.status(500).json({ error: 'Error al consultar MercadoPublico', details: err.message });
+  }
+});
+
+// --- DETALLE DE LICITACIÓN ---
+app.get('/api/mercadopublico/detail/:codigo', async (req, res) => {
+  if (!MP_TICKET) return res.status(400).json({ error: 'API key no configurada' });
+  try {
+    const detail = await fetchLicitacionDetail(req.params.codigo);
+    if (!detail) return res.status(404).json({ error: 'Licitación no encontrada' });
+    res.json({ result: transformLicitacion(detail), raw: detail });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
   }
 });
 
@@ -276,10 +316,58 @@ app.get('/api/search/all', async (req, res) => {
     const allResults = [];
     const seen = new Set();
 
-    // Buscar por cada keyword (máximo 3 para no saturar la API)
+    // Primero buscar por fecha de hoy (devuelve más resultados)
+    const todayUrl = `${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}&fecha=${formatDateForAPI()}`;
+    console.log(`[Search] Buscando por fecha de hoy...`);
+    try {
+      const response = await fetchWithTimeout(todayUrl);
+      const data = await response.json();
+      if (data.Listado) {
+        for (const lic of data.Listado) {
+          const id = lic.CodigoExterno || lic.Codigo;
+          if (!seen.has(id)) {
+            seen.add(id);
+            let opp = transformLicitacion(lic);
+            if (profile) opp = calculateMatch(opp, profile);
+            allResults.push(opp);
+          }
+        }
+        console.log(`[Search] ${data.Cantidad} resultados por fecha`);
+      }
+    } catch (e) {
+      console.error(`[Search] Error en búsqueda por fecha:`, e.message);
+    }
+
+    // También buscar por fecha de ayer para más resultados
+    const yesterday = new Date();
+    yesterday.setDate(yesterday.getDate() - 1);
+    const yesterdayUrl = `${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}&fecha=${formatDateForAPI(yesterday)}`;
+    console.log(`[Search] Buscando por fecha de ayer...`);
+    try {
+      const response = await fetchWithTimeout(yesterdayUrl);
+      const data = await response.json();
+      if (data.Listado) {
+        for (const lic of data.Listado) {
+          const id = lic.CodigoExterno || lic.Codigo;
+          if (!seen.has(id)) {
+            seen.add(id);
+            let opp = transformLicitacion(lic);
+            if (profile) opp = calculateMatch(opp, profile);
+            allResults.push(opp);
+          }
+        }
+        console.log(`[Search] ${data.Cantidad} resultados por ayer`);
+      }
+    } catch (e) {
+      console.error(`[Search] Error en búsqueda ayer:`, e.message);
+    }
+
+    await new Promise(r => setTimeout(r, 300));
+
+    // Luego buscar por keywords relevantes
     for (const kw of keywords.slice(0, 3)) {
-      const url = `${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}&palabra_clave=${encodeURIComponent(kw)}&estado=publicada`;
-      console.log(`[Search] Buscando: ${kw}`);
+      const url = `${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}&palabra_clave=${encodeURIComponent(kw)}`;
+      console.log(`[Search] Buscando keyword: ${kw}`);
 
       try {
         const response = await fetchWithTimeout(url);
@@ -295,13 +383,13 @@ app.get('/api/search/all', async (req, res) => {
               allResults.push(opp);
             }
           }
+          console.log(`[Search] ${data.Cantidad} resultados para "${kw}"`);
         }
       } catch (e) {
         console.error(`[Search] Error en keyword "${kw}":`, e.message);
       }
 
-      // Pausa entre requests para no saturar la API
-      await new Promise(r => setTimeout(r, 500));
+      await new Promise(r => setTimeout(r, 300));
     }
 
     // Ordenar por match
@@ -314,10 +402,13 @@ app.get('/api/search/all', async (req, res) => {
       results: allResults,
     });
 
+    console.log(`[Search] Total final: ${allResults.length} oportunidades únicas`);
+
     res.json({
       results: allResults,
       total: allResults.length,
       source: 'mercadopublico',
+      realData: true,
       keywords_searched: keywords.slice(0, 3),
     });
   } catch (err) {
