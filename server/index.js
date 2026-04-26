@@ -105,28 +105,57 @@ async function fetchLicitacionDetail(codigo) {
 function transformLicitacion(lic) {
   const cat = categorizeOpportunity(lic.Nombre || '', lic.Descripcion || '');
   const budget = lic.MontoEstimado || 0;
+  const fechas = lic.Fechas || {};
+  const comprador = lic.Comprador || {};
 
   return {
     id: lic.CodigoExterno || lic.Codigo || `mp-${Date.now()}`,
     title: lic.Nombre || 'Sin título',
     source: 'MercadoPublico',
-    type: lic.Tipo === 'SE' ? 'compra_agil' : 'licitacion_publica',
+    type: lic.Tipo === 'SE' ? 'compra_agil' : lic.Tipo === 'LE' ? 'licitacion_publica' : lic.Tipo === 'LP' ? 'licitacion_publica' : 'otro',
+    typeName: lic.Tipo === 'SE' ? 'Compra Ágil' : lic.Tipo === 'LE' ? 'Licitación Pública' : lic.Tipo === 'LP' ? 'Licitación Pública' : lic.Tipo === 'CO' ? 'Contratación Directa' : lic.Tipo || 'Otro',
     category: cat.category,
     subCategory: cat.sub,
-    region: regionMap[lic.RegionUnidad] || 'Desconocida',
-    comuna: lic.ComunaUnidad || '',
+    region: comprador.RegionUnidad || regionMap[lic.RegionUnidad] || 'Desconocida',
+    comuna: comprador.ComunaUnidad || lic.ComunaUnidad || '',
     budget: budget,
-    currency: 'CLP',
-    deadline: lic.FechaCierre || '',
-    publishDate: lic.FechaPublicacion || '',
+    currency: lic.Moneda || 'CLP',
+    // Fechas importantes
+    deadline: fechas.FechaCierre || lic.FechaCierre || '',
+    publishDate: fechas.FechaPublicacion || lic.FechaPublicacion || '',
+    fechaVisitaTerreno: fechas.FechaVisitaTerreno || null,
+    fechaEntregaAntecedentes: fechas.FechaEntregaAntecedentes || null,
+    fechaAdjudicacion: fechas.FechaEstimadaAdjudicacion || fechas.FechaAdjudicacion || null,
+    fechaPubRespuestas: fechas.FechaPubRespuestas || null,
+    fechaAperturaTecnica: fechas.FechaActoAperturaTecnica || null,
+    fechaAperturaEconomica: fechas.FechaActoAperturaEconomica || null,
+    // Info del organismo
+    entity: comprador.NombreOrganismo || lic.NombreOrganismo || lic.Organismo || '',
+    entityRut: comprador.RutUnidad || '',
+    entityUnit: comprador.NombreUnidad || '',
+    entityAddress: comprador.DireccionUnidad || '',
+    contactName: comprador.NombreUsuario || '',
+    contactRole: comprador.CargoUsuario || '',
+    // Detalles
+    description: lic.Descripcion || '',
     status: mapStatus(lic.CodigoEstado),
+    statusName: lic.Estado || '',
+    diasCierre: lic.DiasCierreLicitacion || null,
+    direccionVisita: lic.DireccionVisita || '',
+    direccionEntrega: lic.DireccionEntrega || '',
+    fuenteFinanciamiento: lic.FuenteFinanciamiento || '',
+    tieneVisitaTerreno: !!(fechas.FechaVisitaTerreno),
+    // Requisitos
     requiresRegistro: true,
     requiresGarantia: budget > 10000000,
     garantiaAmount: budget > 10000000 ? Math.round(budget * 0.05) : 0,
     requirements: extractRequirements(lic),
-    description: lic.Descripcion || '',
+    // Items/productos
+    items: lic.Items ? lic.Items.Listado || [] : [],
+    cantidadItems: lic.Items ? lic.Items.Cantidad || 0 : 0,
+    // URL directa
     url: `https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=${lic.CodigoExterno}`,
-    entity: lic.NombreOrganismo || lic.Organismo || '',
+    // Match (se calcula después)
     matchScore: 0,
     matchReasons: [],
     isOutsideRubro: false,
