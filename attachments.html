@@ -1,0 +1,84 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1"><title>
+	Ver anexos
+</title><link id="lnkStyleSheet" href="../../Includes/styles/ChileCompra.css" type="text/css" rel="stylesheet" /> 
+	<script src="../../Includes/scripts/chilecompra.js" type="text/javascript"></script>   
+    <script src="../../Includes/scripts/JQuery/jquery-1.7.1.js" type="text/javascript"></script>
+	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script src="../../Includes/scripts/analytics.js" type="text/javascript"></script>
+    <script src="../../Includes/scripts/hotjar.js" type="text/javascript"></script>  
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LftWh0sAAAAAJ2DPJPpe-yTEB2kyZ34ibuc4KGP"></script>
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            grecaptcha.enterprise.ready(function () {
+                grecaptcha.enterprise.execute('6LftWh0sAAAAAJ2DPJPpe-yTEB2kyZ34ibuc4KGP', { action: 'pageLoad' })
+                    .then(function (token) {
+                        console.log('Token obtenido:', token.substring(0, 20) + '...');
+
+                        fetch('ViewAttachment.aspx?ajax=1', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                            body: 'token=' + encodeURIComponent(token) +
+                                '&enc=' + encodeURIComponent('FlZpMDjsmitVGZ5pvLkORBFxrqY7Wp/wNbo/OJX+yczCrGkBtBH9eXyiuVs59gzoD0LvoO0axChlAQ7QpDdWulx+DNNLUdGKHyX4rw5xOO2SVSMCPenirQ1qUS9/+uXjBotd4O863qbUmI/xFDz3UMw1sTNUVsNqAacEWHPa1qfS57HZVm+EVnZxk5m3TwdrhtSAXrGpzki0BXi+SSjSi4HJ7yHLIK9NsGWdDeGJwZCm45fhiJxOKyyTP3Qn0fGm9Y00Wr9/VzCP1WcU8TLpSwmAsBiZ/C4VHyppHRh7k6/jmvumw2DdEH5C+IL8gy3C'),
+                            credentials: 'same-origin'
+                        })
+                            .then(resp => resp.text())
+                            .then(text => {
+                                console.log("Texto recibido:", text);
+                                try {
+                                    let data = JSON.parse(text);
+                                    console.log("Objeto parseado:", data);
+                                    const scoreThreshold = parseFloat('0.5');
+                                    const isBot = data.score >= scoreThreshold;
+                                    if (isBot) {
+                                        console.log("Validacion exitosa, redirigiendo...");
+                                        window.location.href = 'ViewAttachmentLC.aspx?enc=FlZpMDjsmitVGZ5pvLkORBFxrqY7Wp%2fwNbo%2fOJX%2byczCrGkBtBH9eXyiuVs59gzoD0LvoO0axChlAQ7QpDdWulx%2bDNNLUdGKHyX4rw5xOO2SVSMCPenirQ1qUS9%2f%2buXjBotd4O863qbUmI%2fxFDz3UMw1sTNUVsNqAacEWHPa1qfS57HZVm%2bEVnZxk5m3TwdrhtSAXrGpzki0BXi%2bSSjSi4HJ7yHLIK9NsGWdDeGJwZCm45fhiJxOKyyTP3Qn0fGm9Y00Wr9%2fVzCP1WcU8TLpSwmAsBiZ%2fC4VHyppHRh7k6%2fjmvumw2DdEH5C%2bIL8gy3C';
+                                    } else {
+                                        console.log("Validacion fallida:", data);
+                                        window.location.href = '/Procurement/403.html';
+                                    }
+                                } catch (e) {
+                                    console.error("Error parseando JSON:", e, text);
+                                    window.location.href = '/Procurement/403.html';
+                                }
+                            })
+
+                    })
+                    .catch(err => {
+                        console.error("Error obteniendo token:", err);
+                        window.location.href = '/Procurement/403.html';
+                    });
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+    <form name="form1" method="post" action="./ViewAttachment.aspx?enc=FlZpMDjsmitVGZ5pvLkORBFxrqY7Wp%2fwNbo%2fOJX%2byczCrGkBtBH9eXyiuVs59gzoD0LvoO0axChlAQ7QpDdWulx%2bDNNLUdGKHyX4rw5xOO2SVSMCPenirQ1qUS9%2f%2buXjBotd4O863qbUmI%2fxFDz3UMw1sTNUVsNqAacEWHPa1qfS57HZVm%2bEVnZxk5m3TwdrhtSAXrGpzki0BXi%2bSSjSi4HJ7yHLIK9NsGWdDeGJwZCm45fhiJxOKyyTP3Qn0fGm9Y00Wr9%2fVzCP1WcU8TLpSwmAsBiZ%2fC4VHyppHRh7k6%2fjmvumw2DdEH5C%2bIL8gy3C" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTg5Mjk2MTgzNWRk/fphH8Vncz0+iA1KquC8r52OpVc=" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B3D4C169" />
+         
+    </form>
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Filter, SortDesc, ExternalLink, RefreshCw, Calendar, MapPin, Building, Clock } from 'lucide-react';
+import { Filter, SortDesc, ExternalLink, RefreshCw, Calendar, MapPin, Building, Clock, UploadCloud } from 'lucide-react';
 import api from '../services/api';
 
 function Explorer() {
@@ -20,6 +20,7 @@ function Explorer() {
   const [expandedId, setExpandedId] = useState(null);
   const [details, setDetails] = useState({});
   const [loadingDetail, setLoadingDetail] = useState(false);
+  const [analyzingPdf, setAnalyzingPdf] = useState(null);
 
   useEffect(() => {
     loadSavedData();
@@ -59,6 +60,40 @@ function Explorer() {
       setOpportunities(data.results);
     }
     setSearching(false);
+  };
+
+  const handlePdfUpload = async (e, id) => {
+    e.stopPropagation();
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setAnalyzingPdf(id);
+    const formData = new FormData();
+    formData.append('file', file);
+
+    try {
+      const res = await fetch(`http://localhost:3001/api/analyze-pdf/${id}`, {
+        method: 'POST',
+        body: formData,
+      });
+      const data = await res.json();
+      if (data.budget) {
+        setDetails(prev => ({
+          ...prev,
+          [id]: { ...prev[id], budget: data.budget }
+        }));
+        
+        // Actualizar oportunidad local
+        setOpportunities(prev => prev.map(o => o.id === id ? { ...o, budget: data.budget } : o));
+      } else {
+        alert("Gemini no pudo encontrar un monto en el PDF. Revisa las bases manualmente.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Error al analizar el PDF");
+    } finally {
+      setAnalyzingPdf(null);
+    }
   };
 
   const formatMoney = (n) => {
@@ -329,7 +364,26 @@ function Explorer() {
                         </div>
                         
                         {/* Botón de acción si está expandido */}
-                        <div style={{ gridColumn: '1 / -1', display: 'flex', justifyContent: 'flex-end', marginTop: 8 }}>
+                        <div style={{ gridColumn: '1 / -1', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 8 }}>
+                          {(details[opp.id]?.budget === 0 || opp.budget === 0) ? (
+                            <div style={{ position: 'relative' }}>
+                              <input 
+                                type="file" 
+                                accept="application/pdf,.doc,.docx" 
+                                onChange={(e) => handlePdfUpload(e, opp.id)}
+                                style={{ position: 'absolute', inset: 0, opacity: 0, cursor: 'pointer', zIndex: 10 }}
+                                title="Arrastra el PDF aquí o haz clic para subirlo"
+                              />
+                              <button className="btn btn--secondary" disabled={analyzingPdf === opp.id} style={{ pointerEvents: 'none' }}>
+                                {analyzingPdf === opp.id ? (
+                                  <><RefreshCw size={16} className="spinner" /> Analizando Bases...</>
+                                ) : (
+                                  <><UploadCloud size={16} /> Soltar Bases (Extraer Monto con IA)</>
+                                )}
+                              </button>
+                            </div>
+                          ) : <div />}
+
                           <a 
                             href={opp.url} 
                             target="_blank" 

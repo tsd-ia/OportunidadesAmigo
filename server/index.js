@@ -6,6 +6,8 @@ import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { config } from 'dotenv';
+import multer from 'multer';
+import pdfParse from 'pdf-parse';
 
 config();
 
@@ -345,6 +347,47 @@ app.get('/api/mercadopublico/detail/:codigo', async (req, res) => {
     
     res.json({ result: transformed, raw: detail });
   } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// --- ANÁLISIS DE PDF CON IA (DRAG & DROP) ---
+const upload = multer({ storage: multer.memoryStorage() });
+
+app.post('/api/analyze-pdf/:codigo', upload.single('file'), async (req, res) => {
+  if (!req.file) return res.status(400).json({ error: 'No se subió ningún archivo' });
+  if (!process.env.GEMINI_API_KEY) return res.status(400).json({ error: 'API Key de Gemini no configurada' });
+
+  try {
+    console.log(`[PDF] Analizando archivo para ${req.params.codigo} (${req.file.size} bytes)...`);
+    
+    // 1. Extraer texto del PDF
+    const pdfData = await pdfParse(req.file.buffer);
+    const pdfText = pdfData.text.substring(0, 15000); // Limitar a los primeros 15,000 caracteres para evitar overflow de tokens
+    
+    // 2. Enviar a Gemini para extraer monto
+    const prompt = `Actúa como un extractor de datos de licitaciones públicas. A continuación te pasaré el texto extraído de las bases técnicas/administrativas de una licitación.
+Tu tarea es encontrar el Presupuesto Estimado, Monto Disponible, o Monto Referencial total de la licitación.
+Si encuentras el monto, devuelve SOLO EL NÚMERO entero final sin puntos ni símbolos (ej: 20000000). Si no hay absolutamente ningún monto en todo el texto, responde "0".
+
+Texto del PDF:
+${pdfText}`;
+
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: prompt }] }] })
+    });
+
+    if (!response.ok) throw new Error('Fallo al consultar a Gemini');
+    
+    const data = await response.json();
+    const textResponse = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || '0';
+    const extractedBudget = parseInt(textResponse.replace(/\D/g, ''), 10);
+    
+    res.json({ budget: isNaN(extractedBudget) ? 0 : extractedBudget });
+  } catch (err) {
+    console.error('[PDF] Error analizando:', err.message);
     res.status(500).json({ error: err.message });
   }
 });
