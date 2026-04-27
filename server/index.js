@@ -496,7 +496,7 @@ ${JSON.stringify((context || []).slice(0, 15).map(o => ({ titulo: o.title, monto
 
 Pregunta del usuario: ${message}`;
 
-    const response = await fetch(\`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=\${apiKey}\`, {
+    const response = await fetch(\`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent?key=\${apiKey}\`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

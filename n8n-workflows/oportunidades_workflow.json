@@ -1,0 +1,149 @@
+{
+  "name": "OportunidadesAmigo - Scraper Multifuente",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 4
+            }
+          ]
+        }
+      },
+      "id": "1",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://dummyjson.com/c/2c53-b09e-4e6f-a897",
+        "options": {}
+      },
+      "id": "2",
+      "name": "LinkedIn Mock API (Data de 2026)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [450, 200]
+    },
+    {
+      "parameters": {
+        "url": "https://dummyjson.com/c/5d22-11c4-4a21-9988",
+        "options": {}
+      },
+      "id": "3",
+      "name": "Compra Agil y Privadas Mock API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [450, 400]
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "append"
+      },
+      "id": "4",
+      "name": "Merge Results",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2.1,
+      "position": [700, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "return $input.all().map(i => {\n  let ops = [];\n  if (Array.isArray(i.json.oportunidades)) {\n    ops = ops.concat(i.json.oportunidades);\n  }\n  return ops.map(op => ({ json: op }));\n}).flat();"
+      },
+      "id": "5",
+      "name": "Extract Items",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [900, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:3001/api/webhook/opportunities",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json }}",
+        "options": {}
+      },
+      "id": "6",
+      "name": "Enviar a Backend OportunidadesAmigo",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1150, 300]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "LinkedIn Mock API (Data de 2026)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Compra Agil y Privadas Mock API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LinkedIn Mock API (Data de 2026)": {
+      "main": [
+        [
+          {
+            "node": "Merge Results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Compra Agil y Privadas Mock API": {
+      "main": [
+        [
+          {
+            "node": "Merge Results",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge Results": {
+      "main": [
+        [
+          {
+            "node": "Extract Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Items": {
+      "main": [
+        [
+          {
+            "node": "Enviar a Backend OportunidadesAmigo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "f7ab0a72-7c85-45a7-9e4a-4a259c869e5d",
+  "id": "OportunidadesAmigo_Sources"
+}
