@@ -62,7 +62,7 @@ function Explorer() {
   };
 
   const formatMoney = (n) => {
-    if (n === null || n === undefined || n === 0) return 'Monto no especificado';
+    if (n === null || n === undefined || n === 0) return 'Revisar Bases Técnicas';
     return `$${n.toLocaleString('es-CL')}`;
   };
 
@@ -91,15 +91,21 @@ function Explorer() {
     const dl = daysLeft(o.deadline);
     if (dl !== null && dl <= 0) return false;
 
+    // Filtrar visitas a terreno expiradas
+    if (o.fechaVisitaTerreno) {
+      const visitDate = new Date(o.fechaVisitaTerreno);
+      if (visitDate < new Date()) return false;
+    }
+
     if (!showOutside && o.isOutsideRubro) return false;
 
-    // Filtro por fuentes
+    // Filtro por fuentes estricto
     const type = o.type || '';
     const source = o.source || '';
     if (type === 'compra_agil' && !activeSources.compraagil) return false;
-    if (type === 'licitacion_publica' && !activeSources.mercadopublico) return false;
+    if (type !== 'compra_agil' && source === 'MercadoPublico' && !activeSources.mercadopublico) return false;
     if (source === 'LinkedIn' && !activeSources.linkedin) return false;
-    if ((type === 'oferta_privada' || type === 'licitacion_privada') && !activeSources.privadas) return false;
+    if ((type === 'oferta_privada' || type === 'licitacion_privada' || source === 'Privada') && !activeSources.privadas) return false;
 
     if (filter === 'all') return true;
     return o.category === filter;
@@ -231,6 +237,9 @@ function Explorer() {
                         <span className={`tag ${days <= 7 ? 'tag--danger' : 'tag--success'}`}>
                           {days > 0 ? `${days} días restantes` : 'Vencida'}
                         </span>
+                      )}
+                      {opp.fechaVisitaTerreno && (
+                        <span className="tag tag--warning">📍 Visita Terreno: {formatDate(opp.fechaVisitaTerreno)}</span>
                       )}
                       <span className="tag" style={{ background: 'var(--bg-secondary)', color: 'var(--text-muted)' }}>
                         ID: {opp.id}

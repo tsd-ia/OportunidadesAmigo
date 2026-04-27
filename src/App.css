@@ -1,32 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --bg-primary: #0a0e1a;
-  --bg-secondary: #111827;
-  --bg-card: #1a1f35;
-  --bg-card-hover: #222842;
-  --bg-input: #151a2e;
-  --border: #2a3050;
-  --border-light: #353b58;
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --accent: #6366f1;
-  --accent-hover: #818cf8;
-  --accent-glow: rgba(99,102,241,0.25);
-  --success: #22c55e;
-  --warning: #f59e0b;
-  --danger: #ef4444;
-  --info: #3b82f6;
-  --gradient-1: linear-gradient(135deg, #6366f1, #8b5cf6);
+  --bg-primary: #fdfbf7;
+  --bg-secondary: #f4f0e6;
+  --bg-card: #ffffff;
+  --bg-card-hover: #faf8f2;
+  --bg-input: #ffffff;
+  --border: #e2dfd5;
+  --border-light: #d1cbbd;
+  --text-primary: #2d3748;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
+  --accent: #8b5cf6;
+  --accent-hover: #7c3aed;
+  --accent-glow: rgba(139,92,246,0.15);
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --info: #2563eb;
+  --gradient-1: linear-gradient(135deg, #8b5cf6, #ec4899);
   --gradient-2: linear-gradient(135deg, #3b82f6, #06b6d4);
   --gradient-3: linear-gradient(135deg, #f59e0b, #ef4444);
   --sidebar-width: 300px;
   --topbar-height: 80px;
   --radius: 16px;
   --radius-sm: 10px;
-  --shadow: 0 4px 24px rgba(0,0,0,0.3);
-  --shadow-lg: 0 8px 40px rgba(0,0,0,0.4);
+  --shadow: 0 4px 15px rgba(0,0,0,0.05);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.08);
 }
 
 * { margin:0; padding:0; box-sizing:border-box; }
