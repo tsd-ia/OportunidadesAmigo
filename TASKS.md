@@ -20,11 +20,13 @@
 | 14 | Servicio API frontend (conexión backend) | ✅ |
 | 15 | Repo GitHub + Push | ✅ |
 
-## Pendiente para v2.0
+## Pendiente y en progreso para v2.0
 | # | Tarea | Estado |
 |---|-------|--------|
-| 16 | Integrar API real en frontend (reemplazar datos demo) | ⬜ |
-| 17 | Login/Auth con Firebase o JWT | ⬜ |
-| 18 | Persistencia de perfil en base de datos | ⬜ |
-| 19 | Deploy en producción (Vercel/Railway) | ⬜ |
-| 20 | Notificaciones push/email reales | ⬜ |
+| 16 | Integrar API real en frontend y Asistente (MercadoPúblico) | ✔️ Hecho |
+| 17 | Integración Gemini 2.5-Pro en Asistente | ✔️ Hecho |
+| 18 | Estructura Base n8n local (LinkedIn, Privadas, CompraÁgil) | ✔️ Hecho |
+| 19 | Login/Auth con Firebase o JWT | ⬜ Pendiente |
+| 20 | Persistencia de perfil en base de datos | ⬜ Pendiente |
+| 21 | Deploy en producción (Vercel/Railway) | ⬜ Pendiente |
+| 22 | Notificaciones push/email reales | ⬜ Pendiente |
