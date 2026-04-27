@@ -56,7 +56,7 @@ function Explorer() {
   };
 
   const formatMoney = (n) => {
-    if (n === null || n === undefined) return 'No especificado';
+    if (n === null || n === undefined || n === 0) return 'Monto no especificado';
     return `$${n.toLocaleString('es-CL')}`;
   };
 
@@ -311,7 +311,7 @@ function Explorer() {
 
                 <div className="opp-card__footer" style={{ marginTop: isExpanded ? 16 : 0 }}>
                   <div>
-                    <div className="opp-card__budget">{formatMoney(opp.budget)}</div>
+                    <div className="opp-card__budget">{formatMoney(details[opp.id]?.budget || opp.budget)}</div>
                     {!isExpanded && <div className="opp-card__entity" style={{ maxWidth: 400, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{opp.entity}</div>}
                   </div>
                   <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
