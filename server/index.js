@@ -431,18 +431,40 @@ app.get('/api/search/all', async (req, res) => {
     // Ordenar por match
     validResults.sort((a, b) => b.matchScore - a.matchScore);
 
+    console.log(`[Search] Obteniendo detalles completos para mejorar montos y fechas...`);
+    // Obtener detalles completos para asegurar que vengan con montos y fechas (top 50)
+    const topResults = validResults.slice(0, 50);
+    const restResults = validResults.slice(50);
+    
+    for (let i = 0; i < topResults.length; i++) {
+      try {
+        const detail = await fetchLicitacionDetail(topResults[i].id);
+        if (detail) {
+          const transformed = transformLicitacion(detail);
+          // Actualizar con datos detallados (monto, fechas precisas, comprador)
+          topResults[i] = { ...topResults[i], ...transformed, matchScore: topResults[i].matchScore, matchReasons: topResults[i].matchReasons };
+        }
+        // pequeña pausa para evitar limit rate
+        await new Promise(r => setTimeout(r, 100));
+      } catch (e) {
+        console.error(`[Search] Error detalle ${topResults[i].id}`);
+      }
+    }
+
+    const finalResults = [...topResults, ...restResults];
+
     // Guardar resultados
     writeJSON('last_search.json', {
       timestamp: new Date().toISOString(),
-      total: validResults.length,
-      results: validResults,
+      total: finalResults.length,
+      results: finalResults,
     });
 
-    console.log(`[Search] Total final: ${validResults.length} oportunidades únicas (filtradas activas)`);
+    console.log(`[Search] Total final: ${finalResults.length} oportunidades únicas (filtradas activas)`);
 
     res.json({
-      results: validResults,
-      total: validResults.length,
+      results: finalResults,
+      total: finalResults.length,
       source: 'mercadopublico',
       realData: true,
       keywords_searched: keywords.slice(0, 3),

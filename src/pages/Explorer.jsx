@@ -9,6 +9,12 @@ function Explorer() {
   const [filter, setFilter] = useState('all');
   const [sort, setSort] = useState('matchScore');
   const [showOutside, setShowOutside] = useState(true);
+  const [activeSources, setActiveSources] = useState({
+    mercadopublico: true,
+    compraagil: true,
+    linkedin: true,
+    privadas: true
+  });
 
   // Expanded state for cards
   const [expandedId, setExpandedId] = useState(null);
@@ -86,6 +92,15 @@ function Explorer() {
     if (dl !== null && dl <= 0) return false;
 
     if (!showOutside && o.isOutsideRubro) return false;
+
+    // Filtro por fuentes
+    const type = o.type || '';
+    const source = o.source || '';
+    if (type === 'compra_agil' && !activeSources.compraagil) return false;
+    if (type === 'licitacion_publica' && !activeSources.mercadopublico) return false;
+    if (source === 'LinkedIn' && !activeSources.linkedin) return false;
+    if ((type === 'oferta_privada' || type === 'licitacion_privada') && !activeSources.privadas) return false;
+
     if (filter === 'all') return true;
     return o.category === filter;
   });
@@ -138,6 +153,26 @@ function Explorer() {
           </button>
         ))}
         <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 12 }}>
+          {/* Toggles de fuentes */}
+          <div style={{ display: 'flex', gap: 12, marginRight: 12, borderRight: '1px solid var(--border-color)', paddingRight: 12 }}>
+            <label style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 12, color: 'var(--text-secondary)' }}>
+              <input type="checkbox" checked={activeSources.mercadopublico} onChange={e => setActiveSources(p => ({...p, mercadopublico: e.target.checked}))} />
+              MercadoPúblico
+            </label>
+            <label style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 12, color: 'var(--text-secondary)' }}>
+              <input type="checkbox" checked={activeSources.compraagil} onChange={e => setActiveSources(p => ({...p, compraagil: e.target.checked}))} />
+              Compra Ágil
+            </label>
+            <label style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 12, color: 'var(--text-secondary)' }}>
+              <input type="checkbox" checked={activeSources.linkedin} onChange={e => setActiveSources(p => ({...p, linkedin: e.target.checked}))} />
+              LinkedIn
+            </label>
+            <label style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 12, color: 'var(--text-secondary)' }}>
+              <input type="checkbox" checked={activeSources.privadas} onChange={e => setActiveSources(p => ({...p, privadas: e.target.checked}))} />
+              Privadas
+            </label>
+          </div>
+
           <label style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13, color: 'var(--text-secondary)' }}>
             <div className="toggle">
               <input type="checkbox" checked={showOutside} onChange={e => setShowOutside(e.target.checked)} />
