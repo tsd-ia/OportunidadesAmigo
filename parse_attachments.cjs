@@ -1,5 +1,5 @@
 const fs = require('fs');
-const html = fs.readFileSync('attachments.html', 'utf8');
+const html = fs.readFileSync('scrapfly_attachments.html', 'utf8');
 const regex = /<a[^>]+href=["']([^"']+)["'][^>]*>(.*?)<\/a>/gi;
 let match;
 while ((match = regex.exec(html)) !== null) {

@@ -30,3 +30,7 @@
 | 20 | Persistencia de perfil en base de datos | ⬜ Pendiente |
 | 21 | Deploy en producción (Vercel/Railway) | ⬜ Pendiente |
 | 22 | Notificaciones push/email reales | ⬜ Pendiente |
+| 23 | Tema Claro Crema (UI Premium) | ✅ Hecho |
+| 24 | Drag & Drop PDF + Análisis Gemini Presupuestos | ✅ Hecho |
+| 25 | Automatización Scrapfly (Bypass Captcha) | 🔄 En Progreso |
+| 26 | Auto-destrucción licitaciones con Visita Terreno vencida | ✅ Hecho |

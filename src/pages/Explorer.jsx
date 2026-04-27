@@ -21,6 +21,7 @@ function Explorer() {
   const [details, setDetails] = useState({});
   const [loadingDetail, setLoadingDetail] = useState(false);
   const [analyzingPdf, setAnalyzingPdf] = useState(null);
+  const [autoAnalyzing, setAutoAnalyzing] = useState(null);
 
   useEffect(() => {
     loadSavedData();
@@ -93,6 +94,31 @@ function Explorer() {
       alert("Error al analizar el PDF");
     } finally {
       setAnalyzingPdf(null);
+    }
+  };
+
+  const handleAutoAnalyze = async (id) => {
+    setAutoAnalyzing(id);
+    try {
+      const res = await fetch(`http://localhost:3001/api/auto-analyze/${id}`, {
+        method: 'POST'
+      });
+      const data = await res.json();
+      if (data.budget) {
+        setDetails(prev => ({
+          ...prev,
+          [id]: { ...prev[id], budget: data.budget }
+        }));
+        setOpportunities(prev => prev.map(o => o.id === id ? { ...o, budget: data.budget } : o));
+        alert("¡Monto extraído automáticamente con éxito!");
+      } else {
+        alert("No se pudo extraer el monto automáticamente. El captcha fue superado pero el dato no es visible en el HTML. Por favor intenta Drag & Drop con el PDF.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Error en la automatización de Scrapfly");
+    } finally {
+      setAutoAnalyzing(null);
     }
   };
 
@@ -364,23 +390,37 @@ function Explorer() {
                         </div>
                         
                         {/* Botón de acción si está expandido */}
-                        <div style={{ gridColumn: '1 / -1', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 8 }}>
+                        <div style={{ gridColumn: '1 / -1', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 8, gap: 10 }}>
                           {(details[opp.id]?.budget === 0 || opp.budget === 0) ? (
-                            <div style={{ position: 'relative' }}>
-                              <input 
-                                type="file" 
-                                accept="application/pdf,.doc,.docx" 
-                                onChange={(e) => handlePdfUpload(e, opp.id)}
-                                style={{ position: 'absolute', inset: 0, opacity: 0, cursor: 'pointer', zIndex: 10 }}
-                                title="Arrastra el PDF aquí o haz clic para subirlo"
-                              />
-                              <button className="btn btn--secondary" disabled={analyzingPdf === opp.id} style={{ pointerEvents: 'none' }}>
-                                {analyzingPdf === opp.id ? (
-                                  <><RefreshCw size={16} className="spinner" /> Analizando Bases...</>
+                            <div style={{ display: 'flex', gap: 8 }}>
+                              <button 
+                                className="btn btn--secondary" 
+                                onClick={() => handleAutoAnalyze(opp.id)}
+                                disabled={autoAnalyzing === opp.id}
+                              >
+                                {autoAnalyzing === opp.id ? (
+                                  <><RefreshCw size={16} className="spinner" /> Saltando Captcha...</>
                                 ) : (
-                                  <><UploadCloud size={16} /> Soltar Bases (Extraer Monto con IA)</>
+                                  <><RefreshCw size={16} /> Auto-Extraer (Scrapfly)</>
                                 )}
                               </button>
+
+                              <div style={{ position: 'relative' }}>
+                                <input 
+                                  type="file" 
+                                  accept="application/pdf,.doc,.docx" 
+                                  onChange={(e) => handlePdfUpload(e, opp.id)}
+                                  style={{ position: 'absolute', inset: 0, opacity: 0, cursor: 'pointer', zIndex: 10 }}
+                                  title="Arrastra el PDF aquí o haz clic para subirlo"
+                                />
+                                <button className="btn btn--secondary" disabled={analyzingPdf === opp.id} style={{ pointerEvents: 'none' }}>
+                                  {analyzingPdf === opp.id ? (
+                                    <><RefreshCw size={16} className="spinner" /> Analizando Bases...</>
+                                  ) : (
+                                    <><UploadCloud size={16} /> Drag & Drop PDF</>
+                                  )}
+                                </button>
+                              </div>
                             </div>
                           ) : <div />}
 

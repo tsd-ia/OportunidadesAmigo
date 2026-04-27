@@ -363,12 +363,9 @@ app.post('/api/analyze-pdf/:codigo', upload.single('file'), async (req, res) => 
 
   try {
     console.log(`[PDF] Analizando archivo para ${req.params.codigo} (${req.file.size} bytes)...`);
-    
-    // 1. Extraer texto del PDF
     const pdfData = await pdfParse(req.file.buffer);
-    const pdfText = pdfData.text.substring(0, 15000); // Limitar a los primeros 15,000 caracteres para evitar overflow de tokens
+    const pdfText = pdfData.text.substring(0, 15000);
     
-    // 2. Enviar a Gemini para extraer monto
     const prompt = `Actúa como un extractor de datos de licitaciones públicas. A continuación te pasaré el texto extraído de las bases técnicas/administrativas de una licitación.
 Tu tarea es encontrar el Presupuesto Estimado, Monto Disponible, o Monto Referencial total de la licitación.
 Si encuentras el monto, devuelve SOLO EL NÚMERO entero final sin puntos ni símbolos (ej: 20000000). Si no hay absolutamente ningún monto en todo el texto, responde "0".
@@ -383,17 +380,72 @@ ${pdfText}`;
     });
 
     if (!response.ok) throw new Error('Fallo al consultar a Gemini');
-    
     const data = await response.json();
     const textResponse = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || '0';
     const extractedBudget = parseInt(textResponse.replace(/\D/g, ''), 10);
-    
     res.json({ budget: isNaN(extractedBudget) ? 0 : extractedBudget });
   } catch (err) {
     console.error('[PDF] Error analizando:', err.message);
     res.status(500).json({ error: err.message });
   }
 });
+
+// --- ANÁLISIS AUTOMÁTICO CON SCRAPFLY (BYPASS CAPTCHA) ---
+app.post('/api/auto-analyze/:codigo', async (req, res) => {
+  const { codigo } = req.params;
+  const SCRAPFLY_KEY = process.env.SCRAPFLY_API_KEY;
+  if (!SCRAPFLY_KEY) return res.status(400).json({ error: 'Scrapfly API Key no configurada' });
+
+  try {
+    console.log(`[Scrapfly] Iniciando automatización para ${codigo}...`);
+    
+    // 1. Obtener página principal de la licitación para sacar el link de anexos
+    const detailUrl = `https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=${codigo}`;
+    const scrapflyMain = `https://api.scrapfly.io/scrape?key=${SCRAPFLY_KEY}&url=${encodeURIComponent(detailUrl)}&asp=true&render_js=true`;
+    
+    const mainRes = await fetch(scrapflyMain);
+    const mainData = await mainRes.json();
+    const html = mainData.result.content;
+    
+    const matchEnc = html.match(/ViewAttachment\.aspx\?enc=([^']+)','MercadoPublico'/);
+    if (!matchEnc) throw new Error('No se encontró el link de anexos en la página');
+    
+    const attachmentsUrl = `https://www.mercadopublico.cl/Procurement/Modules/Attachment/ViewAttachment.aspx?enc=${matchEnc[1]}`;
+    console.log(`[Scrapfly] Link de anexos encontrado: ${attachmentsUrl}`);
+    
+    // 2. Obtener la página de anexos para buscar el PDF de bases
+    const scrapflyAttach = `https://api.scrapfly.io/scrape?key=${SCRAPFLY_KEY}&url=${encodeURIComponent(attachmentsUrl)}&asp=true&render_js=true`;
+    const attachRes = await fetch(scrapflyAttach);
+    const attachData = await attachRes.json();
+    const attachHtml = attachData.result.content;
+    
+    // Fallback: Analizar si el presupuesto está en la tabla de anexos directamente
+    const promptText = `Actúa como un extractor de datos. Analiza este fragmento HTML de una tabla de anexos de Mercado Público y dime si ves el presupuesto estimado o monto total en algún texto. Si lo ves, devuelve solo el número. Si no, "0". 
+    HTML: ${attachHtml.substring(0, 5000)}`;
+
+    const geminiRes = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: promptText }] }] })
+    });
+
+    const geminiData = await geminiRes.json();
+    const budgetStr = geminiData.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || '0';
+    const finalBudget = parseInt(budgetStr.replace(/\D/g, ''), 10);
+
+    res.json({ 
+      success: true, 
+      budget: isNaN(finalBudget) ? 0 : finalBudget,
+      message: finalBudget > 0 ? 'Monto extraído de la tabla de anexos' : 'Monto no encontrado automáticamente. Por favor usa Drag & Drop.'
+    });
+
+  } catch (err) {
+    console.error('[Scrapfly] Error:', err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// --- BÚSQUEDA MULTI-FUENTE ---
 
 // --- BÚSQUEDA MULTI-FUENTE ---
 // Busca en todas las keywords relevantes según el perfil
