@@ -401,20 +401,20 @@ app.post('/api/auto-analyze/:codigo', async (req, res) => {
     
     // 1. Obtener página principal de la licitación para sacar el link de anexos
     const detailUrl = `https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=${codigo}`;
-    const scrapflyMain = `https://api.scrapfly.io/scrape?key=${SCRAPFLY_KEY}&url=${encodeURIComponent(detailUrl)}&asp=true&render_js=true`;
+    const scrapflyMain = `https://api.scrapfly.io/scrape?key=${SCRAPFLY_KEY}&url=${encodeURIComponent(detailUrl)}&asp=true&render_js=true&country=cl&proxy_pool=public_residential_pool`;
     
     const mainRes = await fetch(scrapflyMain);
     const mainData = await mainRes.json();
-    const html = mainData.result.content;
+    const html = mainData.result.content || '';
     
     const matchEnc = html.match(/ViewAttachment\.aspx\?enc=([^']+)','MercadoPublico'/);
-    if (!matchEnc) throw new Error('No se encontró el link de anexos en la página');
+    if (!matchEnc) throw new Error('No se encontró el link de anexos. MercadoPúblico podría haber bloqueado la petición even con proxy.');
     
     const attachmentsUrl = `https://www.mercadopublico.cl/Procurement/Modules/Attachment/ViewAttachment.aspx?enc=${matchEnc[1]}`;
     console.log(`[Scrapfly] Link de anexos encontrado: ${attachmentsUrl}`);
     
-    // 2. Obtener la página de anexos para buscar el PDF de bases
-    const scrapflyAttach = `https://api.scrapfly.io/scrape?key=${SCRAPFLY_KEY}&url=${encodeURIComponent(attachmentsUrl)}&asp=true&render_js=true`;
+    // 2. Obtener la página de anexos
+    const scrapflyAttach = `https://api.scrapfly.io/scrape?key=${SCRAPFLY_KEY}&url=${encodeURIComponent(attachmentsUrl)}&asp=true&render_js=true&country=cl&proxy_pool=public_residential_pool`;
     const attachRes = await fetch(scrapflyAttach);
     const attachData = await attachRes.json();
     const attachHtml = attachData.result.content;
