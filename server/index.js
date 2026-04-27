@@ -104,7 +104,10 @@ async function fetchLicitacionDetail(codigo) {
 // Transformar licitación de MercadoPublico al formato de nuestra app
 function transformLicitacion(lic) {
   const cat = categorizeOpportunity(lic.Nombre || '', lic.Descripcion || '');
-  const budget = lic.MontoEstimado || 0;
+  let budget = lic.MontoEstimado || 0;
+  if (budget === 0 && lic.Items && Array.isArray(lic.Items.Listado)) {
+    budget = lic.Items.Listado.reduce((acc, it) => acc + ((it.Cantidad || 0) * (it.MontoEstimado || it.PrecioNeto || 0)), 0);
+  }
   const fechas = lic.Fechas || {};
   const comprador = lic.Comprador || {};
 
@@ -306,7 +309,41 @@ app.get('/api/mercadopublico/detail/:codigo', async (req, res) => {
   try {
     const detail = await fetchLicitacionDetail(req.params.codigo);
     if (!detail) return res.status(404).json({ error: 'Licitación no encontrada' });
-    res.json({ result: transformLicitacion(detail), raw: detail });
+    
+    const transformed = transformLicitacion(detail);
+    
+    // Si después del mapeo de items y campos el presupuesto sigue en 0, usamos a Gemini de inspector
+    if (transformed.budget === 0 && process.env.GEMINI_API_KEY) {
+      try {
+        const textToAnalyze = `
+          Nombre: ${detail.Nombre || ''}
+          Descripción: ${detail.Descripcion || ''}
+          Observaciones: ${detail.Observatoria || ''}
+          Justificación: ${detail.JustificacionMontoEstimado || ''}
+        `;
+        const prompt = `Actúa como un extractor de datos técnicos. Revisa el siguiente texto extraído de una licitación chilena y dime cuál es el presupuesto estimado, monto referencial o monto total disponible. Responde SOLO CON EL NÚMERO entero final sin puntos ni comas ni símbolos (ej. 50000000). Si no encuentras ningún monto o dice que no está disponible, responde "0".\n\nTexto:\n${textToAnalyze}`;
+        
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: prompt }] }] })
+        });
+        
+        if (response.ok) {
+          const data = await response.json();
+          const textResponse = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || '0';
+          const extractedBudget = parseInt(textResponse.replace(/\D/g, ''), 10);
+          if (!isNaN(extractedBudget) && extractedBudget > 0) {
+            transformed.budget = extractedBudget;
+            console.log(`[IA] Presupuesto extraído con Gemini para ${req.params.codigo}: $${extractedBudget}`);
+          }
+        }
+      } catch (aiErr) {
+        console.error('[IA] Error extrayendo presupuesto:', aiErr.message);
+      }
+    }
+    
+    res.json({ result: transformed, raw: detail });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
