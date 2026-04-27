@@ -81,6 +81,10 @@ function Explorer() {
   };
 
   let filtered = opportunities.filter(o => {
+    // Filtrar expiradas en el frontend también
+    const dl = daysLeft(o.deadline);
+    if (dl !== null && dl <= 0) return false;
+
     if (!showOutside && o.isOutsideRubro) return false;
     if (filter === 'all') return true;
     return o.category === filter;
