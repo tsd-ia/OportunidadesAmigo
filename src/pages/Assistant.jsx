@@ -55,29 +55,20 @@ function Assistant() {
     messagesEnd.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  const sendMessage = (text) => {
+  const sendMessage = async (text) => {
     if (!text.trim()) return;
     const userMsg = { id: Date.now(), type: 'user', text, timestamp: new Date().toISOString() };
     setMessages(m => [...m, userMsg]);
     setInput('');
 
-    // Simular respuesta basada en los datos reales
-    setTimeout(() => {
-      let response = `Entendido. Actualmente tengo ${opportunities.length} opciones en total guardadas. ¿Te gustaría ir al Explorador para filtrar los detalles exactos?`;
-      
-      const lower = text.toLowerCase();
-      if (lower.includes('buscar') || lower.includes('search')) {
-        response = 'Para hacer un barrido web profundo, ve a la pestaña "Explorador" y presiona el botón "Escanear Ahora". Eso traerá licitaciones nuevas directamente desde los portales.';
-      } else if (lower.includes('estadístic') || lower.includes('stats') || lower.includes('resumen')) {
-        const conPresupuesto = opportunities.filter(o => o.budget > 0).length;
-        response = `📊 Resumen de tu base de datos actual:\n- Oportunidades activas: **${opportunities.length}**\n- Con presupuesto público: **${conPresupuesto}**\n\nTu base está lista para ser explorada.`;
-      } else if (lower.includes('fácil') || lower.includes('facil') || lower.includes('easy')) {
-        response = 'Si buscas oportunidades fáciles, el sistema prioriza las "Compras Ágiles" (menores a 30 UTM) donde hay menos burocracia. Puedes filtrarlas directamente en el Explorador activando solo la opción "Compra Ágil".';
-      }
+    // Indicador de escribiendo
+    const tempId = Date.now() + 1;
+    setMessages(m => [...m, { id: tempId, type: 'bot', text: 'Analizando con IA...', timestamp: new Date().toISOString() }]);
 
-      const botMsg = { id: Date.now() + 1, type: 'bot', text: response, timestamp: new Date().toISOString() };
-      setMessages(m => [...m, botMsg]);
-    }, 800);
+    const response = await api.sendChatMessage(text, opportunities);
+
+    // Reemplazar mensaje temporal con la respuesta real
+    setMessages(m => m.map(msg => msg.id === tempId ? { ...msg, text: response.text || 'Sin respuesta' } : msg));
   };
 
   const handleQuickAction = (actionId) => {

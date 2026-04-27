@@ -119,9 +119,23 @@ export async function getStatus() {
   return checkBackend();
 }
 
+export async function sendChatMessage(message, context) {
+  try {
+    const response = await fetch(`${API_URL}/chat`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message, context }),
+    });
+    return response.json();
+  } catch (error) {
+    console.error('Error in chat:', error);
+    return { text: 'Hubo un error de red al contactar al asistente.' };
+  }
+}
+
 export default {
   loadProfile, saveProfile,
   searchMercadoPublico, searchAll, getMercadoPublicoDetail,
   getOpportunities, getSources, saveSources,
-  getNotifications, getStatus,
+  getNotifications, getStatus, sendChatMessage,
 };

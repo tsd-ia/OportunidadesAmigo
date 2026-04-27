@@ -481,6 +481,40 @@ app.get('/api/opportunities', (req, res) => {
   res.json(data);
 });
 
+// --- AI CHAT (GEMINI) ---
+app.post('/api/chat', async (req, res) => {
+  const { message, context } = req.body;
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) {
+    return res.json({ text: "Lo siento jefe, la API Key de Gemini no está configurada en el .env." });
+  }
+  
+  try {
+    const prompt = `Actúa como "OportunidadesAmigo", un asesor experto y directo (en español) para un contratista en Chile. 
+El usuario ha escaneado licitaciones. Aquí tienes un resumen de las mejores oportunidades actuales (JSON truncado):
+${JSON.stringify((context || []).slice(0, 15).map(o => ({ titulo: o.title, monto: o.budget, region: o.region, cierre: o.deadline })))}
+
+Pregunta del usuario: ${message}`;
+
+    const response = await fetch(\`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=\${apiKey}\`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contents: [{ role: 'user', parts: [{ text: prompt }] }],
+        systemInstruction: { role: 'system', parts: [{ text: "Eres técnico, vas al grano, recomiendas oportunidades y respondes dudas sobre licitaciones de MercadoPúblico." }] }
+      })
+    });
+    
+    const data = await response.json();
+    if (data.error) throw new Error(data.error.message);
+    const text = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Sin respuesta del modelo.';
+    res.json({ text });
+  } catch (err) {
+    console.error('Error Gemini:', err.message);
+    res.json({ text: "Hubo un error al conectar con Gemini: " + err.message });
+  }
+});
+
 // --- WEBHOOK PARA N8N ---
 // n8n envía oportunidades encontradas a este endpoint
 app.post('/api/webhook/opportunities', (req, res) => {
