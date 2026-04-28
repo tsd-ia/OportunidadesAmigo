@@ -226,11 +226,18 @@ async function processAuditQueue() {
 }
 
 
-function addToAuditQueue(ids) {
-  const newIds = ids.filter(id => !auditQueue.includes(id));
-  auditQueue = [...auditQueue, ...newIds];
+function addToAuditQueue(opportunities) {
+  // Separar Compra Ágil de las normales
+  const agiles = opportunities.filter(o => o.type === 'compra_agil' && !auditQueue.includes(o.id)).map(o => o.id);
+  const normales = opportunities.filter(o => o.type !== 'compra_agil' && !auditQueue.includes(o.id)).map(o => o.id);
+  
+  // Las ágiles van al principio (VIP)
+  auditQueue = [...agiles, ...auditQueue, ...normales];
+  
+  if (agiles.length > 0) console.log(`[Prioridad] ${agiles.length} Compras Ágiles añadidas al frente de la cola.`);
   processAuditQueue();
 }
+
 
 
 
@@ -499,6 +506,12 @@ app.get('/api/mercadopublico/search', async (req, res) => {
 
     // Ordenar por match
     results.sort((a, b) => b.matchScore - a.matchScore);
+
+    // DISPARAR AUDITORÍA AUTOMÁTICA (Background Scanner VIP)
+    // Pasamos todos los resultados encontrados para que la cola los procese
+    if (results.length > 0) {
+      addToAuditQueue(results);
+    }
 
     res.json({ results, total: results.length, source: 'mercadopublico', realData: true });
   } catch (err) {
