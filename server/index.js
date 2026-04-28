@@ -326,8 +326,8 @@ function transformLicitacion(lic) {
     id: lic.CodigoExterno || lic.Codigo || `mp-${Date.now()}`,
     title: lic.Nombre || 'Sin título',
     source: 'MercadoPublico',
-    type: lic.Tipo === 'SE' ? 'compra_agil' : lic.Tipo === 'LE' ? 'licitacion_publica' : lic.Tipo === 'LP' ? 'licitacion_publica' : 'otro',
-    typeName: lic.Tipo === 'SE' ? 'Compra Ágil' : lic.Tipo === 'LE' ? 'Licitación Pública' : lic.Tipo === 'LP' ? 'Licitación Pública' : lic.Tipo === 'CO' ? 'Contratación Directa' : lic.Tipo || 'Otro',
+    type: (lic.Tipo === 'SE' || (lic.CodigoExterno && lic.CodigoExterno.includes('-SE'))) ? 'compra_agil' : (lic.Tipo === 'LE' || lic.Tipo === 'LP') ? 'licitacion_publica' : 'otro',
+    typeName: (lic.Tipo === 'SE' || (lic.CodigoExterno && lic.CodigoExterno.includes('-SE'))) ? 'Compra Ágil' : lic.Tipo === 'LE' ? 'Licitación Pública' : lic.Tipo === 'LP' ? 'Licitación Pública' : lic.Tipo === 'CO' ? 'Contratación Directa' : lic.Tipo || 'Otro',
     category: cat.category,
     subCategory: cat.sub,
     region: comprador.RegionUnidad || (lic.RegionUnidad ? (regionMap[lic.RegionUnidad] || lic.RegionUnidad) : 'Metropolitana'), // Fallback a Metropolitana si no hay nada, es lo más común

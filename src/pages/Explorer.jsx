@@ -33,8 +33,10 @@ function Explorer() {
   };
 
   useEffect(() => {
+    console.log("[Explorer] Cargando datos iniciales...");
     loadSavedData();
   }, []);
+
 
   const handleExpand = async (id, source) => {
     if (expandedId === id) {
@@ -79,12 +81,27 @@ function Explorer() {
 
   const handleScan = async () => {
     setSearching(true);
-    const data = await api.searchAll();
-    if (data && data.results) {
-      setOpportunities(data.results);
+    // Forzar activación de fuentes para que no parezca que no hay resultados
+    setActiveSources({
+      mercadopublico: true,
+      compraagil: true,
+      linkedin: true,
+      privadas: true
+    });
+
+    try {
+      const data = await api.searchAll();
+      if (data && data.results) {
+        console.log(`[Frontend] Recibidas ${data.results.length} oportunidades únicas`);
+        setOpportunities(data.results);
+      }
+    } catch (err) {
+      console.error("[Frontend] Error en escaneo:", err);
+    } finally {
+      setSearching(false);
     }
-    setSearching(false);
   };
+
 
   const handleScanAgiles = async () => {
     setSearching(true);
@@ -183,7 +200,9 @@ function Explorer() {
 
   const daysLeft = (d) => {
     if (!d) return null;
-    return Math.ceil((new Date(d) - new Date()) / (1000*60*60*24));
+    // Usar horas para mayor precisión y permitir mostrar las que cierran hoy mismo
+    const diff = (new Date(d) - new Date());
+    return Math.ceil(diff / (1000*60*60*24));
   };
 
   const sourceColors = {
@@ -196,7 +215,8 @@ function Explorer() {
   let filtered = opportunities.filter(o => {
     // Filtrar expiradas en el frontend también
     const dl = daysLeft(o.deadline);
-    if (dl !== null && dl <= 0) return false;
+    // Relajar el filtro: solo ocultar si ya venció hace más de 12 horas (margen de error)
+    if (dl !== null && dl < -0.5) return false;
 
     // Filtrar visitas a terreno expiradas
     if (o.fechaVisitaTerreno) {

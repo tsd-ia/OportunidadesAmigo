@@ -154,246 +154,7 @@
     ],
     "items": [
       {
-        "Correlativo": 3,
-        "CodigoProducto": 42131707,
-        "CodigoCategoria": "42131700",
-        "Categoria": "Equipamiento y suministros médicos / Vestuario clínico / Prendas textiles quirúrgicas",
-        "NombreProducto": "Trajes, cascos o mascarillas de aislamiento quirúrgico o accesorios",
-        "Descripcion": "2250162 - MANGA DE ROLLO PLASTICO 4 X 40 MTS (SEGURIPACK) - (UM: UNIDAD)\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 60,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 4,
-        "CodigoProducto": 42142601,
-        "CodigoCategoria": "42142600",
-        "Categoria": "Equipamiento y suministros médicos / Suministros y productos clínicos / Jeringas y accesorios",
-        "NombreProducto": "Jeringas médicas de aspiración o irrigación",
-        "Descripcion": "2247110 - JERINGA CON CANULA DE ASPIRACION Y SEGURIDAD ANTIRETORNO 50 ML - (UM: UNIDAD)\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 500,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 5,
-        "CodigoProducto": 42142504,
-        "CodigoCategoria": "42142500",
-        "Categoria": "Equipamiento y suministros médicos / Suministros y productos clínicos / Agujas clínicas",
-        "NombreProducto": "Agujas de biopsia",
-        "Descripcion": "2247027 - AGUJA BIOPSIA PROSTATICA 18 G X 20 CM C/PISTOLA PVC DESECHABLE - (UM: UNIDAD)\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 50,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 7,
-        "CodigoProducto": 42272004,
-        "CodigoCategoria": "42272000",
-        "Categoria": "Equipamiento y suministros médicos / Productos de resucitación, anestesia y respiratorios / Suministros de intubación",
-        "NombreProducto": "Estiletes de intubación",
-        "Descripcion": "2229099 - ESTILETE DE INTUBACION INTRODUCTOR BOUGIE 6 FR X 53 CM PEDIATRICO - (UM: UNIDAD)\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 20,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 8,
-        "CodigoProducto": 42271607,
-        "CodigoCategoria": "42271600",
-        "Categoria": "Equipamiento y suministros médicos / Productos de resucitación, anestesia y respiratorios / Productos de comprobación y tratamiento de las funciones pulmonares",
-        "NombreProducto": "Tubos o accesorios de la función pulmonar",
-        "Descripcion": "2229076 - TUBO LUMEN ASPIRACION SUBGLOTICA TAMAÑO 9.0 - (UM: UNIDAD)\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 60,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 9,
-        "CodigoProducto": 42272006,
-        "CodigoCategoria": "42272000",
-        "Categoria": "Equipamiento y suministros médicos / Productos de resucitación, anestesia y respiratorios / Suministros de intubación",
-        "NombreProducto": "Introductores",
-        "Descripcion": "2251257 - INTRODUCTOR DE PRECISION PERCUTANEO 1,9 F o 2 F (SIMIL INTROSYTE NEONATAL) (APF 1.3 NEO) - (UM: UNIDAD)\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 100,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 10,
-        "CodigoProducto": 42295461,
-        "CodigoCategoria": "42295400",
-        "Categoria": "Equipamiento y suministros médicos / Productos quirúrgicos / Suministros quirúrgicos auxiliares",
-        "NombreProducto": "Adhesivos de tejidos, sistemas de adhesivos, aplicadores o accesorios",
-        "Descripcion": "2250373 - SELLANTE DURAMADRE SIMIL DURASEAL XACT 3 ML. - (UM: UNIDAD)\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 2,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 11,
-        "CodigoProducto": 42221501,
-        "CodigoCategoria": "42221500",
-        "Categoria": "Equipamiento y suministros médicos / Productos administrados por vía intravenosa y arterial / Accesorios, catéteres y cánulas intravenosas y arteriales",
-        "NombreProducto": "Catéteres de línea arterial",
-        "Descripcion": "2220891 - CATETER UMBILICAL ARTERIAL POLIURETANO DOBLE LUMEN 3,5 FR. (APF 1.3 NEO) - (UM: UNIDAD)\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 50,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 12,
-        "CodigoProducto": 42221501,
-        "CodigoCategoria": "42221500",
-        "Categoria": "Equipamiento y suministros médicos / Productos administrados por vía intravenosa y arterial / Accesorios, catéteres y cánulas intravenosas y arteriales",
-        "NombreProducto": "Catéteres de línea arterial",
-        "Descripcion": "2227793 - BRONCO-CATH 39 FR  DERECHO - (UM: UNIDAD)\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 20,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 13,
-        "CodigoProducto": 42272004,
-        "CodigoCategoria": "42272000",
-        "Categoria": "Equipamiento y suministros médicos / Productos de resucitación, anestesia y respiratorios / Suministros de intubación",
-        "NombreProducto": "Estiletes de intubación",
-        "Descripcion": "2229098 - ESTILETE DE INTUBACION INTRODUCTOR BOUGIE 10 FR X 70 CM PEDIATRICO - (UM: UNIDAD)\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 30,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 14,
-        "CodigoProducto": 42312113,
-        "CodigoCategoria": "42312100",
-        "Categoria": "Equipamiento y suministros médicos / Productos para el cuidado de heridas / Suministros de ostomía y productos no quirúrgicos de drenaje de heridas",
-        "NombreProducto": "Bolsas de Ostomía",
-        "Descripcion": "2250440 - BOLSA DRENABLE NEONATAL 1 PIEZA DE 0-23 MM - (UM: UNIDAD)\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 600,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 15,
-        "CodigoProducto": 41116201,
-        "CodigoCategoria": "41116200",
-        "Categoria": "Equipamiento para laboratorios / Instrumentos de medida y experimentación / Suministros y equipos para tratamiento de enfermos",
-        "NombreProducto": "Monitores o medidores de glucosa",
-        "Descripcion": "22510000 - CINTAS/TIRAS REACTIVAS CETONEMIA - (UM: UNIDAD)\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 400,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 16,
-        "CodigoProducto": 42311505,
-        "CodigoCategoria": "42311500",
-        "Categoria": "Equipamiento y suministros médicos / Productos para el cuidado de heridas / Vendas, vendajes y productos relacionados",
-        "NombreProducto": "Vendas o vendajes para uso general",
-        "Descripcion": "22510061 - APOSITO TRANSPARENTE NO ADHERENTE Y NO ABSORBENTE SIMIL TELFA CLEAR 30 X 60 CM ESTERIL - (UM: UNIDAD)\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 200,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 17,
-        "CodigoProducto": 42291620,
-        "CodigoCategoria": "42291600",
-        "Categoria": "Equipamiento y suministros médicos / Productos quirúrgicos / Instrumentos quirúrgicos de corte, trampas y productos relacionados",
-        "NombreProducto": "Trocares quirúrgicos para uso general o accesorios",
-        "Descripcion": "3400057 - TROCAR DRENAJE TORAXICO G 28 CON PUNZÓN METÁLICO - (UM: UNIDAD)\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 280,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 18,
-        "CodigoProducto": 42272301,
-        "CodigoCategoria": "42272300",
-        "Categoria": "Equipamiento y suministros médicos / Productos de resucitación, anestesia y respiratorios / Suministros de resucitadores",
-        "NombreProducto": "Resucitadores manuales",
-        "Descripcion": "3401258 - RESUCITADOR AMBU ADULTO - (UM: UNIDAD)\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 10,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 19,
-        "CodigoProducto": 42272301,
-        "CodigoCategoria": "42272300",
-        "Categoria": "Equipamiento y suministros médicos / Productos de resucitación, anestesia y respiratorios / Suministros de resucitadores",
-        "NombreProducto": "Resucitadores manuales",
-        "Descripcion": "3408735 - RESUCITADOR 450 ML RECIEN NACIDO C/SET MASCARILLAS SIMILAR ESUCITADOR MANUAL AMBU BABY MARK IV NEONATAL - (UM: UNIDAD)\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 15,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 20,
-        "CodigoProducto": 42181707,
-        "CodigoCategoria": "42181700",
-        "Categoria": "Equipamiento y suministros médicos / Productos para exámenes y control de pacientes / Unidades de electrocardiografía (ECG) y productos relacionados",
-        "NombreProducto": "Electrodos neonatales de cinta o anillo de electrocardiografía (ECG)",
-        "Descripcion": "3450382 - SENSOR DE FLUJO NEONATAL DRAGUER REF. 8410179 (KIT X 5 UD) - (UM: KIT)\r\n",
-        "UnidadMedida": "Kit",
-        "Cantidad": 4,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 21,
-        "CodigoProducto": 42295117,
-        "CodigoCategoria": "42295100",
-        "Categoria": "Equipamiento y suministros médicos / Productos quirúrgicos / Equipo quirúrgico, accesorios y productos relacionados",
-        "NombreProducto": "Manta quirúrgica o armarios para calentar soluciones o accesorios",
-        "Descripcion": "3409050 - MANTA TREN SUPERIOR ADULTO SOBREPACIENTE CALENTADOR - (UM: UNIDAD)\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 200,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 22,
-        "CodigoProducto": 42142530,
-        "CodigoCategoria": "42142500",
-        "Categoria": "Equipamiento y suministros médicos / Suministros y productos clínicos / Agujas clínicas",
-        "NombreProducto": "Agujas de tratamiento diagnóstico",
-        "Descripcion": "3400273 - AGUJA ESCLEROTERAPIA 23-21 G BISEL CURVO 14º (165 CM X 2,8 MM)  AUTOENROSCANTE - (UM: UNIDAD)\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 130,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 23,
-        "CodigoProducto": 42291802,
-        "CodigoCategoria": "42291800",
-        "Categoria": "Equipamiento y suministros médicos / Productos quirúrgicos / Abrazaderas quirúrgicas, fórceps, ligadores quirúrgicos e instrumentos relacionados",
-        "NombreProducto": "Abrazaderas, pinzas o fórceps quirúrgicos, o accesorios",
-        "Descripcion": "3400072 - PINZA PLASTICA AZUL -TIPO TIJERA - (UM: UNIDAD)\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 400,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 24,
-        "CodigoProducto": 42292603,
-        "CodigoCategoria": "42292600",
-        "Categoria": "Equipamiento y suministros médicos / Productos quirúrgicos / Dilatadores, sondas, ranuras quirúrgicas y productos relacionados",
-        "NombreProducto": "Sondas o directores quirúrgicos",
-        "Descripcion": "2229107 - SONDA GASTROSTOMIA 12 FR C/BALON - (UM: UNIDAD)\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 40,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 25,
-        "CodigoProducto": 85121810,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Test de detección de drogas o alcohol",
-        "Descripcion": "2440020 - TEST DE DROGAS SIMILAR A LUMIQUICK - DOA 5-EN-1: THC, COC, AMP, OPI, BZO - (UM: UNIDAD)\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 2000,
-        "Adjudicacion": null
+        "Nombre": "Auditado Automáticamente"
       }
     ],
     "cantidadItems": 22,
@@ -401,7 +162,13 @@
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T20:47:52.365Z"
+    "updatedAt": "2026-04-28T22:44:42.624Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1224957-22-LE26": {
     "id": "1224957-22-LE26",
@@ -446,26 +213,7 @@
     ],
     "items": [
       {
-        "Correlativo": 1,
-        "CodigoProducto": 41116003,
-        "CodigoCategoria": "41116000",
-        "Categoria": "Equipamiento para laboratorios / Instrumentos de medida y experimentación / Reactivos de analizadores clínicos y diagnósticos",
-        "NombreProducto": "Reactivos de analizadores de gases sanguíneos",
-        "Descripcion": "Ofertar detalladamente línea N°1 según bases técnicas",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 2,
-        "CodigoProducto": 85121803,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios biológicos",
-        "Descripcion": "Ofertar detalladamente línea N°2 según bases técnicas",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
+        "Nombre": "Auditado Automáticamente"
       }
     ],
     "cantidadItems": 2,
@@ -473,7 +221,13 @@
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T20:47:53.194Z"
+    "updatedAt": "2026-04-28T22:45:54.148Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1057964-7-B226": {
     "id": "1057964-7-B226",
@@ -573,15 +327,7 @@
     ],
     "items": [
       {
-        "Correlativo": 1,
-        "CodigoProducto": 60121242,
-        "CodigoCategoria": "60121200",
-        "Categoria": "Instrumentos musicales, juegos, juguetes, artesanías y materiales educativos / Equipos de arte y manualidades, accesorios y suministros / Medios, aplicadores y accesorios para artes plásticas y pinturas",
-        "NombreProducto": "Delantales",
-        "Descripcion": "-Tela cherokee o equivalente\r\n-Tela elasticada\r\n-Tecnología antimicrobiana con certificación por parte del fabricante.\r\n-Tela antiarrugas.\r\n-Textura entre 140 y 200 g/m², con acabado soft touch.\r\n-1 logo en bolsillo (se enviará el diseño al proveedo",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 546,
-        "Adjudicacion": null
+        "Nombre": "Auditado Automáticamente"
       }
     ],
     "cantidadItems": 1,
@@ -589,7 +335,13 @@
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T20:47:55.185Z"
+    "updatedAt": "2026-04-28T22:47:09.474Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "2080-78-LE26": {
     "id": "2080-78-LE26",
@@ -631,36 +383,19 @@
     "requirements": [
       "Inscripción ChileProveedores"
     ],
-    "items": [
-      {
-        "Correlativo": 1,
-        "CodigoProducto": 51182102,
-        "CodigoCategoria": "51182100",
-        "Categoria": "Medicamentos y productos farmacéuticos / Hormonas y antagonistas hormonales / Hormonas de la pituitaria posterior",
-        "NombreProducto": "Vasopresina",
-        "Descripcion": "216-0137\tVASOPRESINA 20 U.I./ML SOL. INY. PARA ADMINISTRACION INTRAVENOSA AMPOLLA 1ML\tFRASCO AMPOLLA\t 900",
-        "UnidadMedida": "Frasco Ampolla",
-        "Cantidad": 900,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 2,
-        "CodigoProducto": 51131801,
-        "CodigoCategoria": "51131800",
-        "Categoria": "Medicamentos y productos farmacéuticos / Medicamentos hematólicos / Agentes hemostáticos sistémicos y coagulantes",
-        "NombreProducto": "Fibrinogeno",
-        "Descripcion": "262-0126\tFIBRINOGENO HUMANO 1 GRAMO \tFRASCO AMPOLLA\t                            24 ",
-        "UnidadMedida": "Frasco Ampolla",
-        "Cantidad": 24,
-        "Adjudicacion": null
-      }
-    ],
+    "items": [],
     "cantidadItems": 2,
     "url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2080-78-LE26",
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T20:47:56.691Z"
+    "updatedAt": "2026-04-28T22:49:39.157Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "2157-54-LE26": {
     "id": "2157-54-LE26",
@@ -1340,234 +1075,19 @@
     "requirements": [
       "Inscripción ChileProveedores"
     ],
-    "items": [
-      {
-        "Correlativo": 1,
-        "CodigoProducto": 47121701,
-        "CodigoCategoria": "47121700",
-        "Categoria": "Equipos y suministros de limpieza / Equipo de limpieza / Envases y accesorios para residuos",
-        "NombreProducto": "Bolsas de basura",
-        "Descripcion": "30-006-351-264-00\tBOLSA TRANSPARENTE DE  1.35  X  1.80 MTS DENSIDAD 0.06 (60 MICRONES) MATERIAL RECICLADO RESISTENTE",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 2,
-        "CodigoProducto": 47121701,
-        "CodigoCategoria": "47121700",
-        "Categoria": "Equipos y suministros de limpieza / Equipo de limpieza / Envases y accesorios para residuos",
-        "NombreProducto": "Bolsas de basura",
-        "Descripcion": "30-006-351-005-00\tBOLSA PLAST. TRANSPARENTE DE 40X60  CMS DENSISDAD 0.03  (30 MICRON) MATERIAL RECICLADO RESISTENTES",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 3,
-        "CodigoProducto": 47121701,
-        "CodigoCategoria": "47121700",
-        "Categoria": "Equipos y suministros de limpieza / Equipo de limpieza / Envases y accesorios para residuos",
-        "NombreProducto": "Bolsas de basura",
-        "Descripcion": "30-006-351-004-00\r\n\tBOLSA PLAST TRANSPARENTE DE .60X90 CMS 30 MICRON) X UD\r\n\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 4,
-        "CodigoProducto": 47121701,
-        "CodigoCategoria": "47121700",
-        "Categoria": "Equipos y suministros de limpieza / Equipo de limpieza / Envases y accesorios para residuos",
-        "NombreProducto": "Bolsas de basura",
-        "Descripcion": "30-006-351-282-00\tBOLSA PREPICADA 20 X 30 DE PEAD ROLLO APROX. 5/6 KG",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 5,
-        "CodigoProducto": 47121701,
-        "CodigoCategoria": "47121700",
-        "Categoria": "Equipos y suministros de limpieza / Equipo de limpieza / Envases y accesorios para residuos",
-        "NombreProducto": "Bolsas de basura",
-        "Descripcion": "30-006-351-283-00\tBOLSA PREPICADA 30 X 40 PEAD ROLLO APROX. 6/7 KG.",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 6,
-        "CodigoProducto": 47121701,
-        "CodigoCategoria": "47121700",
-        "Categoria": "Equipos y suministros de limpieza / Equipo de limpieza / Envases y accesorios para residuos",
-        "NombreProducto": "Bolsas de basura",
-        "Descripcion": "30-006-351-006-00\r\n\tBOLSA PLAST. TRANSPARENTE DE 20X30  CMS DENSISDAD 0.03  (30 MICRON)  MATERIAL VIRGEN RESISTENTES\r\n\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 7,
-        "CodigoProducto": 47121701,
-        "CodigoCategoria": "47121700",
-        "Categoria": "Equipos y suministros de limpieza / Equipo de limpieza / Envases y accesorios para residuos",
-        "NombreProducto": "Bolsas de basura",
-        "Descripcion": "30-006-351-001-00\r\n\tBOLSA PLAST. TRANSPARENTE. 65 X 120 CMS DENSIDAD 0.03 (30 MICRONES) MATERIAL RECICLADO  RESISTENTES\r\n\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 8,
-        "CodigoProducto": 47121701,
-        "CodigoCategoria": "47121700",
-        "Categoria": "Equipos y suministros de limpieza / Equipo de limpieza / Envases y accesorios para residuos",
-        "NombreProducto": "Bolsas de basura",
-        "Descripcion": "30-006-351-224-00\r\n\tBOLSA PLASTICA DE BASURA NEGRA DE 110  X 80 CM (30 MICRON)\r\n\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 9,
-        "CodigoProducto": 47121701,
-        "CodigoCategoria": "47121700",
-        "Categoria": "Equipos y suministros de limpieza / Equipo de limpieza / Envases y accesorios para residuos",
-        "NombreProducto": "Bolsas de basura",
-        "Descripcion": "30-006-351-009-00\r\n\tBOLSA PLAST.  TRANSPARENTE  DE 10 X 20  CM DENSISDAD 0.03  (30 MICRON)  SELLADO FIRME FACIL DE ABRIR\r\n\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 10,
-        "CodigoProducto": 47121701,
-        "CodigoCategoria": "47121700",
-        "Categoria": "Equipos y suministros de limpieza / Equipo de limpieza / Envases y accesorios para residuos",
-        "NombreProducto": "Bolsas de basura",
-        "Descripcion": "30-006-351-008-00\r\n\tBOLSA PLAST.  TRANSPARENTE  DE 50X60  CMS  DENSISDAD 0.03  (30 MICRON)  MATERIAL RECICLADO \r\n\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 11,
-        "CodigoProducto": 47121701,
-        "CodigoCategoria": "47121700",
-        "Categoria": "Equipos y suministros de limpieza / Equipo de limpieza / Envases y accesorios para residuos",
-        "NombreProducto": "Bolsas de basura",
-        "Descripcion": "30-006-351-230-00\r\n\tBOLSAS PLAST.TRANSPARENTE DE 70X90  CMS DENSIDAD 0.03 (30 MICRONES) MATERIAL RECICLADO RESISTENTES\r\n\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 12,
-        "CodigoProducto": 47121701,
-        "CodigoCategoria": "47121700",
-        "Categoria": "Equipos y suministros de limpieza / Equipo de limpieza / Envases y accesorios para residuos",
-        "NombreProducto": "Bolsas de basura",
-        "Descripcion": "30-006-351-293-00\r\n\tBOLSA PLAST. TRANSPARENT. DE 80 X 110 CMS DENSIDAD 0.03(30 MICRONES) MATERIAL RECICLADO RESISTENTE\r\n\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 13,
-        "CodigoProducto": 47121701,
-        "CodigoCategoria": "47121700",
-        "Categoria": "Equipos y suministros de limpieza / Equipo de limpieza / Envases y accesorios para residuos",
-        "NombreProducto": "Bolsas de basura",
-        "Descripcion": "30-006-351-278-00\tMANGA POLIETILENO 60X0.09",
-        "UnidadMedida": "Rollo",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 14,
-        "CodigoProducto": 47121701,
-        "CodigoCategoria": "47121700",
-        "Categoria": "Equipos y suministros de limpieza / Equipo de limpieza / Envases y accesorios para residuos",
-        "NombreProducto": "Bolsas de basura",
-        "Descripcion": "30-006-351-277-00\r\n\tMANGA TRANSPARENTE DE 60X90 CMS 30 MICRON \r\n",
-        "UnidadMedida": "Rollo",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 15,
-        "CodigoProducto": 47121701,
-        "CodigoCategoria": "47121700",
-        "Categoria": "Equipos y suministros de limpieza / Equipo de limpieza / Envases y accesorios para residuos",
-        "NombreProducto": "Bolsas de basura",
-        "Descripcion": "30-006-351-007-00\tBOLSA PLASTICA TRANSPARENTE DE 20X20 DENSID. 0.03(30 MICRO) MATERIAL VIRGEN",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 16,
-        "CodigoProducto": 47121701,
-        "CodigoCategoria": "47121700",
-        "Categoria": "Equipos y suministros de limpieza / Equipo de limpieza / Envases y accesorios para residuos",
-        "NombreProducto": "Bolsas de basura",
-        "Descripcion": "30-006-351-067-00\tMANGA DE POLIETILENO DE 10X0.03 MICRO",
-        "UnidadMedida": "Rollo",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 17,
-        "CodigoProducto": 47121701,
-        "CodigoCategoria": "47121700",
-        "Categoria": "Equipos y suministros de limpieza / Equipo de limpieza / Envases y accesorios para residuos",
-        "NombreProducto": "Bolsas de basura",
-        "Descripcion": "30-006-351-239-00\r\n\tBOLSA HERMETICA 15 X 30 TIPO ZIPLOC\r\n\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 18,
-        "CodigoProducto": 47121701,
-        "CodigoCategoria": "47121700",
-        "Categoria": "Equipos y suministros de limpieza / Equipo de limpieza / Envases y accesorios para residuos",
-        "NombreProducto": "Bolsas de basura",
-        "Descripcion": "30-006-351-074-00\r\n\tBOLSA HERMETICA 20 X 26 TIPO  ZIPLOC\r\n\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 19,
-        "CodigoProducto": 47121701,
-        "CodigoCategoria": "47121700",
-        "Categoria": "Equipos y suministros de limpieza / Equipo de limpieza / Envases y accesorios para residuos",
-        "NombreProducto": "Bolsas de basura",
-        "Descripcion": "30-006-351-066-00\r\n\tBOLSA HERMETICA 27 X 28 TIPO  ZIPLOC SIN PERFORACIONES \r\n\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 20,
-        "CodigoProducto": 47121701,
-        "CodigoCategoria": "47121700",
-        "Categoria": "Equipos y suministros de limpieza / Equipo de limpieza / Envases y accesorios para residuos",
-        "NombreProducto": "Bolsas de basura",
-        "Descripcion": "30-006-351-241-00\r\n\tBOLSA HERMETICA 30 X 40 TIPO ZIPLOC\r\n\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      }
-    ],
+    "items": [],
     "cantidadItems": 20,
     "url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1057501-212-LP26",
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T21:01:11.771Z"
+    "updatedAt": "2026-04-28T22:44:08.804Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1057541-22-LE26": {
     "id": "1057541-22-LE26",
@@ -1611,15 +1131,7 @@
     ],
     "items": [
       {
-        "Correlativo": 1,
-        "CodigoProducto": 90101603,
-        "CodigoCategoria": "90101600",
-        "Categoria": "Servicios de Viajes, alimentación, alojamiento y entretenimiento / Restaurantes y catering / Servicios de comedor y banquetes",
-        "NombreProducto": "Servicios de catering",
-        "Descripcion": "Coffee Breaks para jornadas de Capacitación del SST. Revisar requerimientos técnicos, pág. 26 y 27 B.A.",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 4270,
-        "Adjudicacion": null
+        "Nombre": "Auditado Automáticamente"
       }
     ],
     "cantidadItems": 1,
@@ -1627,7 +1139,13 @@
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T21:01:12.536Z"
+    "updatedAt": "2026-04-28T22:44:14.940Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1058900-5-LE26": {
     "id": "1058900-5-LE26",
@@ -1672,15 +1190,7 @@
     ],
     "items": [
       {
-        "Correlativo": 1,
-        "CodigoProducto": 30201903,
-        "CodigoCategoria": "30201900",
-        "Categoria": "Artículos para estructuras, obras y construcciones / Estructuras prefabricadas / Construcciones médicas prefabricadas",
-        "NombreProducto": "Unidades dentales",
-        "Descripcion": "Servicio de Mantención Preventiva y Correctiva para Equipamiento para el Departamento de Odontología según especificaciones de las Bases Técnicas",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
+        "Nombre": "Auditado Automáticamente"
       }
     ],
     "cantidadItems": 1,
@@ -1688,7 +1198,13 @@
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T21:01:12.791Z"
+    "updatedAt": "2026-04-28T22:44:28.588Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1077275-2-LE26": {
     "id": "1077275-2-LE26",
@@ -1733,15 +1249,7 @@
     ],
     "items": [
       {
-        "Correlativo": 1,
-        "CodigoProducto": 78111803,
-        "CodigoCategoria": "78111800",
-        "Categoria": "Servicios de transporte, almacenaje y correo / Transporte de pasajeros / Transporte de pasajeros por carretera",
-        "NombreProducto": "Servicios de autobuses contratados",
-        "Descripcion": "SERVICIO DE TRASLADO DE FUNCIONARIOS PAASAM-COSAM /\r\nVEHICULO TIPO CAMIONETA DOBLE CABINA /\r\n\r\nEN LA COMUNA DE COPIAPÓ, TIERRA AMARILLA Y SECTORES RURALES Y DE DIFICIL ACCESO - 22 HORAS SEMANALES DIAS LUNES, JUEVES (08:00-17:00) Y VIERNES (08:00-13:00)",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
+        "Nombre": "Auditado Automáticamente"
       }
     ],
     "cantidadItems": 1,
@@ -1749,7 +1257,13 @@
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T21:01:16.774Z"
+    "updatedAt": "2026-04-28T22:44:56.222Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1138297-2-LE26": {
     "id": "1138297-2-LE26",
@@ -1794,15 +1308,7 @@
     ],
     "items": [
       {
-        "Correlativo": 1,
-        "CodigoProducto": 80141607,
-        "CodigoCategoria": "80141600",
-        "Categoria": "Servicios profesionales, administrativos y consultorías de gestión empresarial / Servicios para la comercialización y distribución / Ventas y marketing",
-        "NombreProducto": "Producción de eventos",
-        "Descripcion": "Servicios de producción de material audiovisual, cobertura, promoción, difusión y otros, en el marco de la actividad denominada “Comité de Integración ATACALAR Chile- Argentina Atacama – 2026” a realizarse en la ciudad de Copiapó, Región de Atacama, entre",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
+        "Nombre": "Auditado Automáticamente"
       }
     ],
     "cantidadItems": 1,
@@ -1810,7 +1316,13 @@
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T21:01:19.604Z"
+    "updatedAt": "2026-04-28T22:45:15.419Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1460278-27-L126": {
     "id": "1460278-27-L126",
@@ -2817,25 +2329,19 @@
     "requirements": [
       "Inscripción ChileProveedores"
     ],
-    "items": [
-      {
-        "Correlativo": 1,
-        "CodigoProducto": 39101603,
-        "CodigoCategoria": "39101600",
-        "Categoria": "Artículos eléctricos y de iluminación / Artículos de iluminación / Ampolletas, focos y lámparas",
-        "NombreProducto": "ampolletas solares",
-        "Descripcion": "DE ACUERDO  A LOS TERMINOS DE REFERENCIA ",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 22,
-        "Adjudicacion": null
-      }
-    ],
+    "items": [],
     "cantidadItems": 1,
     "url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3671-26-LE26",
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T21:01:40.920Z"
+    "updatedAt": "2026-04-28T22:56:00.701Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1084156-23-LE26": {
     "id": "1084156-23-LE26",
@@ -4637,25 +4143,19 @@
       "Garantía de seriedad",
       "Inscripción ChileProveedores"
     ],
-    "items": [
-      {
-        "Correlativo": 1,
-        "CodigoProducto": 50101538,
-        "CodigoCategoria": "50101500",
-        "Categoria": "Alimentos, bebidas y tabaco / Frutas, verduras y frutos secos / Verduras",
-        "NombreProducto": "Verduras frescas",
-        "Descripcion": "FRUTAS Y VERDURAS FRESCAS",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      }
-    ],
+    "items": [],
     "cantidadItems": 1,
     "url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2147-29-LE26",
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T21:26:40.639Z"
+    "updatedAt": "2026-04-28T22:58:38.434Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1067476-2-L126": {
     "id": "1067476-2-L126",
@@ -4699,15 +4199,7 @@
     ],
     "items": [
       {
-        "Correlativo": 1,
-        "CodigoProducto": 90151602,
-        "CodigoCategoria": "90151600",
-        "Categoria": "Servicios de Viajes, alimentación, alojamiento y entretenimiento / Entretenimiento / Espectáculos ambulantes",
-        "NombreProducto": "Productoras",
-        "Descripcion": "Servicio de producción para talleres Portadores de tradición y gestión local meses de mayo y junio 2026 -región de Antofagasta",
-        "UnidadMedida": "Global",
-        "Cantidad": 1,
-        "Adjudicacion": null
+        "Nombre": "Auditado Automáticamente"
       }
     ],
     "cantidadItems": 1,
@@ -4715,7 +4207,13 @@
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T21:26:41.443Z"
+    "updatedAt": "2026-04-28T22:44:35.769Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1509-45-LE26": {
     "id": "1509-45-LE26",
@@ -4887,26 +4385,7 @@
     ],
     "items": [
       {
-        "Correlativo": 1,
-        "CodigoProducto": 80111618,
-        "CodigoCategoria": "80111600",
-        "Categoria": "Servicios profesionales, administrativos y consultorías de gestión empresarial / Servicios de recursos humanos / Servicios de personal temporal",
-        "NombreProducto": "Servicios temporales de construcción",
-        "Descripcion": "SERVICIOS DE OBRAS DE CAMBIO Y REPARACIÓN DE CUBIERTA EDIFICIO B - HOSPITALIZADOS",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 2,
-        "CodigoProducto": 80111618,
-        "CodigoCategoria": "80111600",
-        "Categoria": "Servicios profesionales, administrativos y consultorías de gestión empresarial / Servicios de recursos humanos / Servicios de personal temporal",
-        "NombreProducto": "Servicios temporales de construcción",
-        "Descripcion": "SERVICIOS DE OBRAS DE REPARACIÓN DE CUBIERTA EDIFICIO C - CAE",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
+        "Nombre": "Auditado Automáticamente"
       }
     ],
     "cantidadItems": 2,
@@ -4914,7 +4393,13 @@
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T21:26:42.801Z"
+    "updatedAt": "2026-04-28T22:46:29.692Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1017312-5-LP26": {
     "id": "1017312-5-LP26",
@@ -8331,6 +7816,2081 @@
     "keyDates": [],
     "items": [],
     "updatedAt": "2026-04-28T22:33:14.084Z",
+    "isFullyAnalyzed": true
+  },
+  "1057491-15-LP26": {
+    "id": "1057491-15-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:43:51.795Z",
+    "isFullyAnalyzed": true
+  },
+  "1057501-181-LP26": {
+    "id": "1057501-181-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:43:55.477Z",
+    "isFullyAnalyzed": true
+  },
+  "1057489-70-LP26": {
+    "id": "1057489-70-LP26",
+    "budget": 0,
+    "guarantees": [
+      "Garantía de seriedad de la oferta"
+    ],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [
+      {
+        "event": "Publicación",
+        "date": "03-03-2026 14:02:05"
+      },
+      {
+        "event": "Inicio de preguntas",
+        "date": "03-03-2026 14:35:00"
+      },
+      {
+        "event": "Final de preguntas",
+        "date": "09-03-2026 16:00:00"
+      },
+      {
+        "event": "Publicación de respuestas",
+        "date": "16-03-2026 16:00:00"
+      },
+      {
+        "event": "Cierre de recepción de la oferta",
+        "date": "23-03-2026 16:00:00"
+      },
+      {
+        "event": "Acto de apertura técnica",
+        "date": "23-03-2026 16:01:00"
+      },
+      {
+        "event": "Acto de apertura económica (referencial)",
+        "date": "23-03-2026 16:01:00"
+      },
+      {
+        "event": "Adjudicación",
+        "date": "28-04-2026 16:27:11"
+      }
+    ],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:43:57.418Z",
+    "isFullyAnalyzed": true
+  },
+  "1057501-244-LP26": {
+    "id": "1057501-244-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:44:14.719Z",
+    "isFullyAnalyzed": true
+  },
+  "1058012-13-LP26": {
+    "id": "1058012-13-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:44:22.248Z",
+    "isFullyAnalyzed": true
+  },
+  "1058085-56-LP26": {
+    "id": "1058085-56-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:44:28.791Z",
+    "isFullyAnalyzed": true
+  },
+  "1075963-161-LE26": {
+    "id": "1075963-161-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:44:42.396Z",
+    "isFullyAnalyzed": true
+  },
+  "1075963-195-LE26": {
+    "id": "1075963-195-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:44:49.766Z",
+    "isFullyAnalyzed": true
+  },
+  "1080089-9-L126": {
+    "id": "1080089-9-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:44:56.865Z",
+    "isFullyAnalyzed": true
+  },
+  "1084156-25-LP26": {
+    "id": "1084156-25-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:45:03.301Z",
+    "isFullyAnalyzed": true
+  },
+  "1113159-4-L126": {
+    "id": "1113159-4-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:45:09.013Z",
+    "isFullyAnalyzed": true
+  },
+  "1099402-12-R126": {
+    "id": "1099402-12-R126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:45:09.021Z",
+    "isFullyAnalyzed": true
+  },
+  "1147293-3-LE26": {
+    "id": "1147293-3-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:45:22.885Z",
+    "isFullyAnalyzed": true
+  },
+  "1147293-2-LE26": {
+    "id": "1147293-2-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:45:22.907Z",
+    "isFullyAnalyzed": true
+  },
+  "1150-4-O126": {
+    "id": "1150-4-O126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:45:29.653Z",
+    "isFullyAnalyzed": true
+  },
+  "1201-16-LE26": {
+    "id": "1201-16-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:45:35.047Z",
+    "isFullyAnalyzed": true
+  },
+  "1173933-4-LE26": {
+    "id": "1173933-4-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:45:36.104Z",
+    "isFullyAnalyzed": true
+  },
+  "1217466-6-LE26": {
+    "id": "1217466-6-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:45:41.528Z",
+    "isFullyAnalyzed": true
+  },
+  "1223542-4-LE26": {
+    "id": "1223542-4-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:45:46.737Z",
+    "isFullyAnalyzed": true
+  },
+  "1224957-12-LE26": {
+    "id": "1224957-12-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:45:47.713Z",
+    "isFullyAnalyzed": true
+  },
+  "1369-6-O126": {
+    "id": "1369-6-O126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:45:58.758Z",
+    "isFullyAnalyzed": true
+  },
+  "1426096-2-L126": {
+    "id": "1426096-2-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:45:59.424Z",
+    "isFullyAnalyzed": true
+  },
+  "1431291-31-LP26": {
+    "id": "1431291-31-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:46:05.902Z",
+    "isFullyAnalyzed": true
+  },
+  "1003473-12-LP26": {
+    "id": "1003473-12-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:46:11.207Z",
+    "isFullyAnalyzed": true
+  },
+  "1004-18-LE26": {
+    "id": "1004-18-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:46:11.300Z",
+    "isFullyAnalyzed": true
+  },
+  "1057049-50-LE26": {
+    "id": "1057049-50-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:46:17.175Z",
+    "isFullyAnalyzed": true
+  },
+  "1057384-61-L126": {
+    "id": "1057384-61-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:46:22.905Z",
+    "isFullyAnalyzed": true
+  },
+  "1057429-52-LP25": {
+    "id": "1057429-52-LP25",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:46:22.964Z",
+    "isFullyAnalyzed": true
+  },
+  "1057501-203-LE26": {
+    "id": "1057501-203-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:46:35.942Z",
+    "isFullyAnalyzed": true
+  },
+  "1057501-186-LP26": {
+    "id": "1057501-186-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:46:36.011Z",
+    "isFullyAnalyzed": true
+  },
+  "1057501-230-LE26": {
+    "id": "1057501-230-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:46:42.732Z",
+    "isFullyAnalyzed": true
+  },
+  "1057544-122-LP26": {
+    "id": "1057544-122-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:46:50.709Z",
+    "isFullyAnalyzed": true
+  },
+  "1057501-253-LE26": {
+    "id": "1057501-253-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:46:50.935Z",
+    "isFullyAnalyzed": true
+  },
+  "1058132-22-LR26": {
+    "id": "1058132-22-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:46:58.463Z",
+    "isFullyAnalyzed": true
+  },
+  "1180730-23-LE26": {
+    "id": "1180730-23-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:47:05.173Z",
+    "isFullyAnalyzed": true
+  },
+  "1063538-37-LR26": {
+    "id": "1063538-37-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:47:05.208Z",
+    "isFullyAnalyzed": true
+  },
+  "1350296-44-L126": {
+    "id": "1350296-44-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:47:16.148Z",
+    "isFullyAnalyzed": true
+  },
+  "1288419-5-LP26": {
+    "id": "1288419-5-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:47:16.586Z",
+    "isFullyAnalyzed": true
+  },
+  "1355402-2-LP26": {
+    "id": "1355402-2-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:47:19.992Z",
+    "isFullyAnalyzed": true
+  },
+  "1375761-15-LP26": {
+    "id": "1375761-15-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:47:26.741Z",
+    "isFullyAnalyzed": true
+  },
+  "1414396-10-LE26": {
+    "id": "1414396-10-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:47:27.431Z",
+    "isFullyAnalyzed": true
+  },
+  "1464-31-LE26": {
+    "id": "1464-31-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:47:29.805Z",
+    "isFullyAnalyzed": true
+  },
+  "1475050-2-LE26": {
+    "id": "1475050-2-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:47:37.273Z",
+    "isFullyAnalyzed": true
+  },
+  "1514-180-LP25": {
+    "id": "1514-180-LP25",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:47:38.249Z",
+    "isFullyAnalyzed": true
+  },
+  "1627-38-LE26": {
+    "id": "1627-38-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:47:49.770Z",
+    "isFullyAnalyzed": true
+  },
+  "1011183-4-LE26": {
+    "id": "1011183-4-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:47:57.773Z",
+    "isFullyAnalyzed": true
+  },
+  "1736-29-LP26": {
+    "id": "1736-29-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:48:32.956Z",
+    "isFullyAnalyzed": true
+  },
+  "1079694-11-LE26": {
+    "id": "1079694-11-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:48:49.866Z",
+    "isFullyAnalyzed": true
+  },
+  "1549-33-LP26": {
+    "id": "1549-33-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:49:10.050Z",
+    "isFullyAnalyzed": true
+  },
+  "2328-15-LE26": {
+    "id": "2328-15-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:49:53.032Z",
+    "isFullyAnalyzed": true
+  },
+  "2674-16-LE26": {
+    "id": "2674-16-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:50:07.768Z",
+    "isFullyAnalyzed": true
+  },
+  "2177-6-LP26": {
+    "id": "2177-6-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:50:30.390Z",
+    "isFullyAnalyzed": true
+  },
+  "2490-39-LP26": {
+    "id": "2490-39-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:50:40.399Z",
+    "isFullyAnalyzed": true
+  },
+  "1979-76-LP26": {
+    "id": "1979-76-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:51:28.696Z",
+    "isFullyAnalyzed": true
+  },
+  "2778-54-LE25": {
+    "id": "2778-54-LE25",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:51:56.823Z",
+    "isFullyAnalyzed": true
+  },
+  "2989-1-LE26": {
+    "id": "2989-1-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:52:07.412Z",
+    "isFullyAnalyzed": true
+  },
+  "2387-39-CO26": {
+    "id": "2387-39-CO26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:52:35.599Z",
+    "isFullyAnalyzed": true
+  },
+  "3151-13-LE26": {
+    "id": "3151-13-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:52:59.495Z",
+    "isFullyAnalyzed": true
+  },
+  "3381-14-LE26": {
+    "id": "3381-14-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:53:06.035Z",
+    "isFullyAnalyzed": true
+  },
+  "1057385-24-LE26": {
+    "id": "1057385-24-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:53:22.598Z",
+    "isFullyAnalyzed": true
+  },
+  "1057055-31-LP26": {
+    "id": "1057055-31-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:53:22.608Z",
+    "isFullyAnalyzed": true
+  },
+  "1057501-223-LE26": {
+    "id": "1057501-223-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:53:29.200Z",
+    "isFullyAnalyzed": true
+  },
+  "1057547-108-LP26": {
+    "id": "1057547-108-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:53:40.279Z",
+    "isFullyAnalyzed": true
+  },
+  "1175-30-LE26": {
+    "id": "1175-30-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:53:49.021Z",
+    "isFullyAnalyzed": true
+  },
+  "3671-23-LE26": {
+    "id": "3671-23-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:54:20.157Z",
+    "isFullyAnalyzed": true
+  },
+  "407-36-LE26": {
+    "id": "407-36-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:54:38.842Z",
+    "isFullyAnalyzed": true
+  },
+  "507428-46-CO26": {
+    "id": "507428-46-CO26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:55:32.861Z",
+    "isFullyAnalyzed": true
+  },
+  "3376-4-LE26": {
+    "id": "3376-4-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:55:48.577Z",
+    "isFullyAnalyzed": true
+  },
+  "3447-66-L126": {
+    "id": "3447-66-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:55:54.306Z",
+    "isFullyAnalyzed": true
+  },
+  "3769-1-L126": {
+    "id": "3769-1-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:56:06.778Z",
+    "isFullyAnalyzed": true
+  },
+  "799512-14-LE26": {
+    "id": "799512-14-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:56:29.867Z",
+    "isFullyAnalyzed": true
+  },
+  "886954-28-LR26": {
+    "id": "886954-28-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:56:37.221Z",
+    "isFullyAnalyzed": true
+  },
+  "2080-123-LE26": {
+    "id": "2080-123-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:57:05.662Z",
+    "isFullyAnalyzed": true
+  },
+  "2199-8-LE26": {
+    "id": "2199-8-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:57:16.254Z",
+    "isFullyAnalyzed": true
+  },
+  "2337-15-LP26": {
+    "id": "2337-15-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:57:22.774Z",
+    "isFullyAnalyzed": true
+  },
+  "2483-56-LE26": {
+    "id": "2483-56-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:57:34.980Z",
+    "isFullyAnalyzed": true
+  },
+  "5413-164-R226": {
+    "id": "5413-164-R226",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:58:13.342Z",
+    "isFullyAnalyzed": true
+  },
+  "635-76-L126": {
+    "id": "635-76-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:58:21.919Z",
+    "isFullyAnalyzed": true
+  },
+  "1979-73-LE26": {
+    "id": "1979-73-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:58:33.772Z",
+    "isFullyAnalyzed": true
+  },
+  "2205-5-LE26": {
+    "id": "2205-5-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:58:39.907Z",
+    "isFullyAnalyzed": true
+  },
+  "2422-82-L126": {
+    "id": "2422-82-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:58:53.691Z",
+    "isFullyAnalyzed": true
+  },
+  "729-82-LE26": {
+    "id": "729-82-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:59:19.267Z",
+    "isFullyAnalyzed": true
+  },
+  "868-6-LE26": {
+    "id": "868-6-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:59:24.862Z",
+    "isFullyAnalyzed": true
+  },
+  "968521-5-LP26": {
+    "id": "968521-5-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:59:36.311Z",
+    "isFullyAnalyzed": true
+  },
+  "2563-10-LR26": {
+    "id": "2563-10-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:00:29.963Z",
+    "isFullyAnalyzed": true
+  },
+  "2658-72-L126": {
+    "id": "2658-72-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:00:30.495Z",
+    "isFullyAnalyzed": true
+  },
+  "2673-41-LR26": {
+    "id": "2673-41-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:00:39.451Z",
+    "isFullyAnalyzed": true
+  },
+  "2741-29-LR26": {
+    "id": "2741-29-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:00:46.185Z",
+    "isFullyAnalyzed": true
+  },
+  "2760-35-LP26": {
+    "id": "2760-35-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:00:46.291Z",
+    "isFullyAnalyzed": true
+  },
+  "2770-50-LP26": {
+    "id": "2770-50-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:00:56.125Z",
+    "isFullyAnalyzed": true
+  },
+  "2790-22-L126": {
+    "id": "2790-22-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:01:01.307Z",
+    "isFullyAnalyzed": true
+  },
+  "2773-20-LE26": {
+    "id": "2773-20-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:01:01.606Z",
+    "isFullyAnalyzed": true
+  },
+  "2827-50-L126": {
+    "id": "2827-50-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:01:11.022Z",
+    "isFullyAnalyzed": true
+  },
+  "2935-12-LE26": {
+    "id": "2935-12-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:01:15.978Z",
+    "isFullyAnalyzed": true
+  },
+  "2981-111-LE26": {
+    "id": "2981-111-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:01:16.287Z",
+    "isFullyAnalyzed": true
+  },
+  "3086-36-LE26": {
+    "id": "3086-36-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:01:22.901Z",
+    "isFullyAnalyzed": true
+  },
+  "3117-31-LE26": {
+    "id": "3117-31-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:01:30.332Z",
+    "isFullyAnalyzed": true
+  },
+  "3191-30-LP26": {
+    "id": "3191-30-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:01:30.648Z",
+    "isFullyAnalyzed": true
+  },
+  "886954-86-LP26": {
+    "id": "886954-86-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:01:40.070Z",
+    "isFullyAnalyzed": true
+  },
+  "929-14-LE26": {
+    "id": "929-14-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:01:46.058Z",
+    "isFullyAnalyzed": true
+  },
+  "933-7-LP26": {
+    "id": "933-7-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:01:46.147Z",
+    "isFullyAnalyzed": true
+  },
+  "938-11-LE26": {
+    "id": "938-11-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:01:53.818Z",
+    "isFullyAnalyzed": true
+  },
+  "994-15-LP26": {
+    "id": "994-15-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:01:59.757Z",
+    "isFullyAnalyzed": true
+  },
+  "3541-3-L126": {
+    "id": "3541-3-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:02:00.222Z",
+    "isFullyAnalyzed": true
+  },
+  "3572-3-LP26": {
+    "id": "3572-3-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:02:09.443Z",
+    "isFullyAnalyzed": true
+  },
+  "3624-13-L126": {
+    "id": "3624-13-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T23:02:11.969Z",
+    "isFullyAnalyzed": true
+  },
+  "3624-15-E226": {
+    "id": "3624-15-E226",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:02:14.027Z",
+    "isFullyAnalyzed": true
+  },
+  "3678-9-LP26": {
+    "id": "3678-9-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:02:22.827Z",
+    "isFullyAnalyzed": true
+  },
+  "3710-17-L126": {
+    "id": "3710-17-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:02:23.867Z",
+    "isFullyAnalyzed": true
+  },
+  "3730-31-L126": {
+    "id": "3730-31-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:02:31.712Z",
+    "isFullyAnalyzed": true
+  },
+  "3825-12-LE26": {
+    "id": "3825-12-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:02:35.481Z",
+    "isFullyAnalyzed": true
+  },
+  "3887-24-LP26": {
+    "id": "3887-24-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:02:36.905Z",
+    "isFullyAnalyzed": true
+  },
+  "3890-50-L126": {
+    "id": "3890-50-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:02:47.435Z",
+    "isFullyAnalyzed": true
+  },
+  "3980-9-LE26": {
+    "id": "3980-9-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:02:49.041Z",
+    "isFullyAnalyzed": true
+  },
+  "4030-12-L126": {
+    "id": "4030-12-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:02:55.674Z",
+    "isFullyAnalyzed": true
+  },
+  "4031-1-LE26": {
+    "id": "4031-1-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T23:03:02.338Z",
+    "isFullyAnalyzed": true
+  },
+  "4121-10-LE26": {
+    "id": "4121-10-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:03:02.698Z",
+    "isFullyAnalyzed": true
+  },
+  "418-24-LE26": {
+    "id": "418-24-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:03:12.403Z",
+    "isFullyAnalyzed": true
+  },
+  "4308-2-L126": {
+    "id": "4308-2-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:03:14.411Z",
+    "isFullyAnalyzed": true
+  },
+  "4371-20-LE26": {
+    "id": "4371-20-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:03:16.630Z",
+    "isFullyAnalyzed": true
+  },
+  "438-24-LE26": {
+    "id": "438-24-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:03:26.699Z",
+    "isFullyAnalyzed": true
+  },
+  "4381-1-LP26": {
+    "id": "4381-1-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:03:26.771Z",
+    "isFullyAnalyzed": true
+  },
+  "4429-39-L126": {
+    "id": "4429-39-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T23:03:27.531Z",
+    "isFullyAnalyzed": true
+  },
+  "4451-45-L126": {
+    "id": "4451-45-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T23:03:39.597Z",
+    "isFullyAnalyzed": true
+  },
+  "4556-19-LE26": {
+    "id": "4556-19-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T23:03:39.606Z",
+    "isFullyAnalyzed": true
+  },
+  "4451-30-LE26": {
+    "id": "4451-30-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T23:03:39.622Z",
+    "isFullyAnalyzed": true
+  },
+  "4879-5-LE26": {
+    "id": "4879-5-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T23:03:51.406Z",
+    "isFullyAnalyzed": true
+  },
+  "507428-31-LP26": {
+    "id": "507428-31-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T23:03:51.757Z",
+    "isFullyAnalyzed": true
+  },
+  "4642-31-LE26": {
+    "id": "4642-31-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T23:03:52.376Z",
+    "isFullyAnalyzed": true
+  },
+  "5147-18-LP26": {
+    "id": "5147-18-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T23:04:02.329Z",
+    "isFullyAnalyzed": true
+  },
+  "5416-7-LE26": {
+    "id": "5416-7-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:04:03.698Z",
+    "isFullyAnalyzed": true
+  },
+  "545774-15-LE26": {
+    "id": "545774-15-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:04:04.378Z",
+    "isFullyAnalyzed": true
+  },
+  "564162-24-L126": {
+    "id": "564162-24-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:04:13.564Z",
+    "isFullyAnalyzed": true
+  },
+  "5877-3-LE26": {
+    "id": "5877-3-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:04:15.475Z",
+    "isFullyAnalyzed": true
+  },
+  "5963-8-L126": {
+    "id": "5963-8-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:04:17.558Z",
+    "isFullyAnalyzed": true
+  },
+  "603128-5-O126": {
+    "id": "603128-5-O126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:04:25.261Z",
+    "isFullyAnalyzed": true
+  },
+  "618641-11-L126": {
+    "id": "618641-11-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:04:26.333Z",
+    "isFullyAnalyzed": true
+  },
+  "621-425-LR26": {
+    "id": "621-425-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:04:28.247Z",
+    "isFullyAnalyzed": true
+  },
+  "633-5-LE26": {
+    "id": "633-5-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:04:37.829Z",
+    "isFullyAnalyzed": true
+  },
+  "806-3-LE26": {
+    "id": "806-3-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:04:44.354Z",
+    "isFullyAnalyzed": true
+  },
+  "564162-13-L126": {
+    "id": "564162-13-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:05:10.562Z",
+    "isFullyAnalyzed": true
+  },
+  "621-426-LR26": {
+    "id": "621-426-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:05:16.608Z",
+    "isFullyAnalyzed": true
+  },
+  "2305-6-LP26": {
+    "id": "2305-6-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:06:30.308Z",
+    "isFullyAnalyzed": true
+  },
+  "2378-15-LR26": {
+    "id": "2378-15-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:06:38.687Z",
+    "isFullyAnalyzed": true
+  },
+  "2658-123-L126": {
+    "id": "2658-123-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:06:56.746Z",
+    "isFullyAnalyzed": true
+  },
+  "3656-65-LE26": {
+    "id": "3656-65-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:07:21.237Z",
+    "isFullyAnalyzed": true
+  },
+  "3709-10-LE26": {
+    "id": "3709-10-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:07:26.987Z",
+    "isFullyAnalyzed": true
+  },
+  "3762-21-LE26": {
+    "id": "3762-21-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:07:34.379Z",
+    "isFullyAnalyzed": true
+  },
+  "4062-24-LE26": {
+    "id": "4062-24-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:07:45.606Z",
+    "isFullyAnalyzed": true
+  },
+  "990973-4-LE26": {
+    "id": "990973-4-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:08:15.035Z",
+    "isFullyAnalyzed": true
+  },
+  "3946-12-LE26": {
+    "id": "3946-12-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T23:08:20.274Z",
     "isFullyAnalyzed": true
   }
 }
