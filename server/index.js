@@ -46,6 +46,43 @@ function writeJSON(filename, data) {
   writeFileSync(path, JSON.stringify(data, null, 2), 'utf-8');
 }
 
+// --- UTILIDADES DE MEMORIA (CEREBRO) ---
+const DB_PATH = join(__dirname, '..', 'opportunities_db.json');
+
+function readDB() {
+  try {
+    if (!existsSync(DB_PATH)) return {};
+    return JSON.parse(readFileSync(DB_PATH, 'utf8'));
+  } catch (e) {
+    console.error('[Cerebro] Error leyendo memoria:', e.message);
+    return {};
+  }
+}
+
+function writeDB(data) {
+  try {
+    writeFileSync(DB_PATH, JSON.stringify(data, null, 2));
+  } catch (e) {
+    console.error('[Cerebro] Error guardando memoria:', e.message);
+  }
+}
+
+function saveToMemory(opp) {
+  const db = readDB();
+  const id = opp.id;
+  // Solo guardamos si el presupuesto es > 0 o si no teníamos ese ID antes con datos completos
+  if (!db[id] || (opp.budget > 0 && db[id].budget === 0) || (opp.items?.length > 0 && !db[id].items)) {
+    db[id] = { ...db[id], ...opp, updatedAt: new Date().toISOString() };
+    writeDB(db);
+    console.log(`[Cerebro] Memoria actualizada para ${id} (Presupuesto: $${opp.budget})`);
+  }
+}
+
+function getFromMemory(id) {
+  const db = readDB();
+  return db[id] || null;
+}
+
 // Fetch con timeout
 async function fetchWithTimeout(url, timeout = 15000) {
   const controller = new AbortController();
@@ -99,6 +136,13 @@ function formatDateForAPI(date) {
 
 // Obtener detalle de una licitación específica
 async function fetchLicitacionDetail(codigo) {
+  // Primero consultar Memoria (Cerebro)
+  const cached = getFromMemory(codigo);
+  if (cached && cached.budget > 0) {
+    console.log(`[Cerebro] Recuperando datos de memoria para ${codigo}`);
+    return cached;
+  }
+
   try {
     const url = `${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}&codigo=${codigo}`;
     const response = await fetchWithTimeout(url, 10000);
@@ -484,10 +528,19 @@ app.post('/api/auto-analyze/:codigo', async (req, res) => {
 
     await browser.close();
 
+    // Guardar en el Cerebro para el futuro
+    const finalResult = {
+      id: codigo,
+      budget: isNaN(finalBudget) ? 0 : finalBudget,
+      items: tableText.includes('Producto') ? [{ Nombre: 'Extraído vía Puppeteer' }] : [],
+      updatedAt: new Date().toISOString()
+    };
+    saveToMemory(finalResult);
+
     res.json({ 
       success: true, 
-      budget: isNaN(finalBudget) ? 0 : finalBudget,
-      message: finalBudget > 0 ? 'Monto extraído de la tabla de anexos' : 'Monto no encontrado en la tabla. Por favor usa Drag & Drop con el PDF.'
+      budget: finalResult.budget,
+      message: finalResult.budget > 0 ? 'Monto extraído de la tabla de anexos' : 'Monto no encontrado en la tabla. Por favor usa Drag & Drop con el PDF.'
     });
 
   } catch (err) {
@@ -625,13 +678,30 @@ app.get('/api/search/all', async (req, res) => {
     
     for (let i = 0; i < topResults.length; i++) {
       try {
-        const detail = await fetchLicitacionDetail(topResults[i].id);
-        if (detail) {
-          const transformed = transformLicitacion(detail);
-          // Actualizar con datos detallados (monto, fechas precisas, comprador)
-          topResults[i] = { ...topResults[i], ...transformed, matchScore: topResults[i].matchScore, matchReasons: topResults[i].matchReasons };
+        // Consultar memoria primero
+        const id = topResults[i].id;
+        const cached = getFromMemory(id);
+        
+        if (cached && cached.budget > 0) {
+          topResults[i] = { ...topResults[i], ...cached };
+          continue;
         }
-        // pequeña pausa para evitar limit rate
+
+        const detail = await fetchLicitacionDetail(id);
+        if (detail) {
+          // Si el detail vino de la API (no de memoria cacheada de arriba)
+          const transformed = detail.budget !== undefined ? detail : transformLicitacion(detail);
+          
+          // Enriquecimiento con Gemini si el budget es 0
+          if (transformed.budget === 0 && process.env.GEMINI_API_KEY) {
+             // ... (esta lógica ya está dentro de transformLicitacion o el detail handler)
+          }
+
+          topResults[i] = { ...topResults[i], ...transformed, matchScore: topResults[i].matchScore, matchReasons: topResults[i].matchReasons };
+          
+          // Guardar descubrimiento en el Cerebro
+          saveToMemory(topResults[i]);
+        }
         await new Promise(r => setTimeout(r, 100));
       } catch (e) {
         console.error(`[Search] Error detalle ${topResults[i].id}`);
