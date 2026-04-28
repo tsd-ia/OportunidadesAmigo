@@ -510,37 +510,65 @@ app.post('/api/auto-analyze/:codigo', async (req, res) => {
       }
     }
 
-    // 4. Intentar sacar el presupuesto del HTML de la tabla (más rápido que bajar el PDF)
+    // 4. Extracción Profunda de Requisitos con Gemini
     const tableText = await attachmentsPage.evaluate(() => document.body.innerText);
-    const promptText = `Analiza este texto de la página de anexos de una licitación y dime si ves el presupuesto estimado o monto total. 
-    Si lo ves, devuelve solo el número. Si no, "0".
-    Texto: ${tableText.substring(0, 5000)}`;
+    const detailText = await page.evaluate(() => document.body.innerText); // Texto de la ficha principal
+    
+    const auditPrompt = `Actúa como un auditor experto en licitaciones de Mercado Público Chile.
+    Analiza este contenido extraído de la ficha y anexos de la licitación ${codigo}.
+    Extrae la siguiente información de forma estructurada en JSON:
+    {
+      "budget": 0, // Monto total estimado o referencial
+      "guarantees": [], // Ej: ["Garantía Seriedad: $500.000", "Fiel cumplimiento: 5%"]
+      "experience": "", // Ej: "3 años en obras civiles"
+      "certifications": [], // Ej: ["ISO 9001", "Patente al día"]
+      "siteVisit": "", // Ej: "Obligatoria 15/05", "No aplica"
+      "keyDates": [] // Fechas críticas encontradas
+    }
+    Si no encuentras algo, pon "" o []. Responde SOLO el objeto JSON.
+    
+    TEXTO FICHA: ${detailText.substring(0, 3000)}
+    TEXTO ANEXOS: ${tableText.substring(0, 5000)}`;
 
     const geminiRes = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: promptText }] }] })
+      body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: auditPrompt }] }] })
     });
 
     const geminiData = await geminiRes.json();
-    const budgetStr = geminiData.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || '0';
-    const finalBudget = parseInt(budgetStr.replace(/\D/g, ''), 10);
+    let auditResults = { budget: 0, guarantees: [], experience: "", certifications: [], siteVisit: "", keyDates: [] };
+    
+    try {
+      const jsonText = geminiData.candidates?.[0]?.content?.parts?.[0]?.text?.replace(/```json|```/g, '').trim();
+      auditResults = JSON.parse(jsonText);
+    } catch (e) {
+      console.error('[IA] Fallo al parsear JSON de auditoría, usando fallback');
+      const text = geminiData.candidates?.[0]?.content?.parts?.[0]?.text || '';
+      auditResults.budget = parseInt(text.replace(/\D/g, ''), 10) || 0;
+    }
 
     await browser.close();
 
-    // Guardar en el Cerebro para el futuro
+    // Guardar en el Cerebro con la info enriquecida
     const finalResult = {
       id: codigo,
-      budget: isNaN(finalBudget) ? 0 : finalBudget,
-      items: tableText.includes('Producto') ? [{ Nombre: 'Extraído vía Puppeteer' }] : [],
-      updatedAt: new Date().toISOString()
+      budget: auditResults.budget || 0,
+      guarantees: auditResults.guarantees || [],
+      experience: auditResults.experience || "",
+      certifications: auditResults.certifications || [],
+      siteVisit: auditResults.siteVisit || "",
+      keyDates: auditResults.keyDates || [],
+      items: tableText.includes('Producto') ? [{ Nombre: 'Analizado por IA Auditora' }] : [],
+      updatedAt: new Date().toISOString(),
+      isFullyAnalyzed: true
     };
     saveToMemory(finalResult);
 
     res.json({ 
       success: true, 
-      budget: finalResult.budget,
-      message: finalResult.budget > 0 ? 'Monto extraído de la tabla de anexos' : 'Monto no encontrado en la tabla. Por favor usa Drag & Drop con el PDF.'
+      ...finalResult,
+      message: finalResult.budget > 0 ? 'Auditoría completa finalizada con éxito' : 'Auditoría finalizada, presupuesto no encontrado.'
     });
 
   } catch (err) {

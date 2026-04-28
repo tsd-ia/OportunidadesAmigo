@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Filter, SortDesc, ExternalLink, RefreshCw, Calendar, MapPin, Building, Clock, UploadCloud } from 'lucide-react';
+import { Filter, SortDesc, ExternalLink, RefreshCw, Calendar, MapPin, Building, Clock, UploadCloud, ShieldCheck } from 'lucide-react';
 import api from '../services/api';
 
 function Explorer() {
@@ -389,6 +389,44 @@ function Explorer() {
                           </div>
                         </div>
                         
+                        {/* Sección de Auditoría de IA (Si existe) */}
+                        {details[opp.id]?.isFullyAnalyzed && (
+                          <div style={{ 
+                            gridColumn: '1 / -1', 
+                            background: 'rgba(var(--accent-rgb), 0.05)', 
+                            borderRadius: 12, 
+                            padding: 16, 
+                            marginTop: 16,
+                            border: '1px dashed var(--accent)'
+                          }}>
+                            <h4 style={{ margin: '0 0 10px 0', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: 8, color: 'var(--accent)' }}>
+                              <ShieldCheck size={18} /> Auditoría de Requisitos (IA)
+                            </h4>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 15, fontSize: '0.85rem' }}>
+                              <div>
+                                <strong style={{ display: 'block', marginBottom: 4 }}>🛡️ Garantías:</strong>
+                                <ul style={{ margin: 0, paddingLeft: 18 }}>
+                                  {details[opp.id].guarantees?.length > 0 ? details[opp.id].guarantees.map((g, i) => <li key={i}>{g}</li>) : <li>No especificadas</li>}
+                                </ul>
+                              </div>
+                              <div>
+                                <strong style={{ display: 'block', marginBottom: 4 }}>🏆 Experiencia:</strong>
+                                <span>{details[opp.id].experience || 'No mencionada'}</span>
+                              </div>
+                              <div>
+                                <strong style={{ display: 'block', marginBottom: 4 }}>📜 Certificaciones/Patentes:</strong>
+                                <ul style={{ margin: 0, paddingLeft: 18 }}>
+                                  {details[opp.id].certifications?.length > 0 ? details[opp.id].certifications.map((c, i) => <li key={i}>{c}</li>) : <li>No requeridas</li>}
+                                </ul>
+                              </div>
+                              <div>
+                                <strong style={{ display: 'block', marginBottom: 4 }}>📍 Visita a Terreno:</strong>
+                                <span>{details[opp.id].siteVisit || 'No se menciona'}</span>
+                              </div>
+                            </div>
+                          </div>
+                        )}
+
                         {/* Botón de acción si está expandido */}
                         <div style={{ gridColumn: '1 / -1', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 8, gap: 10 }}>
                           {(details[opp.id]?.budget === 0 || opp.budget === 0) ? (
@@ -401,7 +439,7 @@ function Explorer() {
                                 {autoAnalyzing === opp.id ? (
                                   <><RefreshCw size={16} className="spinner" /> Saltando Captcha...</>
                                 ) : (
-                                  <><RefreshCw size={16} /> Auto-Extraer (Scrapfly)</>
+                                  <><RefreshCw size={16} /> Auto-Extraer (IA Auditora)</>
                                 )}
                               </button>
 
