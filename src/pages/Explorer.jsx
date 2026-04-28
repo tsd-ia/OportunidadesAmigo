@@ -231,6 +231,41 @@ function Explorer() {
         </button>
       </div>
 
+      {/* Dashboard de Regiones */}
+      <div style={{ 
+        display: 'flex', 
+        gap: 10, 
+        overflowX: 'auto', 
+        paddingBottom: 15, 
+        marginBottom: 20,
+        scrollbarWidth: 'none'
+      }}>
+        {Object.entries(
+          filtered.reduce((acc, o) => {
+            const reg = o.region || 'Desconocida';
+            acc[reg] = (acc[reg] || 0) + 1;
+            return acc;
+          }, {})
+        ).sort((a, b) => b[1] - a[1]).map(([reg, count]) => (
+          <div key={reg} style={{ 
+            background: 'var(--card-bg)', 
+            padding: '8px 16px', 
+            borderRadius: 20, 
+            border: '1px solid var(--border)',
+            fontSize: '0.8rem',
+            whiteSpace: 'nowrap',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 8,
+            boxShadow: 'var(--shadow-sm)'
+          }}>
+            <MapPin size={14} style={{ color: 'var(--accent)' }} />
+            <strong>{reg}:</strong> 
+            <span style={{ color: 'var(--accent)', fontWeight: 'bold' }}>{count}</span>
+          </div>
+        ))}
+      </div>
+
       {/* Filtros */}
       <div className="card" style={{ marginBottom: 20, display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
         <Filter size={16} color="var(--text-muted)" />
@@ -423,14 +458,14 @@ function Explorer() {
                         {details[opp.id]?.isFullyAnalyzed && (
                           <div style={{ 
                             gridColumn: '1 / -1', 
-                            background: 'rgba(var(--accent-rgb), 0.05)', 
+                            background: '#e8f5e9', // Verde Pastel Suave
                             borderRadius: 12, 
                             padding: 16, 
                             marginTop: 16,
-                            border: '1px dashed var(--accent)'
+                            border: '1px dashed #4caf50'
                           }}>
-                            <h4 style={{ margin: '0 0 10px 0', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: 8, color: 'var(--accent)' }}>
-                              <ShieldCheck size={18} /> Auditoría de Requisitos (IA)
+                            <h4 style={{ margin: '0 0 10px 0', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: 8, color: '#2e7d32' }}>
+                              <ShieldCheck size={18} /> Auditoría de Requisitos (IA) - Cargado de Memoria
                             </h4>
                             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 15, fontSize: '0.85rem' }}>
                               <div>
