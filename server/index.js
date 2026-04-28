@@ -522,44 +522,66 @@ app.get('/api/mercadopublico/search', async (req, res) => {
   }
 });
 
-// --- BUSCAR COMPRAS ÁGILES (VIP) ---
-app.get('/api/mercadopublico/search-agiles', async (req, res) => {
-  if (!MP_TICKET) return res.status(400).json({ error: 'API key no configurada' });
-  try {
-    // Buscar tipo SE (Compra Ágil) de hoy
-    const url = `${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}&codigoTipo=SE&fecha=${formatDateForAPI()}`;
-    console.log(`[VIP] Buscando Compras Ágiles: ${url.replace(MP_TICKET, '***')}`);
-    
-    const response = await fetchWithTimeout(url);
-    const data = await response.json();
-    
-    if (!data.Listado) return res.json({ results: [], total: 0 });
-    
-    const results = data.Listado.map(transformLicitacion);
-    
-    // Disparar auditoría turbo VIP inmediatamente
-    if (results.length > 0) {
-      addToAuditQueue(results);
-    }
-    
-    res.json({ results, total: results.length });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
-
-// --- BUSCAR TODO (FALLBACK) ---
+// --- BUSCAR TODO (CENTRALIZADO Y MASIVO) ---
 app.get('/api/search/all', async (req, res) => {
-  // Por ahora redirigir a la búsqueda normal de hoy
+  if (!MP_TICKET) return res.status(400).json({ error: 'API key no configurada' });
+  
   try {
-    const url = `${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}&fecha=${formatDateForAPI()}`;
-    const response = await fetchWithTimeout(url);
-    const data = await response.json();
-    if (!data.Listado) return res.json({ results: [] });
-    const results = data.Listado.map(transformLicitacion);
-    if (results.length > 0) addToAuditQueue(results);
-    res.json({ results });
+    console.log('[Escáner Central] Iniciando búsqueda masiva en todas las fuentes...');
+    const today = formatDateForAPI();
+    
+    // 1. Definir promesas de búsqueda en paralelo
+    const searches = [
+      // Mercado Público General
+      fetchWithTimeout(`${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}&fecha=${today}`).then(r => r.json()),
+      // Compras Ágiles (VIP)
+      fetchWithTimeout(`${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}&codigoTipo=SE&fecha=${today}`).then(r => r.json()),
+      // LinkedIn / Privadas (Fallback local por ahora hasta integrar APIs específicas)
+      Promise.resolve({ Listado: [] }) 
+    ];
+
+    const [mpData, agilesData, othersData] = await Promise.all(searches);
+
+    // 2. Transformar y unificar
+    const mpResults = (mpData.Listado || []).map(transformLicitacion);
+    const agilesResults = (agilesData.Listado || []).map(transformLicitacion);
+    
+    // Marcar las ágiles explícitamente
+    agilesResults.forEach(r => {
+      r.type = 'compra_agil';
+      r.typeName = 'Compra Ágil (SE)';
+    });
+
+    const allResults = [...agilesResults, ...mpResults];
+    
+    // 3. Eliminar duplicados por ID
+    const uniqueResults = [];
+    const seenIds = new Set();
+    for (const r of allResults) {
+      if (!seenIds.has(r.id)) {
+        seenIds.add(r.id);
+        uniqueResults.push(r);
+      }
+    }
+
+    // 4. Calcular match con perfil
+    const profile = readJSON('profile.json');
+    let processed = uniqueResults;
+    if (profile) {
+      processed = uniqueResults.map(r => calculateMatch(r, profile));
+    }
+    processed.sort((a, b) => b.matchScore - a.matchScore);
+
+    // 5. DISPARAR AUDITORÍA TURBO VIP (Priorizando Ágiles)
+    if (processed.length > 0) {
+      addToAuditQueue(processed);
+    }
+
+    console.log(`[Escáner Central] Finalizado. Encontradas: ${processed.length} oportunidades.`);
+    res.json({ results: processed, total: processed.length });
+
   } catch (err) {
+    console.error('[Escáner Central] Error:', err.message);
     res.status(500).json({ error: err.message });
   }
 });
