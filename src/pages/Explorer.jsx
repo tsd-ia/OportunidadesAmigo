@@ -242,7 +242,12 @@ function Explorer() {
       }}>
         {Object.entries(
           filtered.reduce((acc, o) => {
-            const reg = o.region || 'Desconocida';
+            // Limpiar nombres de región largos
+            let reg = o.region || 'Metropolitana';
+            if (reg.includes('Región de')) reg = reg.replace('Región de ', '');
+            if (reg.includes('Región del')) reg = reg.replace('Región del ', '');
+            if (reg.includes('Libertador General Bernardo O\'Higgins')) reg = 'O\'Higgins';
+            
             acc[reg] = (acc[reg] || 0) + 1;
             return acc;
           }, {})

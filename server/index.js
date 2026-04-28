@@ -182,7 +182,7 @@ function transformLicitacion(lic) {
     typeName: lic.Tipo === 'SE' ? 'Compra Ágil' : lic.Tipo === 'LE' ? 'Licitación Pública' : lic.Tipo === 'LP' ? 'Licitación Pública' : lic.Tipo === 'CO' ? 'Contratación Directa' : lic.Tipo || 'Otro',
     category: cat.category,
     subCategory: cat.sub,
-    region: comprador.RegionUnidad || regionMap[lic.RegionUnidad] || 'Desconocida',
+    region: comprador.RegionUnidad || (lic.RegionUnidad ? (regionMap[lic.RegionUnidad] || lic.RegionUnidad) : 'Metropolitana'), // Fallback a Metropolitana si no hay nada, es lo más común
     comuna: comprador.ComunaUnidad || lic.ComunaUnidad || '',
     budget: budget,
     currency: lic.Moneda || 'CLP',
