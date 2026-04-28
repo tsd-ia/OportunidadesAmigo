@@ -196,23 +196,35 @@ async function executeAudit(codigo) {
 async function processAuditQueue() {
   if (isProcessingQueue || auditQueue.length === 0) return;
   isProcessingQueue = true;
-  console.log(`[Escáner] Iniciando procesamiento de cola (${auditQueue.length} pendientes)...`);
   
-  while (auditQueue.length > 0) {
-    const id = auditQueue.shift();
-    const cached = getFromMemory(id);
-    if (!cached || !cached.isFullyAnalyzed) {
-      console.log(`[Escáner] Procesando automáticamente: ${id}`);
-      try {
-        await executeAudit(id);
-        await new Promise(r => setTimeout(r, 5000));
-      } catch (err) {
-        console.error(`[Escáner] Error en ${id}:`, err.message);
+  const CONCURRENCY = 3; // Procesar 3 licitaciones a la vez
+  console.log(`[Escáner Turbo] Iniciando con ${auditQueue.length} pendientes. Concurrencia: ${CONCURRENCY}`);
+
+  const worker = async () => {
+    while (auditQueue.length > 0) {
+      const id = auditQueue.shift();
+      const cached = getFromMemory(id);
+      if (!cached || !cached.isFullyAnalyzed) {
+        console.log(`[Escáner] Procesando: ${id}`);
+        try {
+          await executeAudit(id);
+          // Pequeño respiro para el trabajador
+          await new Promise(r => setTimeout(r, 2000));
+        } catch (err) {
+          console.error(`[Escáner] Error en ${id}:`, err.message);
+        }
       }
     }
-  }
+  };
+
+  // Lanzar trabajadores en paralelo
+  const workers = Array(CONCURRENCY).fill(null).map(() => worker());
+  await Promise.all(workers);
+  
   isProcessingQueue = false;
+  console.log(`[Escáner Turbo] Cola finalizada.`);
 }
+
 
 function addToAuditQueue(ids) {
   const newIds = ids.filter(id => !auditQueue.includes(id));
