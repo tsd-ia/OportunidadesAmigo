@@ -420,7 +420,7 @@ app.post('/api/auto-analyze/:codigo', async (req, res) => {
     if (!attachmentsBtn) throw new Error('No se encontró el botón de anexos');
     
     await attachmentsBtn.click();
-    await page.waitForTimeout(3000); // Esperar que cargue el popup o la nueva página
+    await new Promise(r => setTimeout(r, 3000)); // Esperar que cargue el popup o la nueva página
     
     // El popup suele ser una nueva ventana o la misma página. Si es popup, hay que cambiar de target.
     const targets = await browser.targets();
