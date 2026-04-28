@@ -522,66 +522,75 @@ app.get('/api/mercadopublico/search', async (req, res) => {
   }
 });
 
-// --- BUSCAR TODO (CENTRALIZADO Y MASIVO) ---
+// --- BUSCAR TODO (CENTRALIZADO Y MASIVO - MULTI-DÍA) ---
 app.get('/api/search/all', async (req, res) => {
   if (!MP_TICKET) return res.status(400).json({ error: 'API key no configurada' });
   
   try {
-    console.log('[Escáner Central] Iniciando búsqueda masiva en todas las fuentes...');
-    const today = formatDateForAPI();
+    console.log('[Escáner Central] Iniciando búsqueda masiva de los últimos 3 días...');
     
-    // 1. Definir promesas de búsqueda en paralelo
-    const searches = [
-      // Mercado Público General
-      fetchWithTimeout(`${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}&fecha=${today}`).then(r => r.json()),
-      // Compras Ágiles (VIP)
-      fetchWithTimeout(`${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}&codigoTipo=SE&fecha=${today}`).then(r => r.json()),
-      // LinkedIn / Privadas (Fallback local por ahora hasta integrar APIs específicas)
-      Promise.resolve({ Listado: [] }) 
-    ];
-
-    const [mpData, agilesData, othersData] = await Promise.all(searches);
-
-    // 2. Transformar y unificar
-    const mpResults = (mpData.Listado || []).map(transformLicitacion);
-    const agilesResults = (agilesData.Listado || []).map(transformLicitacion);
-    
-    // Marcar las ágiles explícitamente
-    agilesResults.forEach(r => {
-      r.type = 'compra_agil';
-      r.typeName = 'Compra Ágil (SE)';
-    });
-
-    const allResults = [...agilesResults, ...mpResults];
-    
-    // 3. Eliminar duplicados por ID
-    const uniqueResults = [];
-    const seenIds = new Set();
-    for (const r of allResults) {
-      if (!seenIds.has(r.id)) {
-        seenIds.add(r.id);
-        uniqueResults.push(r);
-      }
+    // Generar fechas para los últimos 3 días
+    const dates = [];
+    for (let i = 0; i < 3; i++) {
+      const d = new Date();
+      d.setDate(d.getDate() - i);
+      dates.push(formatDateForAPI(d));
     }
 
-    // 4. Calcular match con perfil
+    const allSearches = [];
+    for (const date of dates) {
+      // Licitaciones generales
+      allSearches.push(fetchWithTimeout(`${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}&fecha=${date}`).then(r => r.json()));
+      // Compras Ágiles
+      allSearches.push(fetchWithTimeout(`${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}&codigoTipo=SE&fecha=${date}`).then(r => r.json()));
+    }
+
+    console.log(`[Escáner Central] Lanzando ${allSearches.length} peticiones en paralelo...`);
+    const searchResults = await Promise.all(allSearches);
+
+    // Unificar y transformar
+    const unified = [];
+    const seenIds = new Set();
+
+    searchResults.forEach((data, index) => {
+      if (data && data.Listado) {
+        data.Listado.forEach(lic => {
+          const transformed = transformLicitacion(lic);
+          // Si el índice es impar, es una Compra Ágil (SE)
+          if (index % 2 !== 0) {
+            transformed.type = 'compra_agil';
+            transformed.typeName = 'Compra Ágil (SE)';
+          }
+          
+          if (!seenIds.has(transformed.id)) {
+            seenIds.add(transformed.id);
+            unified.push(transformed);
+          }
+        });
+      }
+    });
+
+    // Calcular match con perfil
     const profile = readJSON('profile.json');
-    let processed = uniqueResults;
+    let processed = unified;
     if (profile) {
-      processed = uniqueResults.map(r => calculateMatch(r, profile));
+      processed = unified.map(r => calculateMatch(r, profile));
     }
     processed.sort((a, b) => b.matchScore - a.matchScore);
 
-    // 5. DISPARAR AUDITORÍA TURBO VIP (Priorizando Ágiles)
+    // Persistir en last_search.json
+    writeJSON('last_search.json', { results: processed, total: processed.length, timestamp: new Date().toISOString() });
+
+    // DISPARAR AUDITORÍA TURBO VIP
     if (processed.length > 0) {
       addToAuditQueue(processed);
     }
 
-    console.log(`[Escáner Central] Finalizado. Encontradas: ${processed.length} oportunidades.`);
+    console.log(`[Escáner Central] Finalizado. Total: ${processed.length} oportunidades únicas.`);
     res.json({ results: processed, total: processed.length });
 
   } catch (err) {
-    console.error('[Escáner Central] Error:', err.message);
+    console.error('[Escáner Central] Error Crítico:', err.message);
     res.status(500).json({ error: err.message });
   }
 });

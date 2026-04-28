@@ -817,15 +817,7 @@
     ],
     "items": [
       {
-        "Correlativo": 1,
-        "CodigoProducto": 22101619,
-        "CodigoCategoria": "22101600",
-        "Categoria": "Maquinaria para construcción y edificación / Maquinaria pesada de construcción / Equipos de pavimentación",
-        "NombreProducto": "Máquinas niveladoras",
-        "Descripcion": "REPUESTOS PARA MOTONIVELADORA KOMATSU MODELO GD675-5 AÑO (2012-2014). SEGÚN PUNTO 9.1 DE LAS BASES DE LICITACIÓN.",
-        "UnidadMedida": "Global",
-        "Cantidad": 1,
-        "Adjudicacion": null
+        "Nombre": "Auditado Automáticamente"
       }
     ],
     "cantidadItems": 1,
@@ -833,7 +825,13 @@
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T20:47:58.827Z"
+    "updatedAt": "2026-04-28T21:53:08.271Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1075963-192-LE26": {
     "id": "1075963-192-LE26",
@@ -1355,37 +1353,7 @@
     ],
     "items": [
       {
-        "Correlativo": 1,
-        "CodigoProducto": 42293507,
-        "CodigoCategoria": "42293500",
-        "Categoria": "Equipamiento y suministros médicos / Productos quirúrgicos / Cánulas, puntas y estiletes de irrigación, succión quirúrgica y productos relacionados",
-        "NombreProducto": "Depósitos de aspiración quirúrgicos",
-        "Descripcion": "20-225-050-091-00 GUANTES PROCEDIMIENTOS S/POLVO NITRILO S",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 2,
-        "CodigoProducto": 42293507,
-        "CodigoCategoria": "42293500",
-        "Categoria": "Equipamiento y suministros médicos / Productos quirúrgicos / Cánulas, puntas y estiletes de irrigación, succión quirúrgica y productos relacionados",
-        "NombreProducto": "Depósitos de aspiración quirúrgicos",
-        "Descripcion": "20-225-050-089-00 GUANTES PROCEDIMIENTOS S/POLVO NITRILO M",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 3,
-        "CodigoProducto": 42293507,
-        "CodigoCategoria": "42293500",
-        "Categoria": "Equipamiento y suministros médicos / Productos quirúrgicos / Cánulas, puntas y estiletes de irrigación, succión quirúrgica y productos relacionados",
-        "NombreProducto": "Depósitos de aspiración quirúrgicos",
-        "Descripcion": "20-225-050-092-00 GUANTES PROCEDIMIENTOS S/POLVO NITRILO L",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
+        "Nombre": "Auditado Automáticamente"
       }
     ],
     "cantidadItems": 3,
@@ -1393,7 +1361,13 @@
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T20:51:27.253Z"
+    "updatedAt": "2026-04-28T21:53:38.925Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1237328-18-LP26": {
     "id": "1237328-18-LP26",
@@ -6161,5 +6135,1145 @@
     "matchReasons": [],
     "isOutsideRubro": false,
     "updatedAt": "2026-04-28T21:26:42.801Z"
+  },
+  "1017312-5-LP26": {
+    "id": "1017312-5-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [
+      {
+        "event": "Fecha de Publicación",
+        "date": "15-04-2026 17:28:00"
+      },
+      {
+        "event": "Fecha inicio de preguntas",
+        "date": "15-04-2026 18:01:00"
+      },
+      {
+        "event": "Fecha final de preguntas",
+        "date": "27-04-2026 15:47:00"
+      },
+      {
+        "event": "Fecha de publicación de respuestas",
+        "date": "05-05-2026 23:59:00"
+      },
+      {
+        "event": "Fecha de cierre de recepción de la oferta",
+        "date": "01-06-2026 16:00:00"
+      },
+      {
+        "event": "Fecha de acto de apertura técnica",
+        "date": "02-06-2026 10:00:00"
+      },
+      {
+        "event": "Fecha de acto de apertura económica (referencial)",
+        "date": "02-06-2026 10:00:00"
+      },
+      {
+        "event": "Fecha de Adjudicación",
+        "date": "10-09-2026 18:00:00"
+      }
+    ],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:49:52.317Z",
+    "isFullyAnalyzed": true
+  },
+  "1002584-4-LE26": {
+    "id": "1002584-4-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [
+      "Fecha de Publicación: 31-03-2026 11:32:57",
+      "Fecha inicio de preguntas: 31-03-2026 12:01:00",
+      "Fecha final de preguntas: 02-04-2026 16:00:00",
+      "Fecha de publicación de respuestas: 06-04-2026 16:00:00",
+      "Fecha de cierre de recepción de la oferta: 07-04-2026 16:01:00",
+      "Fecha de acto de apertura técnica: 07-04-2026 16:02:00",
+      "Fecha de acto de apertura económica (referencial): 07-04-2026 16:02:00",
+      "Fecha de Adjudicación: 28-04-2026 16:45:27",
+      "Fecha de entrega en soporte fisico: No hay información",
+      "Fecha estimada de firma de contrato: No hay información"
+    ],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:49:52.469Z",
+    "isFullyAnalyzed": true
+  },
+  "1000-7-LE26": {
+    "id": "1000-7-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "El contenido proporcionado indica que los 'Antecedentes para incluir en la oferta' (Punto N°1.5. de las bases de licitación) y los 'Requisitos para contratar al proveedor adjudicado' detallarán la información sobre experiencia. No se especifica en el extracto un requisito de experiencia concreto en términos de años o proyectos específicos, más allá de las inhabilidades generales mencionadas.",
+    "certifications": [],
+    "siteVisit": "No se especifica en el contenido proporcionado la necesidad o posibilidad de realizar una visita a terreno.",
+    "keyDates": [
+      {
+        "description": "Fecha de Publicación",
+        "date": "28-04-2026 17:02:54"
+      },
+      {
+        "description": "Fecha inicio de preguntas",
+        "date": "28-04-2026 18:05:00"
+      },
+      {
+        "description": "Fecha final de preguntas",
+        "date": "05-05-2026 18:00:00"
+      },
+      {
+        "description": "Fecha de publicación de respuestas",
+        "date": "06-05-2026 18:00:00"
+      },
+      {
+        "description": "Fecha de cierre de recepción de la oferta",
+        "date": "08-05-2026 15:10:00"
+      },
+      {
+        "description": "Fecha de acto de apertura técnica",
+        "date": "08-05-2026 15:10:00"
+      },
+      {
+        "description": "Fecha de acto de apertura económica (referencial)",
+        "date": "08-05-2026 15:10:00"
+      },
+      {
+        "description": "Fecha de Adjudicación",
+        "date": "25-05-2026 18:00:00"
+      }
+    ],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:49:57.068Z",
+    "isFullyAnalyzed": true
+  },
+  "1019-31-LE26": {
+    "id": "1019-31-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "No se especifican requisitos de experiencia para los oferentes en el contenido proporcionado.",
+    "certifications": [],
+    "siteVisit": "Descripción del lugar de instalación: Sala de central de Laboratorio Ambiental, segundo piso del edificio en Santa Rosa 342, Santiago. Acceso solo a través de escaleras. No se menciona una visita obligatoria o voluntaria para los oferentes.",
+    "keyDates": [
+      {
+        "description": "Fecha de Publicación",
+        "date": "30-03-2026 11:36:42"
+      },
+      {
+        "description": "Fecha inicio de preguntas",
+        "date": "30-03-2026 14:05:00"
+      },
+      {
+        "description": "Fecha final de preguntas",
+        "date": "02-04-2026 15:05:00"
+      },
+      {
+        "description": "Fecha de publicación de respuestas",
+        "date": "08-04-2026 15:05:00"
+      },
+      {
+        "description": "Fecha de cierre de recepción de la oferta",
+        "date": "14-04-2026 15:36:00"
+      },
+      {
+        "description": "Fecha de acto de apertura técnica",
+        "date": "14-04-2026 15:37:00"
+      },
+      {
+        "description": "Fecha de acto de apertura económica (referencial)",
+        "date": "14-04-2026 15:37:00"
+      },
+      {
+        "description": "Fecha de Adjudicación",
+        "date": "28-04-2026 17:26:00"
+      },
+      {
+        "description": "Vigencia del contrato hasta",
+        "date": "14-08-2026 0:00:00"
+      }
+    ],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:50:13.530Z",
+    "isFullyAnalyzed": true
+  },
+  "1057501-222-LE26": {
+    "id": "1057501-222-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:50:22.839Z",
+    "isFullyAnalyzed": true
+  },
+  "1057501-208-LP26": {
+    "id": "1057501-208-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "No se especifica información detallada sobre la experiencia requerida para los oferentes en el contenido proporcionado. Los 'Requisitos para contratar al proveedor adjudicado' se refieren a inhabilidades y situación legal/financiera, no a experiencia previa en proyectos.",
+    "certifications": [],
+    "siteVisit": "No se menciona la realización de una visita a terreno en el contenido proporcionado.",
+    "keyDates": [
+      {
+        "event": "Fecha de Publicación",
+        "date": "07-04-2026 10:16:46"
+      },
+      {
+        "event": "Fecha inicio de preguntas",
+        "date": "07-04-2026 10:30:00"
+      },
+      {
+        "event": "Fecha final de preguntas",
+        "date": "13-04-2026 10:00:00"
+      },
+      {
+        "event": "Fecha de publicación de respuestas",
+        "date": "16-04-2026 18:00:00"
+      },
+      {
+        "event": "Fecha de cierre de recepción de la oferta",
+        "date": "28-04-2026 15:00:00"
+      },
+      {
+        "event": "Fecha de acto de apertura técnica",
+        "date": "28-04-2026 15:01:00"
+      },
+      {
+        "event": "Fecha de acto de apertura económica (referencial)",
+        "date": "28-04-2026 15:01:00"
+      },
+      {
+        "event": "Fecha de Adjudicación",
+        "date": "28-08-2026 16:37:00"
+      }
+    ],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:50:28.039Z",
+    "isFullyAnalyzed": true
+  },
+  "1057429-51-LP25": {
+    "id": "1057429-51-LP25",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "No se especifica experiencia requerida para los proveedores en el contenido proporcionado. Los requisitos para contratar al proveedor adjudicado se centran en la habilidad en el Registro de Proveedores y la ausencia de inhabilidades legales o financieras, así como la presentación de documentos administrativos estándar.",
+    "certifications": [],
+    "siteVisit": "No se menciona la necesidad o posibilidad de realizar una visita a terreno en el contenido proporcionado de la ficha o anexos.",
+    "keyDates": [
+      {
+        "description": "Fecha de Publicación",
+        "date": "29-12-2025 16:21:06"
+      },
+      {
+        "description": "Fecha inicio de preguntas",
+        "date": "29-12-2025 19:38:00"
+      },
+      {
+        "description": "Fecha final de preguntas",
+        "date": "07-01-2026 19:38:00"
+      },
+      {
+        "description": "Fecha de publicación de respuestas",
+        "date": "12-01-2026 19:38:00"
+      },
+      {
+        "description": "Fecha de cierre de recepción de la oferta",
+        "date": "19-01-2026 17:32:00"
+      },
+      {
+        "description": "Fecha de acto de apertura técnica",
+        "date": "19-01-2026 17:33:00"
+      },
+      {
+        "description": "Fecha de acto de apertura económica (referencial)",
+        "date": "19-01-2026 17:33:00"
+      },
+      {
+        "description": "Fecha de Adjudicación",
+        "date": "28-04-2026 16:51:46"
+      },
+      {
+        "description": "Fecha de entrega en soporte fisico",
+        "date": "No hay información"
+      },
+      {
+        "description": "Fecha estimada de firma de contrato",
+        "date": "No hay información"
+      }
+    ],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:50:29.883Z",
+    "isFullyAnalyzed": true
+  },
+  "1057501-268-LE26": {
+    "id": "1057501-268-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:50:31.206Z",
+    "isFullyAnalyzed": true
+  },
+  "1057501-740-LP25": {
+    "id": "1057501-740-LP25",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:50:37.271Z",
+    "isFullyAnalyzed": true
+  },
+  "1057503-81-LP26": {
+    "id": "1057503-81-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:50:38.886Z",
+    "isFullyAnalyzed": true
+  },
+  "1057503-82-LP26": {
+    "id": "1057503-82-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:50:40.332Z",
+    "isFullyAnalyzed": true
+  },
+  "1057544-144-LE26": {
+    "id": "1057544-144-LE26",
+    "budget": 1.0575441442628042e+122,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:50:56.170Z",
+    "isFullyAnalyzed": true
+  },
+  "1058045-5-LE26": {
+    "id": "1058045-5-LE26",
+    "budget": 1000,
+    "guarantees": "No se especifican las garantías requeridas en el texto proporcionado de la sección 8 de las bases.",
+    "experience": "No se mencionan requisitos de experiencia para el proveedor en el texto proporcionado.",
+    "certifications": "No se mencionan certificaciones específicas para el proveedor o para el producto (más allá de ser 'agua destilada') como requisito en el texto proporcionado.",
+    "siteVisit": "No se requiere visita a terreno según el texto proporcionado.",
+    "keyDates": [
+      {
+        "event": "Fecha de Publicación",
+        "date": "24-03-2026 15:50:09"
+      },
+      {
+        "event": "Fecha inicio de preguntas",
+        "date": "24-03-2026 19:38:00"
+      },
+      {
+        "event": "Fecha final de preguntas",
+        "date": "30-03-2026 12:00:00"
+      },
+      {
+        "event": "Fecha de publicación de respuestas",
+        "date": "01-04-2026 12:00:00"
+      },
+      {
+        "event": "Fecha de cierre de recepción de la oferta",
+        "date": "09-04-2026 15:25:00"
+      },
+      {
+        "event": "Fecha de acto de apertura técnica",
+        "date": "09-04-2026 15:30:00"
+      },
+      {
+        "event": "Fecha de acto de apertura económica (referencial)",
+        "date": "09-04-2026 15:30:00"
+      },
+      {
+        "event": "Fecha de Adjudicación",
+        "date": "28-04-2026 15:11:11"
+      }
+    ],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:50:57.654Z",
+    "isFullyAnalyzed": true
+  },
+  "1058085-57-LP26": {
+    "id": "1058085-57-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "No especificado en el contenido proporcionado.",
+    "certifications": [],
+    "siteVisit": "No se requiere visita a terreno.",
+    "keyDates": [
+      "Fecha de Publicación: 08-04-2026 13:34:10",
+      "Fecha inicio de preguntas: 08-04-2026 15:01:00",
+      "Fecha final de preguntas: 15-04-2026 16:00:00",
+      "Fecha de publicación de respuestas: 17-04-2026 17:00:00",
+      "Fecha de cierre de recepción de la oferta: 28-04-2026 16:00:00",
+      "Fecha de acto de apertura técnica: 28-04-2026 16:01:00",
+      "Fecha de acto de apertura económica (referencial): 28-04-2026 16:01:00",
+      "Fecha de Adjudicación: 31-08-2026 11:11:00"
+    ],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:50:59.133Z",
+    "isFullyAnalyzed": true
+  },
+  "1058085-70-LP26": {
+    "id": "1058085-70-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:51:07.546Z",
+    "isFullyAnalyzed": true
+  },
+  "1075963-133-LE26": {
+    "id": "1075963-133-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [
+      "Fecha de cierre de recepción de la oferta: 30-03-2026 17:30:00",
+      "Fecha de Publicación: 18-03-2026 12:13:42",
+      "Fecha inicio de preguntas: 18-03-2026 19:00:00",
+      "Fecha final de preguntas: 23-03-2026 20:00:00",
+      "Fecha de publicación de respuestas: 26-03-2026 20:00:00",
+      "Fecha de acto de apertura técnica: 30-03-2026 17:31:00",
+      "Fecha de acto de apertura económica (referencial): 30-03-2026 17:31:00",
+      "Fecha de Adjudicación: 28-04-2026 11:53:35"
+    ],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:51:17.793Z",
+    "isFullyAnalyzed": true
+  },
+  "1068829-47-O125": {
+    "id": "1068829-47-O125",
+    "budget": 106622382,
+    "guarantees": [],
+    "experience": "No se especifica información detallada sobre requisitos de experiencia para el proponente en el texto proporcionado. Se menciona la especialidad 'Inspecciones' y categoría '7.1 Obras Viales y Aeropuertos. 2da', lo cual es una clasificación del servicio, no un requisito directo para el proponente.",
+    "certifications": [],
+    "siteVisit": "No se menciona en el texto proporcionado la realización de una visita a terreno.",
+    "keyDates": [
+      "Fecha de Publicación: 26-09-2025 11:09:43",
+      "Fecha inicio de preguntas: 26-09-2025 12:01:00",
+      "Fecha final de preguntas: 01-10-2025 23:59:00",
+      "Fecha de publicación de respuestas: 06-10-2025 23:59:00",
+      "Fecha de cierre de recepción de la oferta: 10-10-2025 11:00:00",
+      "Fecha de acto de apertura técnica: 10-10-2025 12:00:00",
+      "Fecha de acto de apertura económica: 17-10-2025 12:00:00",
+      "Fecha de Adjudicación: 15-12-2025 23:59:00"
+    ],
+    "items": [],
+    "updatedAt": "2026-04-28T21:51:18.045Z",
+    "isFullyAnalyzed": true
+  },
+  "1080936-16-LE26": {
+    "id": "1080936-16-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:51:27.762Z",
+    "isFullyAnalyzed": true
+  },
+  "1079576-12-LP26": {
+    "id": "1079576-12-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:51:28.358Z",
+    "isFullyAnalyzed": true
+  },
+  "1075963-145-LR25": {
+    "id": "1075963-145-LR25",
+    "budget": 5000,
+    "guarantees": [],
+    "experience": "Anexo Nº 5: Experiencia con Grandes Clientes.",
+    "certifications": [
+      "Declaración Jurada de Requisitos para Ofertar",
+      "Anexo Nº 2: Certificado y Declaración jurada de aceptación y conocimiento de las Bases Administrativas, Bases Técnicas y Anexos",
+      "Anexo Nº 3: Declaración Jurada de Vínculos",
+      "Anexo Nº 4: Pacto de integridad",
+      "Encontrarse hábil en el Registro de Proveedores",
+      "Certificado de la autoridad competente (para deudas previsionales o de salud)"
+    ],
+    "siteVisit": "No se especifica información sobre visita a terreno.",
+    "keyDates": [
+      {
+        "description": "Fecha de Publicación",
+        "date": "08-10-2025 13:20:48"
+      },
+      {
+        "description": "Fecha inicio de preguntas",
+        "date": "08-10-2025 17:30:00"
+      },
+      {
+        "description": "Fecha final de preguntas",
+        "date": "28-10-2025 17:30:00"
+      },
+      {
+        "description": "Fecha de publicación de respuestas",
+        "date": "03-11-2025 15:01:00"
+      },
+      {
+        "description": "Fecha de cierre de recepción de la oferta",
+        "date": "11-11-2025 17:30:00"
+      },
+      {
+        "description": "Fecha de acto de apertura técnica",
+        "date": "11-11-2025 17:31:00"
+      },
+      {
+        "description": "Fecha de acto de apertura económica (referencial)",
+        "date": "11-11-2025 17:31:00"
+      },
+      {
+        "description": "Fecha de Adjudicación",
+        "date": "28-04-2026 15:52:00"
+      }
+    ],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:51:34.021Z",
+    "isFullyAnalyzed": true
+  },
+  "1094080-9-LE26": {
+    "id": "1094080-9-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:51:38.709Z",
+    "isFullyAnalyzed": true
+  },
+  "1213444-12-LE26": {
+    "id": "1213444-12-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:51:39.000Z",
+    "isFullyAnalyzed": true
+  },
+  "1237849-9-LE26": {
+    "id": "1237849-9-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "No se especifican requisitos de experiencia explícitos en el contenido proporcionado. Los requisitos mencionados se centran en inhabilidades y declaraciones juradas.",
+    "certifications": [],
+    "siteVisit": "No se menciona la obligatoriedad o existencia de una visita a terreno.",
+    "keyDates": [
+      {
+        "name": "Fecha de Publicación",
+        "date": "28-04-2026 17:12:40"
+      },
+      {
+        "name": "Fecha inicio de preguntas",
+        "date": "28-04-2026 17:31:00"
+      },
+      {
+        "name": "Fecha final de preguntas",
+        "date": "04-05-2026 13:00:00"
+      },
+      {
+        "name": "Fecha de publicación de respuestas",
+        "date": "04-05-2026 17:00:00"
+      },
+      {
+        "name": "Fecha de cierre de recepción de la oferta",
+        "date": "11-05-2026 15:01:00"
+      },
+      {
+        "name": "Fecha de acto de apertura técnica",
+        "date": "11-05-2026 15:02:00"
+      },
+      {
+        "name": "Fecha de acto de apertura económica (referencial)",
+        "date": "11-05-2026 15:02:00"
+      },
+      {
+        "name": "Fecha de Adjudicación",
+        "date": "18-05-2026 17:45:00"
+      },
+      {
+        "name": "Fecha estimada de firma de contrato",
+        "date": "03-06-2026"
+      }
+    ],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:51:54.115Z",
+    "isFullyAnalyzed": true
+  },
+  "1283719-6-LE25": {
+    "id": "1283719-6-LE25",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "Acreditación de experiencia en el rubro, detallando perfil profesional y experiencia del/la Jefe(a) de Estudio, del/la Encargado(a) de Vinculación con el Medio y del/la Analista, conforme a lo exigido en las bases.",
+    "certifications": [
+      "Declaración Jurada de Requisitos para Ofertar (firma electrónica obligatoria)",
+      "Identificación completa del proponente (sea persona natural o jurídica)",
+      "Declaraciones juradas requeridas (toma de conocimiento y ausencia de conflicto de interés)",
+      "Declaración para Uniones Temporales de Proveedores (cuando corresponda)",
+      "Certificado de inscripción vigente de la sociedad o EIRL",
+      "Rol Único Tributario",
+      "Acreditación de giro",
+      "Patente comercial vigente"
+    ],
+    "siteVisit": "No se menciona visita a terreno en el texto proporcionado.",
+    "keyDates": [
+      "Fecha de Publicación: 17-04-2026 12:09:41",
+      "Fecha inicio de preguntas: 17-04-2026 15:00:00",
+      "Fecha final de preguntas: 22-04-2026 23:59:00",
+      "Fecha de publicación de respuestas: 23-04-2026 18:00:00",
+      "Fecha de cierre de recepción de la oferta: 28-04-2026 15:00:00",
+      "Fecha de acto de apertura técnica: 28-04-2026 15:30:00",
+      "Fecha de acto de apertura económica (referencial): 28-04-2026 15:30:00",
+      "Fecha de Adjudicación: 30-04-2026 15:00:00"
+    ],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:52:01.622Z",
+    "isFullyAnalyzed": true
+  },
+  "1336-2-LP26": {
+    "id": "1336-2-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "No se mencionan requisitos específicos de experiencia en el texto proporcionado. Los detalles podrían estar contenidos en los anexos técnicos o administrativos, como el 'ANEXO_N°_3_ANTECEDENTES_TECNICOS_-_HORAS_MAQUINA.DOC' o 'ANEXO_N°_2__ANTECEDENTES_ADMINISTRATIVOS-_HORAS_MAQUINA.DOC', cuyo contenido no fue extraído.",
+    "certifications": [],
+    "siteVisit": "No se especifica la realización de una visita a terreno obligatoria u opcional en el contenido proporcionado.",
+    "keyDates": [
+      {
+        "event": "Fecha de Publicación",
+        "date": "08-04-2026 17:14:47"
+      },
+      {
+        "event": "Fecha inicio de preguntas",
+        "date": "08-04-2026 20:44:00"
+      },
+      {
+        "event": "Fecha final de preguntas",
+        "date": "13-04-2026 20:44:00"
+      },
+      {
+        "event": "Fecha de publicación de respuestas",
+        "date": "16-04-2026 20:44:00"
+      },
+      {
+        "event": "Fecha de cierre de recepción de la oferta",
+        "date": "28-04-2026 12:00:00"
+      },
+      {
+        "event": "Fecha de acto de apertura técnica",
+        "date": "28-04-2026 12:01:00"
+      },
+      {
+        "event": "Fecha de acto de apertura económica (referencial)",
+        "date": "28-04-2026 12:01:00"
+      },
+      {
+        "event": "Fecha de Adjudicación",
+        "date": "12-05-2026 12:17:00"
+      }
+    ],
+    "items": [],
+    "updatedAt": "2026-04-28T21:52:06.199Z",
+    "isFullyAnalyzed": true
+  },
+  "1350296-36-L126": {
+    "id": "1350296-36-L126",
+    "budget": 1.350296361261304e+120,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:52:13.208Z",
+    "isFullyAnalyzed": true
+  },
+  "1423921-7-LE26": {
+    "id": "1423921-7-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T21:52:15.043Z",
+    "isFullyAnalyzed": true
+  },
+  "1428-5-LE26": {
+    "id": "1428-5-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:52:18.240Z",
+    "isFullyAnalyzed": true
+  },
+  "1490160-22-LE26": {
+    "id": "1490160-22-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:52:24.662Z",
+    "isFullyAnalyzed": true
+  },
+  "1503-12-O126": {
+    "id": "1503-12-O126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T21:52:24.700Z",
+    "isFullyAnalyzed": true
+  },
+  "1549-31-LP26": {
+    "id": "1549-31-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:52:31.377Z",
+    "isFullyAnalyzed": true
+  },
+  "1643-28-LP26": {
+    "id": "1643-28-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T21:52:37.987Z",
+    "isFullyAnalyzed": true
+  },
+  "1662-6-LP26": {
+    "id": "1662-6-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:52:41.146Z",
+    "isFullyAnalyzed": true
+  },
+  "1641-84-I226": {
+    "id": "1641-84-I226",
+    "budget": 1.6418422603032027e+120,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:52:46.258Z",
+    "isFullyAnalyzed": true
+  },
+  "1663-57-LE26": {
+    "id": "1663-57-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:52:47.281Z",
+    "isFullyAnalyzed": true
+  },
+  "1725-77-LP26": {
+    "id": "1725-77-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:52:50.967Z",
+    "isFullyAnalyzed": true
+  },
+  "1725-97-LP26": {
+    "id": "1725-97-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:52:56.209Z",
+    "isFullyAnalyzed": true
+  },
+  "1747-22-LE26": {
+    "id": "1747-22-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:52:57.171Z",
+    "isFullyAnalyzed": true
+  },
+  "1979-91-LP26": {
+    "id": "1979-91-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:53:01.459Z",
+    "isFullyAnalyzed": true
+  },
+  "1037199-1-LE26": {
+    "id": "1037199-1-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:53:11.270Z",
+    "isFullyAnalyzed": true
+  },
+  "1057402-18-LE26": {
+    "id": "1057402-18-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:53:18.237Z",
+    "isFullyAnalyzed": true
+  },
+  "1057439-46-LR26": {
+    "id": "1057439-46-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:53:20.263Z",
+    "isFullyAnalyzed": true
+  },
+  "2065-13-LE26": {
+    "id": "2065-13-LE26",
+    "budget": 2.0651326220042026e+148,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:53:23.148Z",
+    "isFullyAnalyzed": true
+  },
+  "1057501-165-LP26": {
+    "id": "1057501-165-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:53:28.172Z",
+    "isFullyAnalyzed": true
+  },
+  "1057501-218-LE26": {
+    "id": "1057501-218-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:53:29.724Z",
+    "isFullyAnalyzed": true
+  },
+  "1057501-226-LE26": {
+    "id": "1057501-226-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:53:33.212Z",
+    "isFullyAnalyzed": true
+  },
+  "1057503-42-LP26": {
+    "id": "1057503-42-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:53:39.836Z",
+    "isFullyAnalyzed": true
+  },
+  "1057627-3-L126": {
+    "id": "1057627-3-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:53:43.611Z",
+    "isFullyAnalyzed": true
+  },
+  "1058095-9-LE26": {
+    "id": "1058095-9-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T21:53:50.497Z",
+    "isFullyAnalyzed": true
   }
 }
