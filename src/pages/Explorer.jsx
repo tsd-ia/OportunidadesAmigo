@@ -104,15 +104,23 @@ function Explorer() {
         method: 'POST'
       });
       const data = await res.json();
-      if (data.budget) {
+      if (data.success) {
         setDetails(prev => ({
           ...prev,
-          [id]: { ...prev[id], budget: data.budget }
+          [id]: { 
+            ...prev[id], 
+            ...data,
+            budget: (data.budget && data.budget > 0) ? data.budget : prev[id]?.budget
+          }
         }));
-        setOpportunities(prev => prev.map(o => o.id === id ? { ...o, budget: data.budget } : o));
-        alert("¡Monto extraído automáticamente con éxito!");
+        
+        if (data.budget > 0) {
+          setOpportunities(prev => prev.map(o => o.id === id ? { ...o, budget: data.budget } : o));
+        }
+        
+        alert("¡Auditoría completa finalizada con éxito!");
       } else {
-        alert("No se pudo extraer el monto automáticamente. El captcha fue superado pero el dato no es visible en el HTML. Por favor intenta Drag & Drop con el PDF.");
+        alert(data.message || "No se pudo realizar la auditoría completa.");
       }
     } catch (err) {
       console.error(err);

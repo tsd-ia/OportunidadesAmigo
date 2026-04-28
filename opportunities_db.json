@@ -1,1 +1,29 @@
-{}
+{
+  "3902-22-LE26": {
+    "id": "3902-22-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "Experiencia de la empresa en cantidad de proyectos realizados, referidos a obras de igual o similar naturaleza (construcción de nichos, obras de albañilería estructural, construcción de edificaciones menores de uso público, entre otras).",
+    "certifications": [
+      "Acreditar existencia de programas de integridad y ética empresarial (Anexo N°4)"
+    ],
+    "siteVisit": "",
+    "keyDates": [
+      "Fecha de Publicación: 27-04-2026 15:04:16",
+      "Fecha inicio de preguntas: 27-04-2026 15:31:00",
+      "Fecha final de preguntas: 04-05-2026 17:00:00",
+      "Fecha de publicación de respuestas: 07-05-2026 16:00:00",
+      "Fecha de cierre de recepción de la oferta: 12-05-2026 15:30:00",
+      "Fecha de acto de apertura técnica: 12-05-2026 15:31:00",
+      "Fecha de acto de apertura económica (referencial): 12-05-2026 15:31:00",
+      "Fecha de Adjudicación: 26-06-2026 17:00:00"
+    ],
+    "items": [
+      {
+        "Nombre": "Analizado por IA Auditora"
+      }
+    ],
+    "updatedAt": "2026-04-28T02:12:56.717Z",
+    "isFullyAnalyzed": true
+  }
+}

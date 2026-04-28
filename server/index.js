@@ -70,11 +70,21 @@ function writeDB(data) {
 function saveToMemory(opp) {
   const db = readDB();
   const id = opp.id;
+  
+  // Lógica de preservación: Si el nuevo monto es 0 pero ya teníamos uno > 0, mantener el viejo
+  const existingBudget = db[id]?.budget || 0;
+  const finalBudget = (opp.budget && opp.budget > 0) ? opp.budget : existingBudget;
+
   // Solo guardamos si el presupuesto es > 0 o si no teníamos ese ID antes con datos completos
-  if (!db[id] || (opp.budget > 0 && db[id].budget === 0) || (opp.items?.length > 0 && !db[id].items)) {
-    db[id] = { ...db[id], ...opp, updatedAt: new Date().toISOString() };
+  if (!db[id] || finalBudget > existingBudget || (opp.isFullyAnalyzed && !db[id].isFullyAnalyzed)) {
+    db[id] = { 
+      ...db[id], 
+      ...opp, 
+      budget: finalBudget, // Preservar monto
+      updatedAt: new Date().toISOString() 
+    };
     writeDB(db);
-    console.log(`[Cerebro] Memoria actualizada para ${id} (Presupuesto: $${opp.budget})`);
+    console.log(`[Cerebro] Memoria actualizada para ${id} (Monto Final: $${finalBudget})`);
   }
 }
 
