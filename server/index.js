@@ -12,6 +12,10 @@ import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const pdfParse = require('pdf-parse');
 
+import puppeteer from 'puppeteer-extra';
+import StealthPlugin from 'puppeteer-extra-plugin-stealth';
+puppeteer.use(StealthPlugin());
+
 config();
 
 const __filename = fileURLToPath(import.meta.url);
@@ -390,38 +394,83 @@ ${pdfText}`;
   }
 });
 
-// --- ANÁLISIS AUTOMÁTICO CON SCRAPFLY (BYPASS CAPTCHA) ---
+// --- ANÁLISIS AUTOMÁTICO CON PUPPETEER + IA (BYPASS CAPTCHA LOCAL) ---
 app.post('/api/auto-analyze/:codigo', async (req, res) => {
   const { codigo } = req.params;
-  const SCRAPFLY_KEY = process.env.SCRAPFLY_API_KEY;
-  if (!SCRAPFLY_KEY) return res.status(400).json({ error: 'Scrapfly API Key no configurada' });
+  let browser;
 
   try {
-    console.log(`[Scrapfly] Iniciando automatización para ${codigo}...`);
+    console.log(`[Puppeteer] Iniciando extracción autónoma para ${codigo}...`);
+    browser = await puppeteer.launch({ 
+      headless: "new",
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
+    const page = await browser.newPage();
     
-    // 1. Obtener página principal de la licitación para sacar el link de anexos
-    const detailUrl = `https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=${codigo}`;
-    const scrapflyMain = `https://api.scrapfly.io/scrape?key=${SCRAPFLY_KEY}&url=${encodeURIComponent(detailUrl)}&asp=true&render_js=true&country=cl&proxy_pool=public_residential_pool`;
+    // Simular ser un usuario real
+    await page.setViewport({ width: 1280, height: 800 });
     
-    const mainRes = await fetch(scrapflyMain);
-    const mainData = await mainRes.json();
-    const html = mainData.result.content || '';
+    // 1. Ir a la ficha de la licitación
+    const url = `https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=${codigo}`;
+    await page.goto(url, { waitUntil: 'networkidle2' });
+
+    // 2. Click en el botón de anexos
+    console.log('[Puppeteer] Buscando botón de anexos...');
+    const attachmentsBtn = await page.$('#imgAdjuntos');
+    if (!attachmentsBtn) throw new Error('No se encontró el botón de anexos');
     
-    const matchEnc = html.match(/ViewAttachment\.aspx\?enc=([^']+)','MercadoPublico'/);
-    if (!matchEnc) throw new Error('No se encontró el link de anexos. MercadoPúblico podría haber bloqueado la petición even con proxy.');
+    await attachmentsBtn.click();
+    await page.waitForTimeout(3000); // Esperar que cargue el popup o la nueva página
     
-    const attachmentsUrl = `https://www.mercadopublico.cl/Procurement/Modules/Attachment/ViewAttachment.aspx?enc=${matchEnc[1]}`;
-    console.log(`[Scrapfly] Link de anexos encontrado: ${attachmentsUrl}`);
+    // El popup suele ser una nueva ventana o la misma página. Si es popup, hay que cambiar de target.
+    const targets = await browser.targets();
+    const popupTarget = targets.find(t => t.url().includes('ViewAttachment.aspx'));
+    const attachmentsPage = popupTarget ? await popupTarget.page() : page;
+
+    await attachmentsPage.waitForSelector('body');
+    const html = await attachmentsPage.content();
     
-    // 2. Obtener la página de anexos
-    const scrapflyAttach = `https://api.scrapfly.io/scrape?key=${SCRAPFLY_KEY}&url=${encodeURIComponent(attachmentsUrl)}&asp=true&render_js=true&country=cl&proxy_pool=public_residential_pool`;
-    const attachRes = await fetch(scrapflyAttach);
-    const attachData = await attachRes.json();
-    const attachHtml = attachData.result.content;
-    
-    // Fallback: Analizar si el presupuesto está en la tabla de anexos directamente
-    const promptText = `Actúa como un extractor de datos. Analiza este fragmento HTML de una tabla de anexos de Mercado Público y dime si ves el presupuesto estimado o monto total en algún texto. Si lo ves, devuelve solo el número. Si no, "0". 
-    HTML: ${attachHtml.substring(0, 5000)}`;
+    // 3. ¿Hay Captcha de imagen?
+    const hasCaptcha = html.includes('Captcha.aspx');
+    let solvedCaptcha = "";
+
+    if (hasCaptcha) {
+      console.log('[Puppeteer] ¡Captcha de imagen detectado! Resolviendo con IA...');
+      const captchaImg = await attachmentsPage.$('img[src*="Captcha.aspx"]');
+      if (captchaImg) {
+        const screenshotB64 = await captchaImg.screenshot({ encoding: 'base64' });
+        
+        // Pedir a Gemini que resuelva el captcha
+        const geminiResponse = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contents: [{
+              parts: [
+                { text: "Dime el código de 5 o 6 letras/números que aparece en esta imagen de captcha de Mercado Público. Responde SOLO el código, nada más." },
+                { inline_data: { mime_type: "image/png", data: screenshotB64 } }
+              ]
+            }]
+          })
+        });
+
+        const geminiData = await geminiResponse.json();
+        solvedCaptcha = geminiData.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || "";
+        console.log(`[Puppeteer] Gemini resolvió el captcha: ${solvedCaptcha}`);
+
+        if (solvedCaptcha) {
+          await attachmentsPage.type('input[name*="ctl10"]', solvedCaptcha);
+          // Opcional: Si hay un botón de descargar todos, o descargar el primero. 
+          // Intentaremos extraer el presupuesto directamente del texto de la tabla primero
+        }
+      }
+    }
+
+    // 4. Intentar sacar el presupuesto del HTML de la tabla (más rápido que bajar el PDF)
+    const tableText = await attachmentsPage.evaluate(() => document.body.innerText);
+    const promptText = `Analiza este texto de la página de anexos de una licitación y dime si ves el presupuesto estimado o monto total. 
+    Si lo ves, devuelve solo el número. Si no, "0".
+    Texto: ${tableText.substring(0, 5000)}`;
 
     const geminiRes = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`, {
       method: 'POST',
@@ -433,14 +482,17 @@ app.post('/api/auto-analyze/:codigo', async (req, res) => {
     const budgetStr = geminiData.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || '0';
     const finalBudget = parseInt(budgetStr.replace(/\D/g, ''), 10);
 
+    await browser.close();
+
     res.json({ 
       success: true, 
       budget: isNaN(finalBudget) ? 0 : finalBudget,
-      message: finalBudget > 0 ? 'Monto extraído de la tabla de anexos' : 'Monto no encontrado automáticamente. Por favor usa Drag & Drop.'
+      message: finalBudget > 0 ? 'Monto extraído de la tabla de anexos' : 'Monto no encontrado en la tabla. Por favor usa Drag & Drop con el PDF.'
     });
 
   } catch (err) {
-    console.error('[Scrapfly] Error:', err.message);
+    if (browser) await browser.close();
+    console.error('[Puppeteer] Error:', err.message);
     res.status(500).json({ error: err.message });
   }
 });
