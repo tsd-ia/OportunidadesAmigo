@@ -96,15 +96,7 @@
     ],
     "items": [
       {
-        "Correlativo": 1,
-        "CodigoProducto": 72131702,
-        "CodigoCategoria": "72131700",
-        "Categoria": "Servicios de construcción y mantenimiento / Construcción de edificios en general / Construcción de obras civiles y infraestructuras",
-        "NombreProducto": "Construcción de obras civiles",
-        "Descripcion": "HABILITACIÓN DE ESPACIOS DESTINADOS A BOX DE ATENCIÓN, SALA DE KINESIOLOGÍA Y OFICINA, SEGÚN BASES TECNICAS",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
+        "Nombre": "Auditado Automáticamente"
       }
     ],
     "cantidadItems": 1,
@@ -112,7 +104,13 @@
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T20:47:51.229Z"
+    "updatedAt": "2026-04-28T22:03:00.140Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1075963-184-LE26": {
     "id": "1075963-184-LE26",
@@ -519,25 +517,19 @@
       "Garantía de seriedad",
       "Inscripción ChileProveedores"
     ],
-    "items": [
-      {
-        "Correlativo": 1,
-        "CodigoProducto": 72131702,
-        "CodigoCategoria": "72131700",
-        "Categoria": "Servicios de construcción y mantenimiento / Construcción de edificios en general / Construcción de obras civiles y infraestructuras",
-        "NombreProducto": "Construcción de obras civiles",
-        "Descripcion": "Servicios de Mantenciones y Reparaciones Menores en los Establecimiento del Servicio de Salud Tarapacá, periodo 2026, 2027 y 2028.(34 meses).",
-        "UnidadMedida": "Global",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      }
-    ],
+    "items": [],
     "cantidadItems": 1,
     "url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1057964-7-B226",
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T20:47:54.511Z"
+    "updatedAt": "2026-04-28T22:26:31.517Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1224957-23-LE26": {
     "id": "1224957-23-LE26",
@@ -875,433 +867,7 @@
     ],
     "items": [
       {
-        "Correlativo": 1,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2321643) CD56 (MRQ-42) PAB, PRESENTACIÓN VIAL DE 5 ML.",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 9,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 2,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2321644)SYNAPTOPHYSIN (MRQ-40), PRESENTACIÓN VIAL DE 5 ML.",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 3,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 3,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446045) ANTICUERPO CD-3 (2GV6).-",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 6,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 4,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446046) ANTICUERPO CD-20  (L26).-",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 6,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 5,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446049) GATA 3 (L50-823)",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 6,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 6,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446051) CDX-2 (EPR2764Y).-",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 4,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 7,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446059) ANTICUERPO CD10 (SP67).-",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 4,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 8,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446060) ANTICUERPO NAPSIN A (MRQ-60)-",
-        "UnidadMedida": "Kit",
-        "Cantidad": 4,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 9,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446065) ANTICUERPO P40 (BC28).-",
-        "UnidadMedida": "Kit",
-        "Cantidad": 4,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 10,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446066) ANTICUERPO PAX 8 (MRQ-50).-",
-        "UnidadMedida": "Kit",
-        "Cantidad": 4,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 11,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446068) ANTICUERPO WT1 (6F-H2).-",
-        "UnidadMedida": "Kit",
-        "Cantidad": 4,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 12,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446083) BCL-2 (124).-",
-        "UnidadMedida": "Kit",
-        "Cantidad": 4,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 13,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446084) CD31 (JC70)",
-        "UnidadMedida": "Kit",
-        "Cantidad": 4,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 14,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446097) CYTOKERATIN 5/6 (D5,16B4).-",
-        "UnidadMedida": "Kit",
-        "Cantidad": 4,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 15,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2440363) ANTICUERO VIMENTIN (V9).-",
-        "UnidadMedida": "Kit",
-        "Cantidad": 4,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 16,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2440373) ANTICUERPO S-100 (4C4.9).-",
-        "UnidadMedida": "Kit",
-        "Cantidad": 4,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 17,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446114) ANTICUERPO SOX-10 (SP267).-",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 6,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 18,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446129) ANTICUERPO PRAME (EPR20330).-",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 6,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 19,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446050) UROPLAKIN III (SP73)",
-        "UnidadMedida": "Kit",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 20,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446056) ANTICUERPO PLAP (NB10)",
-        "UnidadMedida": "Kit",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 21,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446062) ANTICUERPO DOG-1 (SP31).-",
-        "UnidadMedida": "Kit",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 22,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446063) ANTICUERPO PODOPLANIN (D2-40)",
-        "UnidadMedida": "Kit",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 23,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446072) ANTICUERPO CA-125 (OC125) ",
-        "UnidadMedida": "Kit",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 24,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446080) GCDFP-15 (BRST-2) (EP1582Y)",
-        "UnidadMedida": "Kit",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 25,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446085) CD138(B-A38).-",
-        "UnidadMedida": "Kit",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 26,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446094) MYOD1(EP212).-",
-        "UnidadMedida": "Kit",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 27,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446095) VILLIN (CWWB1).-",
-        "UnidadMedida": "Kit",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 28,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446096) MYOGENIN (F5D).-",
-        "UnidadMedida": "Kit",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 29,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446098) CYTOKERATIN 19 (A53-B/A2.26).-",
-        "UnidadMedida": "Kit",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 30,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446099) HEPATOCYTE SPECIFIC ANTIGEN (OCH1E5).-",
-        "UnidadMedida": "Kit",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 31,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446100)GLIAL FIBRILLARY ACIDIC PROTEIN (GFAP) (EP672Y)",
-        "UnidadMedida": "Kit",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 32,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446101) FACTOR XIIIA (EP3372).-",
-        "UnidadMedida": "Kit",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 33,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446113) ANTICUERPO HHV-8 (13B10).",
-        "UnidadMedida": "Kit",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 34,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446119) ANTICUERPO SATB2 (EP281).-",
-        "UnidadMedida": "Kit",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 35,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": " (2446122) ANTICUERPO CD79a (SP18).-",
-        "UnidadMedida": "Kit",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 36,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": " (2446124) ANTICUERPO BCL6 (GI191E/A8).-",
-        "UnidadMedida": "Kit",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 37,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446125) ANTICUERPO MUM1 (EP190)",
-        "UnidadMedida": "Kit",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 38,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": " (2446126) ANTICUERPO ANTI LAMBDA (POLICLONAL).-",
-        "UnidadMedida": "Kit",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 39,
-        "CodigoProducto": 85121804,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios patológicos",
-        "Descripcion": "(2446128) ANTICUERPO ANTI-C-MYC (Y69).-",
-        "UnidadMedida": "Kit",
-        "Cantidad": 1,
-        "Adjudicacion": null
+        "Nombre": "Auditado Automáticamente"
       }
     ],
     "cantidadItems": 39,
@@ -1309,7 +875,13 @@
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T20:47:59.370Z"
+    "updatedAt": "2026-04-28T22:01:01.183Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1057501-271-LP26": {
     "id": "1057501-271-LP26",
@@ -1411,730 +983,7 @@
     ],
     "items": [
       {
-        "Correlativo": 1,
-        "CodigoProducto": 41104107,
-        "CodigoCategoria": "41104100",
-        "Categoria": "Equipamiento para laboratorios / Equipos e insumos para laboratorio / Contenedores para especímenes de laboratorio",
-        "NombreProducto": "Tubos o contenedores de almacenamiento de sangre en vacío",
-        "Descripcion": "Tubo al vacío gel 5ml tapa amarilla, 100 unidades\r\n(Descripción: Tubo para extracción de Sangre al vacío con sistema vacutainer, con gel separador y activador de la coagulación, material de plástico estéril, volumen 5ml, tapón de seguridad. Tapa amarilla,",
-        "UnidadMedida": "Caja",
-        "Cantidad": 750,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 2,
-        "CodigoProducto": 41104107,
-        "CodigoCategoria": "41104100",
-        "Categoria": "Equipamiento para laboratorios / Equipos e insumos para laboratorio / Contenedores para especímenes de laboratorio",
-        "NombreProducto": "Tubos o contenedores de almacenamiento de sangre en vacío",
-        "Descripcion": "Tubo al Vacio K3EDTA, Tubo para extracción de sangre al vacío con sistema vacutainer, con anticoagulante k3 edta pulverizado, según lo recomendado por clsi. Material de plástico estéril de politereftalato de etileno (pet), volumen 3ml tapón de seguridad t",
-        "UnidadMedida": "Caja",
-        "Cantidad": 700,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 3,
-        "CodigoProducto": 41104107,
-        "CodigoCategoria": "41104100",
-        "Categoria": "Equipamiento para laboratorios / Equipos e insumos para laboratorio / Contenedores para especímenes de laboratorio",
-        "NombreProducto": "Tubos o contenedores de almacenamiento de sangre en vacío",
-        "Descripcion": "Tubo al vacío Citrato, Tubo para extracción de sangre al vacío con sistema BD vacutainer, tapa celeste. con anticoagulante citrato de sodio 3.2%. doble pared del tubo para asegurar la estabilidad del anticoagulante, pared interna siliconizada con poliprop",
-        "UnidadMedida": "Caja",
-        "Cantidad": 100,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 4,
-        "CodigoProducto": 41121701,
-        "CodigoCategoria": "41121700",
-        "Categoria": "Equipamiento para laboratorios / Suministros para laboratorios / Tubos de ensayo",
-        "NombreProducto": "Tubos de ensayo multipropósito o generales",
-        "Descripcion": "Monosed Vacuum Tubes VHS, Tubo vhs tapa negra, 1.28 ml, material vidrio, diámetro 9mmx120mm. aditivo solución tamponada de citrato. Presentación: 100 unidades",
-        "UnidadMedida": "Caja",
-        "Cantidad": 20,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 5,
-        "CodigoProducto": 30201902,
-        "CodigoCategoria": "30201900",
-        "Categoria": "Artículos para estructuras, obras y construcciones / Estructuras prefabricadas / Construcciones médicas prefabricadas",
-        "NombreProducto": "Unidades de laboratorio",
-        "Descripcion": "Humatex rf latex reagent, para determinación de factor reumatoideo. Prueba rápida de aglutinación.",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 25,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 6,
-        "CodigoProducto": 41116134,
-        "CodigoCategoria": "41116100",
-        "Categoria": "Equipamiento para laboratorios / Instrumentos de medida y experimentación / Kits para ensayos manuales, controles de calidad, calibradores y normativas",
-        "NombreProducto": "Reactivos, soluciones o tinturas de biología molecular",
-        "Descripcion": "Microgen antígeno VDRL (Aprobado ISP), presentación unidad",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 20,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 7,
-        "CodigoProducto": 41116134,
-        "CodigoCategoria": "41116100",
-        "Categoria": "Equipamiento para laboratorios / Instrumentos de medida y experimentación / Kits para ensayos manuales, controles de calidad, calibradores y normativas",
-        "NombreProducto": "Reactivos, soluciones o tinturas de biología molecular",
-        "Descripcion": "Asa metal mango verde 1 ul para cultivo microbiología. Presentación unidad ",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 6,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 8,
-        "CodigoProducto": 41116134,
-        "CodigoCategoria": "41116100",
-        "Categoria": "Equipamiento para laboratorios / Instrumentos de medida y experimentación / Kits para ensayos manuales, controles de calidad, calibradores y normativas",
-        "NombreProducto": "Reactivos, soluciones o tinturas de biología molecular",
-        "Descripcion": "Decolorante para Tinción Gram Microbiología, Alcohol Acetona presentación unidad de 100 ml.",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 4,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 9,
-        "CodigoProducto": 42141502,
-        "CodigoCategoria": "42141500",
-        "Categoria": "Equipamiento y suministros médicos / Suministros y productos clínicos / Torundas de algodón y aplicadoras de algodón",
-        "NombreProducto": "Palitos con casquillo de fibra",
-        "Descripcion": "Torulas plástica punta algodón estériles para antibiograma, presentación 100 unidades.",
-        "UnidadMedida": "Caja",
-        "Cantidad": 20,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 10,
-        "CodigoProducto": 41121609,
-        "CodigoCategoria": "41121600",
-        "Categoria": "Equipamiento para laboratorios / Suministros para laboratorios / Puntas de pipeta",
-        "NombreProducto": "Puntas de pipeta de volumen variable",
-        "Descripcion": "Puntas amarillas universales 10-200ul con corona, presentación x 1000 unidades",
-        "UnidadMedida": "Caja",
-        "Cantidad": 10,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 11,
-        "CodigoProducto": 41116205,
-        "CodigoCategoria": "41116200",
-        "Categoria": "Equipamiento para laboratorios / Instrumentos de medida y experimentación / Suministros y equipos para tratamiento de enfermos",
-        "NombreProducto": "Kits de exámenes rápidos",
-        "Descripcion": "Test rápido hepatitis B HBsAG combo, presentación 30 tests.",
-        "UnidadMedida": "Caja",
-        "Cantidad": 6,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 12,
-        "CodigoProducto": 41115807,
-        "CodigoCategoria": "41115800",
-        "Categoria": "Equipamiento para laboratorios / Instrumentos de medida y experimentación / Analizadores, accesorios y suministros clínicos y de diagnósticos",
-        "NombreProducto": "Analizadores químicos",
-        "Descripcion": "Cubetas Muestra Hitachi: cubetas plásticas para autoanalizador hitachi, volumen de 3ml, material poliestireno. utilizadas en los análisis de laboratorio, para muestras escasas y preparación de controles de calidad del laboratorio. Presentación 500 Uds.",
-        "UnidadMedida": "Caja",
-        "Cantidad": 60,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 13,
-        "CodigoProducto": 41121609,
-        "CodigoCategoria": "41121600",
-        "Categoria": "Equipamiento para laboratorios / Suministros para laboratorios / Puntas de pipeta",
-        "NombreProducto": "Puntas de pipeta de volumen variable",
-        "Descripcion": "Pipetas Pasteur plásticas 3ml, presentación 100 unidades",
-        "UnidadMedida": "Caja",
-        "Cantidad": 10,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 14,
-        "CodigoProducto": 42291704,
-        "CodigoCategoria": "42291700",
-        "Categoria": "Equipamiento y suministros médicos / Productos quirúrgicos / Taladros quirúrgicos de mano, escariadores, instrumentos de punzonar, accesorios y productos relacionados",
-        "NombreProducto": "Brocas o porta brocas quirúrgicos, o accesorios",
-        "Descripcion": "Adaptador Tubos (Holder): adaptador camisa para tubo al vacío. Accesorio reutilizable para toma de muestra con sistema vacutainer, compatibles con tubos vacutainer. material plástico y libre de látex.  Requisito: NO desechable. Presentación 10uds.\r\n",
-        "UnidadMedida": "Caja",
-        "Cantidad": 300,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 15,
-        "CodigoProducto": 42142507,
-        "CodigoCategoria": "42142500",
-        "Categoria": "Equipamiento y suministros médicos / Suministros y productos clínicos / Agujas clínicas",
-        "NombreProducto": "Agujas mariposa",
-        "Descripcion": "Aguja mariposa vacutainer con adaptador luer en extremo distal para extracción múltiple. Alas flexibles que permiten la fácil manipulación. Material acero inoxidable de alta resistencia con doble capa de silicona en la pared exterior y bisel de corte trif",
-        "UnidadMedida": "Caja",
-        "Cantidad": 340,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 16,
-        "CodigoProducto": 41121701,
-        "CodigoCategoria": "41121700",
-        "Categoria": "Equipamiento para laboratorios / Suministros para laboratorios / Tubos de ensayo",
-        "NombreProducto": "Tubos de ensayo multipropósito o generales",
-        "Descripcion": "Tubos ensayo khan material vidrio, tamaño 12x75mm. Presentación 250 ud. (tubos khan)\r\n",
-        "UnidadMedida": "Caja",
-        "Cantidad": 50,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 17,
-        "CodigoProducto": 41104201,
-        "CodigoCategoria": "41104200",
-        "Categoria": "Equipamiento para laboratorios / Equipos e insumos para laboratorio / Equipo y suministros de purificación de agua para laboratorio",
-        "NombreProducto": "Reactivos para depuración del agua",
-        "Descripcion": "Gradilla plástica armable para 60 tubos de 16mm. material polipropileno. que sea esterilizable en autoclave, apilables.\r\ndimensiones 24x11x6.5cm. color puede variar.\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 30,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 18,
-        "CodigoProducto": 41116004,
-        "CodigoCategoria": "41116000",
-        "Categoria": "Equipamiento para laboratorios / Instrumentos de medida y experimentación / Reactivos de analizadores clínicos y diagnósticos",
-        "NombreProducto": "Reactivos de analizadores químicos",
-        "Descripcion": "Cubreobjetos, lámina de vidrio de 22x22mm presentación caja 1000 uds ",
-        "UnidadMedida": "Caja",
-        "Cantidad": 150,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 19,
-        "CodigoProducto": 41104201,
-        "CodigoCategoria": "41104200",
-        "Categoria": "Equipamiento para laboratorios / Equipos e insumos para laboratorio / Equipo y suministros de purificación de agua para laboratorio",
-        "NombreProducto": "Reactivos para depuración del agua",
-        "Descripcion": "Contenedor de frascos para heces 30ml con paleta, estéril. Tapa del envase fabricado con polipropileno. Presentación caja de 500 uds ",
-        "UnidadMedida": "Caja",
-        "Cantidad": 20,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 20,
-        "CodigoProducto": 30201902,
-        "CodigoCategoria": "30201900",
-        "Categoria": "Artículos para estructuras, obras y construcciones / Estructuras prefabricadas / Construcciones médicas prefabricadas",
-        "NombreProducto": "Unidades de laboratorio",
-        "Descripcion": "Tubos cónicos 15ml polipropileno. Tubo transparente, graduado y con tapa. Medida 16x120mm presentación 100ud ",
-        "UnidadMedida": "Caja",
-        "Cantidad": 40,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 21,
-        "CodigoProducto": 41105201,
-        "CodigoCategoria": "41105200",
-        "Categoria": "Equipamiento para laboratorios / Equipos e insumos para laboratorio / Equipo de teñido de portaobjetos para laboratorio",
-        "NombreProducto": "Teñidores de portaobjetos de histología o citología",
-        "Descripcion": "Reactivo de burrows (fijador paf). presentación 1 litro.",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 24,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 22,
-        "CodigoProducto": 30201902,
-        "CodigoCategoria": "30201900",
-        "Categoria": "Artículos para estructuras, obras y construcciones / Estructuras prefabricadas / Construcciones médicas prefabricadas",
-        "NombreProducto": "Unidades de laboratorio",
-        "Descripcion": "Tinción giemsa, colorante para Hematología. presentación 1000ml.",
-        "UnidadMedida": "Caja",
-        "Cantidad": 6,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 23,
-        "CodigoProducto": 30201902,
-        "CodigoCategoria": "30201900",
-        "Categoria": "Artículos para estructuras, obras y construcciones / Estructuras prefabricadas / Construcciones médicas prefabricadas",
-        "NombreProducto": "Unidades de laboratorio",
-        "Descripcion": "Tinción may grunwald, solución para hematología. presentación 1000ml",
-        "UnidadMedida": "Caja",
-        "Cantidad": 6,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 24,
-        "CodigoProducto": 51142930,
-        "CodigoCategoria": "51142900",
-        "Categoria": "Medicamentos y productos farmacéuticos / Medicamentos para el sistema nervioso central / Fármacos anestésicos, complementos relacionados y analépticos",
-        "NombreProducto": "Éter",
-        "Descripcion": "Éter etílico para Parasitología, presentación 1000ml.",
-        "UnidadMedida": "Caja",
-        "Cantidad": 24,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 25,
-        "CodigoProducto": 41116105,
-        "CodigoCategoria": "41116100",
-        "Categoria": "Equipamiento para laboratorios / Instrumentos de medida y experimentación / Kits para ensayos manuales, controles de calidad, calibradores y normativas",
-        "NombreProducto": "Reactivos o soluciones químicos",
-        "Descripcion": "Tionina 0,1%, colorante para microscopia.",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 8,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 26,
-        "CodigoProducto": 41105204,
-        "CodigoCategoria": "41105200",
-        "Categoria": "Equipamiento para laboratorios / Equipos e insumos para laboratorio / Equipo de teñido de portaobjetos para laboratorio",
-        "NombreProducto": "Accesorios del equipo de teñido de portaobjetos de laboratorio",
-        "Descripcion": "Azul de cresil brillante en solución para tinción de reticulocitos para microscopia. presentación 100ml",
-        "UnidadMedida": "Caja",
-        "Cantidad": 2,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 27,
-        "CodigoProducto": 41104107,
-        "CodigoCategoria": "41104100",
-        "Categoria": "Equipamiento para laboratorios / Equipos e insumos para laboratorio / Contenedores para especímenes de laboratorio",
-        "NombreProducto": "Tubos o contenedores de almacenamiento de sangre en vacío",
-        "Descripcion": "Test rápido fob sangre oculta en deposiciones. Test inmunoensayo visual rápido para detección cualitativa de hemoglobina humana en muestras fecales humanas. Especificidad >98.%, Sensibilidad > 97%. Presentación caja de 25 test.\r\n",
-        "UnidadMedida": "Kit",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 28,
-        "CodigoProducto": 41104112,
-        "CodigoCategoria": "41104100",
-        "Categoria": "Equipamiento para laboratorios / Equipos e insumos para laboratorio / Contenedores para especímenes de laboratorio",
-        "NombreProducto": "Contenedores de recogida de orina",
-        "Descripcion": "Frascos para la recolección de muestras de orina con tubos con sistema al vacío vacutainer estéril, con tapa rosca para minimizar el riesgo de contaminación y \r\ncon dispositivo de transferencia integrado para drenar la orina de uno o más tubos sin tener c",
-        "UnidadMedida": "Caja",
-        "Cantidad": 130,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 29,
-        "CodigoProducto": 41104112,
-        "CodigoCategoria": "41104100",
-        "Categoria": "Equipamiento para laboratorios / Equipos e insumos para laboratorio / Contenedores para especímenes de laboratorio",
-        "NombreProducto": "Contenedores de recogida de orina",
-        "Descripcion": "Tubo cónico al vacío, para recolección de muestras de orina con sistema vacutainer. tubo estéril sin preservante para ser utilizado cuando no se requiere preservación de la muestra. volumen de llenado 8-9 ml. Dimensiones 16x100mm, material plástico de pol",
-        "UnidadMedida": "Caja",
-        "Cantidad": 490,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 30,
-        "CodigoProducto": 51102710,
-        "CodigoCategoria": "51102700",
-        "Categoria": "Medicamentos y productos farmacéuticos / Medicamentos anti infecciosos / Antisépticos",
-        "NombreProducto": "Antisépticos basados en alcohol o acetona",
-        "Descripcion": "Alcohol etílico desnaturalizado 70°, solución desinfectante y antiséptica. Uso en superficies y artículos médicos. Sin Glicerina. Presentación 1litro.\r\n",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 96,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 31,
-        "CodigoProducto": 41122601,
-        "CodigoCategoria": "41122600",
-        "Categoria": "Equipamiento para laboratorios / Suministros para laboratorios / Portaobjetos y suministros de laboratorio",
-        "NombreProducto": "Portaobjetos",
-        "Descripcion": "Portaobjeto borde esmerilado, láminas de vidrio para microscopia. medidas 72x26mm. presentación caja de 50 uds.",
-        "UnidadMedida": "Caja",
-        "Cantidad": 200,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 32,
-        "CodigoProducto": 41104308,
-        "CodigoCategoria": "41104300",
-        "Categoria": "Equipamiento para laboratorios / Equipos e insumos para laboratorio / Equipo de fermentación",
-        "NombreProducto": "Sistemas de cultivo ambiental anaeróbico o suministros",
-        "Descripcion": "Agar cromoorientacion (UTIC), placas de medio de cultivo para identificación de patógenos. Medidas 90mmx15mm. presentación estuche 10 unidades. (requisito:  iso 13.485 del oferente)\r\n",
-        "UnidadMedida": "Caja",
-        "Cantidad": 300,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 33,
-        "CodigoProducto": 30201902,
-        "CodigoCategoria": "30201900",
-        "Categoria": "Artículos para estructuras, obras y construcciones / Estructuras prefabricadas / Construcciones médicas prefabricadas",
-        "NombreProducto": "Unidades de laboratorio",
-        "Descripcion": "Asa plástica calibradas estéril 1 ul para urocultivo.\r\npresentación: 1 bolsa de 20 unidades.\r\n",
-        "UnidadMedida": "Caja",
-        "Cantidad": 1000,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 34,
-        "CodigoProducto": 42142523,
-        "CodigoCategoria": "42142500",
-        "Categoria": "Equipamiento y suministros médicos / Suministros y productos clínicos / Agujas clínicas",
-        "NombreProducto": "Agujas hipodérmicas",
-        "Descripcion": "Aguja multipropósito para extracción de sangre al vacío con sistema vacutainer, con tecnología precisionglide para un mejor deslizamiento de la aguja en vena. material de acero inoxidable de alta resistencia con doble capa de silicona en la pared exterior",
-        "UnidadMedida": "Caja",
-        "Cantidad": 250,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 35,
-        "CodigoProducto": 42142523,
-        "CodigoCategoria": "42142500",
-        "Categoria": "Equipamiento y suministros médicos / Suministros y productos clínicos / Agujas clínicas",
-        "NombreProducto": "Agujas hipodérmicas",
-        "Descripcion": "Aguja multipropósito para extracción de sangre al vacío con sistema vacutainer, con tecnología precisionglide para un mejor deslizamiento de la aguja en vena. material de acero inoxidable de alta resistencia con doble capa de silicona en la pared exterior",
-        "UnidadMedida": "Caja",
-        "Cantidad": 250,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 36,
-        "CodigoProducto": 85121805,
-        "CodigoCategoria": "85121800",
-        "Categoria": "Salud, servicios sanitarios y alimentación / Medicina y servicios de salud / Laboratorios clínicos",
-        "NombreProducto": "Laboratorios de análisis de orina",
-        "Descripcion": "Recolector pediátrico. presentación 100ud",
-        "UnidadMedida": "Caja",
-        "Cantidad": 2,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 37,
-        "CodigoProducto": 42291704,
-        "CodigoCategoria": "42291700",
-        "Categoria": "Equipamiento y suministros médicos / Productos quirúrgicos / Taladros quirúrgicos de mano, escariadores, instrumentos de punzonar, accesorios y productos relacionados",
-        "NombreProducto": "Brocas o porta brocas quirúrgicos, o accesorios",
-        "Descripcion": "Adaptador (holder) con dispositivo automático para eliminación automática de aguja múltiple, mariposas y adaptador luer (con botón para descartar la aguja) accesorio reutilizable para toma de muestra al vacío con sistema vacutainer.  dispositivo material ",
-        "UnidadMedida": "Caja",
-        "Cantidad": 50,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 38,
-        "CodigoProducto": 41104201,
-        "CodigoCategoria": "41104200",
-        "Categoria": "Equipamiento para laboratorios / Equipos e insumos para laboratorio / Equipo y suministros de purificación de agua para laboratorio",
-        "NombreProducto": "Reactivos para depuración del agua",
-        "Descripcion": "Gradilla plástica para 90 tubos de 13mm. material polipropileno. que sea esterilizable en autoclave., apilables. color puede variar.",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 30,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 39,
-        "CodigoProducto": 41115304,
-        "CodigoCategoria": "41115300",
-        "Categoria": "Equipamiento para laboratorios / Instrumentos de medida y experimentación / Equipo de generación y medición de luz y ondas",
-        "NombreProducto": "Contadores, temporizadores o divisores de frecuencia",
-        "Descripcion": "Temporizador digital de 4 tiempos, diseño compacto y funcional, pantalla lcd. con funciones de reloj, cronómetro y cuenta regresiva.  base con pie de apoyo, imán incorporado. dimensiones 93x70x24.5mm, fuente de energía pila.",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 5,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 40,
-        "CodigoProducto": 41116205,
-        "CodigoCategoria": "41116200",
-        "Categoria": "Equipamiento para laboratorios / Instrumentos de medida y experimentación / Suministros y equipos para tratamiento de enfermos",
-        "NombreProducto": "Kits de exámenes rápidos",
-        "Descripcion": "Test rápido hepatitis c HCV ab plus combo presentación caja de 30 tests.",
-        "UnidadMedida": "Caja",
-        "Cantidad": 8,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 41,
-        "CodigoProducto": 41116201,
-        "CodigoCategoria": "41116200",
-        "Categoria": "Equipamiento para laboratorios / Instrumentos de medida y experimentación / Suministros y equipos para tratamiento de enfermos",
-        "NombreProducto": "Monitores o medidores de glucosa",
-        "Descripcion": "Bebida para la tolerancia a la glucosa PTGO en formato de 75gr/296ml en pack de 24 unidades. ",
-        "UnidadMedida": "Caja",
-        "Cantidad": 200,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 42,
-        "CodigoProducto": 41104308,
-        "CodigoCategoria": "41104300",
-        "Categoria": "Equipamiento para laboratorios / Equipos e insumos para laboratorio / Equipo de fermentación",
-        "NombreProducto": "Sistemas de cultivo ambiental anaeróbico o suministros",
-        "Descripcion": "Agar Mueller Hinton 2 CLSI para examen de Antibiograma. Placas de 9cms. Presentación caja de 10 unidades. (REQUISITO:  ISO 13.485 DEL OFERENTE)\r\n\t\r\n",
-        "UnidadMedida": "Caja",
-        "Cantidad": 100,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 43,
-        "CodigoProducto": 41116004,
-        "CodigoCategoria": "41116000",
-        "Categoria": "Equipamiento para laboratorios / Instrumentos de medida y experimentación / Reactivos de analizadores clínicos y diagnósticos",
-        "NombreProducto": "Reactivos de analizadores químicos",
-        "Descripcion": "Caldo Mueller Hinton para antibiograma. Tubo 16x125. Presentación: caja de 30 unidades. REQUISITO:  ISO 13.485 DEL OFERENTE\r\n",
-        "UnidadMedida": "Caja",
-        "Cantidad": 50,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 44,
-        "CodigoProducto": 41104308,
-        "CodigoCategoria": "41104300",
-        "Categoria": "Equipamiento para laboratorios / Equipos e insumos para laboratorio / Equipo de fermentación",
-        "NombreProducto": "Sistemas de cultivo ambiental anaeróbico o suministros",
-        "Descripcion": "Agar Mueller Hinton + Sangre cordero.Placas de 9cms. Presentación: caja 10 unidades. (REQUISITO:  ISO 13.485 DEL OFERENTE)\r\n",
-        "UnidadMedida": "Caja",
-        "Cantidad": 10,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 45,
-        "CodigoProducto": 41104308,
-        "CodigoCategoria": "41104300",
-        "Categoria": "Equipamiento para laboratorios / Equipos e insumos para laboratorio / Equipo de fermentación",
-        "NombreProducto": "Sistemas de cultivo ambiental anaeróbico o suministros",
-        "Descripcion": "Agar Chocolate base GC+Suple+HB. Placas de 9cms.Presentación: baja 10 unidades. REQUISITO:  ISO 13.485 DEL OFERENTE\r\n",
-        "UnidadMedida": "Caja",
-        "Cantidad": 10,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 46,
-        "CodigoProducto": 41104308,
-        "CodigoCategoria": "41104300",
-        "Categoria": "Equipamiento para laboratorios / Equipos e insumos para laboratorio / Equipo de fermentación",
-        "NombreProducto": "Sistemas de cultivo ambiental anaeróbico o suministros",
-        "Descripcion": "Combi-PL Agar Macconkey Sangre. Placas de 9cms. Presentación: caja 10 unidades . (REQUISITO:  ISO 13.485 DEL OFERENTE)\r\n",
-        "UnidadMedida": "Caja",
-        "Cantidad": 10,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 47,
-        "CodigoProducto": 42141502,
-        "CodigoCategoria": "42141500",
-        "Categoria": "Equipamiento y suministros médicos / Suministros y productos clínicos / Torundas de algodón y aplicadoras de algodón",
-        "NombreProducto": "Palitos con casquillo de fibra",
-        "Descripcion": "Tórulas Medio Stuart para Cultivo. Presentación: 100 unidades. (REQUISITO:  ISO 13.485 DEL OFERENTE)\r\n",
-        "UnidadMedida": "Caja",
-        "Cantidad": 10,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 48,
-        "CodigoProducto": 41104308,
-        "CodigoCategoria": "41104300",
-        "Categoria": "Equipamiento para laboratorios / Equipos e insumos para laboratorio / Equipo de fermentación",
-        "NombreProducto": "Sistemas de cultivo ambiental anaeróbico o suministros",
-        "Descripcion": "Agar medio de cultivo TSI, para la identificación de bacilos gran negativos mediante fermentación de carbohidratos y producción de gas y H2S. Tubo 16x125. Presentación: caja 30 unidades. (REQUISITO:  ISO 13.485 DEL OFERENTE)\r\n",
-        "UnidadMedida": "Caja",
-        "Cantidad": 3,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 49,
-        "CodigoProducto": 41104308,
-        "CodigoCategoria": "41104300",
-        "Categoria": "Equipamiento para laboratorios / Equipos e insumos para laboratorio / Equipo de fermentación",
-        "NombreProducto": "Sistemas de cultivo ambiental anaeróbico o suministros",
-        "Descripcion": "Agar medio de cultivo LIA, para la identificación de enterobacterias, según fermentación de glucosa, degradación lisina y generación de H2S. Tubo 16x125.\r\nPresentación: caja 30 unidades. (REQUISITO:  ISO 13.485 DEL OFERENTE)\r\n",
-        "UnidadMedida": "Caja",
-        "Cantidad": 3,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 50,
-        "CodigoProducto": 41104308,
-        "CodigoCategoria": "41104300",
-        "Categoria": "Equipamiento para laboratorios / Equipos e insumos para laboratorio / Equipo de fermentación",
-        "NombreProducto": "Sistemas de cultivo ambiental anaeróbico o suministros",
-        "Descripcion": "Agar medio de cultivo MIO, para el estudio de la motilidad bacteriana, producción de indol y degradación de la Ornitina. Tubo 16x125. Presentación: caja 30 unidades. (REQUISITO:  ISO 13.485 DEL OFERENTE)\r\n",
-        "UnidadMedida": "Caja",
-        "Cantidad": 3,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 51,
-        "CodigoProducto": 30201902,
-        "CodigoCategoria": "30201900",
-        "Categoria": "Artículos para estructuras, obras y construcciones / Estructuras prefabricadas / Construcciones médicas prefabricadas",
-        "NombreProducto": "Unidades de laboratorio",
-        "Descripcion": "Medio de cultivo diferencial Citrato Simmons, para identificación de bacilos gran negativos. Presentación: caja 30 unidades. (REQUISITO:  ISO 13.485 DEL OFERENTE)\r\n",
-        "UnidadMedida": "Caja",
-        "Cantidad": 3,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 52,
-        "CodigoProducto": 30201902,
-        "CodigoCategoria": "30201900",
-        "Categoria": "Artículos para estructuras, obras y construcciones / Estructuras prefabricadas / Construcciones médicas prefabricadas",
-        "NombreProducto": "Unidades de laboratorio",
-        "Descripcion": "Medio de cultivo Urea Christensen para la diferenciación de microorganismos. Presentación: caja 30 unidades.(REQUISITO:  ISO 13.485 DEL OFERENTE)\r\n",
-        "UnidadMedida": "Caja",
-        "Cantidad": 3,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 53,
-        "CodigoProducto": 30201902,
-        "CodigoCategoria": "30201900",
-        "Categoria": "Artículos para estructuras, obras y construcciones / Estructuras prefabricadas / Construcciones médicas prefabricadas",
-        "NombreProducto": "Unidades de laboratorio",
-        "Descripcion": "Sensidiscos de 6 mm de AMIKACINA 30mcg, para procedimientos de microbiología, pruebas semicuantitativas de sensibilidad, por medio de prueba de difusión de disco en agar. Presentación: cartridge que contienen 50 discos cada uno. (REQUISITO:  ISO 13.485 DE",
-        "UnidadMedida": "Caja",
-        "Cantidad": 5,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 54,
-        "CodigoProducto": 30201902,
-        "CodigoCategoria": "30201900",
-        "Categoria": "Artículos para estructuras, obras y construcciones / Estructuras prefabricadas / Construcciones médicas prefabricadas",
-        "NombreProducto": "Unidades de laboratorio",
-        "Descripcion": "Sensidiscos de 6 mm de AMPICILINA 10mcg, para procedimientos de microbiología, pruebas semicuantitativas de sensibilidad, por medio de prueba de difusión de disco en agar. presentación: cartridge que contienen 50 discos cada uno.\r\n(REQUISITO:  ISO 13.485 ",
-        "UnidadMedida": "Caja",
-        "Cantidad": 5,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 55,
-        "CodigoProducto": 30201902,
-        "CodigoCategoria": "30201900",
-        "Categoria": "Artículos para estructuras, obras y construcciones / Estructuras prefabricadas / Construcciones médicas prefabricadas",
-        "NombreProducto": "Unidades de laboratorio",
-        "Descripcion": "Sensidiscos de 6 mm de CEFOPERAZONE 75mcg, para procedimientos de microbiología, pruebas semicuantitativas de sensibilidad, por medio de prueba de difusión de disco en agar. Presentación: cartridge que contienen 50 discos cada uno.\r\n(REQUISITO:  ISO 13.48",
-        "UnidadMedida": "Caja",
-        "Cantidad": 3,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 56,
-        "CodigoProducto": 30201902,
-        "CodigoCategoria": "30201900",
-        "Categoria": "Artículos para estructuras, obras y construcciones / Estructuras prefabricadas / Construcciones médicas prefabricadas",
-        "NombreProducto": "Unidades de laboratorio",
-        "Descripcion": "Sensidiscos de 6 mm de CEFOTAXIME 30mcg, para procedimientos de microbiología, pruebas semicuantitativas de sensibilidad, por medio de prueba de difusión de disco en agar. Presentación: cartridge que contienen 50 discos cada uno.\r\n(REQUISITO:  ISO 13.485 ",
-        "UnidadMedida": "Caja",
-        "Cantidad": 3,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 57,
-        "CodigoProducto": 30201902,
-        "CodigoCategoria": "30201900",
-        "Categoria": "Artículos para estructuras, obras y construcciones / Estructuras prefabricadas / Construcciones médicas prefabricadas",
-        "NombreProducto": "Unidades de laboratorio",
-        "Descripcion": "Sensidiscos de 6 mm de CEFPODOXIME 10mcg, para procedimientos de microbiología, pruebas semicuantitativas de sensibilidad, por medio de prueba de difusión de disco en agar. Presentación: cartridge que contienen 50 discos cada uno.\r\n(REQUISITO:  ISO 13.485",
-        "UnidadMedida": "Caja",
-        "Cantidad": 4,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 58,
-        "CodigoProducto": 30201902,
-        "CodigoCategoria": "30201900",
-        "Categoria": "Artículos para estructuras, obras y construcciones / Estructuras prefabricadas / Construcciones médicas prefabricadas",
-        "NombreProducto": "Unidades de laboratorio",
-        "Descripcion": "Sensidiscos de 6 mm de CEFTAZIDIME 30mcg, para procedimientos de microbiología, pruebas semicuantitativas de sensibilidad, por medio de prueba de difusión de disco en agar. Presentación: cartridge que contienen 50 discos cada uno.\r\n(REQUISITO:  ISO 13.485",
-        "UnidadMedida": "Caja",
-        "Cantidad": 3,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 59,
-        "CodigoProducto": 30201902,
-        "CodigoCategoria": "30201900",
-        "Categoria": "Artículos para estructuras, obras y construcciones / Estructuras prefabricadas / Construcciones médicas prefabricadas",
-        "NombreProducto": "Unidades de laboratorio",
-        "Descripcion": "Sensidiscos de 6 mm de CEFTRIAXONE 30mcg, para procedimientos de microbiología, pruebas semicuantitativas de sensibilidad, por medio de prueba de difusión de disco en agar. Presentación: cartridge que contienen 50 discos cada uno.\r\n(REQUISITO:  ISO 13.485",
-        "UnidadMedida": "Caja",
-        "Cantidad": 4,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 60,
-        "CodigoProducto": 30201902,
-        "CodigoCategoria": "30201900",
-        "Categoria": "Artículos para estructuras, obras y construcciones / Estructuras prefabricadas / Construcciones médicas prefabricadas",
-        "NombreProducto": "Unidades de laboratorio",
-        "Descripcion": "Sensidiscos de 6 mm de CEFAZOLIN 30mcg, para procedimientos de microbiología, pruebas semicuantitativas de sensibilidad, por medio de prueba de difusión de disco en agar. Presentación: cartridge que contienen 50 discos cada uno.\r\n(REQUISITO:  ISO 13.485 D",
-        "UnidadMedida": "Caja",
-        "Cantidad": 4,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 61,
-        "CodigoProducto": 30201902,
-        "CodigoCategoria": "30201900",
-        "Categoria": "Artículos para estructuras, obras y construcciones / Estructuras prefabricadas / Construcciones médicas prefabricadas",
-        "NombreProducto": "Unidades de laboratorio",
-        "Descripcion": "Sensidiscos de 6 mm de CIPROFLOXACIN 5mcg, para procedimientos de microbiología, pruebas semicuantitativas de sensibilidad, por medio de prueba de difusión de disco en agar. Presentación: cartridge que contienen 50 discos cada uno.\r\n(REQUISITO:  ISO 13.48",
-        "UnidadMedida": "Caja",
-        "Cantidad": 5,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 62,
-        "CodigoProducto": 30201902,
-        "CodigoCategoria": "30201900",
-        "Categoria": "Artículos para estructuras, obras y construcciones / Estructuras prefabricadas / Construcciones médicas prefabricadas",
-        "NombreProducto": "Unidades de laboratorio",
-        "Descripcion": "Sensidiscos de 6 mm de GENTAMICINA 10mcg, para procedimientos de microbiología, pruebas semicuantitativas de sensibilidad, por medio de prueba de difusión de disco en agar. Presentación: cartridge que contienen 50 discos cada uno.\r\n(REQUISITO:  ISO 13.485",
-        "UnidadMedida": "Caja",
-        "Cantidad": 3,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 63,
-        "CodigoProducto": 30201902,
-        "CodigoCategoria": "30201900",
-        "Categoria": "Artículos para estructuras, obras y construcciones / Estructuras prefabricadas / Construcciones médicas prefabricadas",
-        "NombreProducto": "Unidades de laboratorio",
-        "Descripcion": "Sensidiscos de 6 mm de TRIMETHOPRIM/SULPHAMETHOX, 25mcg, para procedimientos de microbiología, pruebas semicuantitativas de sensibilidad, por medio de prueba de difusión de disco en agar. Presentación: cartridge que contienen 50 discos cada uno.(REQUISITO",
-        "UnidadMedida": "Caja",
-        "Cantidad": 4,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 64,
-        "CodigoProducto": 30201902,
-        "CodigoCategoria": "30201900",
-        "Categoria": "Artículos para estructuras, obras y construcciones / Estructuras prefabricadas / Construcciones médicas prefabricadas",
-        "NombreProducto": "Unidades de laboratorio",
-        "Descripcion": "- Sensidiscos de 6 mm de SULBACTAM/CEFOPERAZONE 105mcg, para procedimientos de microbiología, pruebas semicuantitativas de sensibilidad, por medio de prueba de difusión de disco en agar. Presentación: cartridge que contienen 50 discos cada uno.(REQUISITO:",
-        "UnidadMedida": "Caja",
-        "Cantidad": 3,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 65,
-        "CodigoProducto": 30201902,
-        "CodigoCategoria": "30201900",
-        "Categoria": "Artículos para estructuras, obras y construcciones / Estructuras prefabricadas / Construcciones médicas prefabricadas",
-        "NombreProducto": "Unidades de laboratorio",
-        "Descripcion": "Sensidiscos de 6 mm de NITROFURANTOIN 300mcg, para procedimientos de microbiología, pruebas semicuantitativas de sensibilidad, por medio de prueba de difusión de disco en agar. Presentación: cartridge que contienen 50 discos cada uno.(REQUISITO:  ISO 13.4",
-        "UnidadMedida": "Caja",
-        "Cantidad": 5,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 66,
-        "CodigoProducto": 41105201,
-        "CodigoCategoria": "41105200",
-        "Categoria": "Equipamiento para laboratorios / Equipos e insumos para laboratorio / Equipo de teñido de portaobjetos para laboratorio",
-        "NombreProducto": "Teñidores de portaobjetos de histología o citología",
-        "Descripcion": "Reactivo Kovacs, reactivo tipo tinción para confirmación de microrganismos indol positivo. Presentación Frasco de 100ml.",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 2,
-        "Adjudicacion": null
+        "Nombre": "Auditado Automáticamente"
       }
     ],
     "cantidadItems": 66,
@@ -2142,7 +991,13 @@
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T20:51:28.554Z"
+    "updatedAt": "2026-04-28T22:01:41.544Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1057491-73-LP26": {
     "id": "1057491-73-LP26",
@@ -2429,37 +1284,7 @@
     ],
     "items": [
       {
-        "Correlativo": 1,
-        "CodigoProducto": 47132101,
-        "CodigoCategoria": "47132100",
-        "Categoria": "Equipos y suministros de limpieza / Suministros de limpieza / Kits de limpieza",
-        "NombreProducto": "Kits de limpieza industrial",
-        "Descripcion": "LINEA N°1: HIGIENE INSTITUCIONAL Y PERSONAL, DE ACUERDO A LO INDICADO EN BASES TÉCNICAS. OFERTAR POR LA TOTALIDAD DE LA LÍNEA",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 2,
-        "CodigoProducto": 47132102,
-        "CodigoCategoria": "47132100",
-        "Categoria": "Equipos y suministros de limpieza / Suministros de limpieza / Kits de limpieza",
-        "NombreProducto": "Kits de limpieza de uso general",
-        "Descripcion": "LINEA N°2: UTENSILIOS PLÁSTICOS Y VARIOS DE ASEO, DE ACUERDO A LO INDICADO EN BASES TÉCNICAS. OFERTAR POR LA TOTALIDAD DE LA LÍNEA.",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 3,
-        "CodigoProducto": 47132102,
-        "CodigoCategoria": "47132100",
-        "Categoria": "Equipos y suministros de limpieza / Suministros de limpieza / Kits de limpieza",
-        "NombreProducto": "Kits de limpieza de uso general",
-        "Descripcion": "LINEA N°3: UTENSILIOS DE 1 USO, ARTÍCULOS PLÁSTICOS, DE ACUERDO A LO INDICADO EN BASES TÉCNICAS. OFERTAR POR LA TOTALIDAD DE LA LÍNEA",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
+        "Nombre": "Auditado Automáticamente"
       }
     ],
     "cantidadItems": 3,
@@ -2467,7 +1292,13 @@
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T21:01:09.641Z"
+    "updatedAt": "2026-04-28T22:03:01.464Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1057501-212-LP26": {
     "id": "1057501-212-LP26",
@@ -4049,15 +2880,7 @@
     ],
     "items": [
       {
-        "Correlativo": 1,
-        "CodigoProducto": 42251503,
-        "CodigoCategoria": "42251500",
-        "Categoria": "Equipamiento y suministros médicos / Productos de rehabilitación, terapia ocupacional y física / Productos de terapia y evaluación sensorial, perceptual, cognitiva y de desteridad",
-        "NombreProducto": "Juegos terapéuticos",
-        "Descripcion": "ADQUISICIÓN DE MATERIAL DIDÁCTICO SENSORIAL PARA PROGRAMA DE INTEGRACIÓN ESCOLAR",
-        "UnidadMedida": "Global",
-        "Cantidad": 1,
-        "Adjudicacion": null
+        "Nombre": "Auditado Automáticamente"
       }
     ],
     "cantidadItems": 1,
@@ -4065,7 +2888,13 @@
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T21:01:44.338Z"
+    "updatedAt": "2026-04-28T22:01:14.198Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1171085-3-L126": {
     "id": "1171085-3-L126",
@@ -4109,15 +2938,7 @@
     ],
     "items": [
       {
-        "Correlativo": 1,
-        "CodigoProducto": 72101506,
-        "CodigoCategoria": "72101500",
-        "Categoria": "Servicios de construcción y mantenimiento / Servicios de atención, mantenimiento y reparaciones de edificios / Servicios de apoyo para la construcción",
-        "NombreProducto": "Servicios de mantenimiento de ascensores",
-        "Descripcion": "Mantención preventiva mensual por 12 meses de ascensor Teatro Municipal , se debe considerar el valor en pesos chilenos y facturación mensual por servicio.",
-        "UnidadMedida": "Global",
-        "Cantidad": 1,
-        "Adjudicacion": null
+        "Nombre": "Auditado Automáticamente"
       }
     ],
     "cantidadItems": 1,
@@ -4125,7 +2946,13 @@
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T21:01:45.202Z"
+    "updatedAt": "2026-04-28T22:01:23.380Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1180937-5-LP26": {
     "id": "1180937-5-LP26",
@@ -4169,15 +2996,7 @@
     ],
     "items": [
       {
-        "Correlativo": 1,
-        "CodigoProducto": 25101703,
-        "CodigoCategoria": "25101700",
-        "Categoria": "Vehículos y equipamiento en general / Vehículos motorizados / Vehículos de emergencia",
-        "NombreProducto": "Ambulancias",
-        "Descripcion": "Ambulancias segun Especificaciones Tecnicas",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
+        "Nombre": "Auditado Automáticamente"
       }
     ],
     "cantidadItems": 1,
@@ -4185,7 +3004,13 @@
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T21:01:46.064Z"
+    "updatedAt": "2026-04-28T22:01:31.787Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1357605-2-LP26": {
     "id": "1357605-2-LP26",
@@ -4231,15 +3056,7 @@
     ],
     "items": [
       {
-        "Correlativo": 1,
-        "CodigoProducto": 76111501,
-        "CodigoCategoria": "76111500",
-        "Categoria": "Servicios de limpieza industrial / Servicios de limpieza / Servicios de limpieza de edificios y oficinas en general",
-        "NombreProducto": "Servicios de limpieza de edificios",
-        "Descripcion": "servicios de vigilancia y de aseo del Auditorio de la Plaza Bicentenario de Antofagasta,servicio integral deberá ejecutarse todos los días de vigencia del contrato, aseo y vigilancia respectivamente",
-        "UnidadMedida": "Global",
-        "Cantidad": 1,
-        "Adjudicacion": null
+        "Nombre": "Auditado Automáticamente"
       }
     ],
     "cantidadItems": 1,
@@ -4247,7 +3064,13 @@
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T21:01:52.737Z"
+    "updatedAt": "2026-04-28T22:01:52.542Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1426037-12-LE26": {
     "id": "1426037-12-LE26",
@@ -4292,15 +3115,7 @@
     ],
     "items": [
       {
-        "Correlativo": 1,
-        "CodigoProducto": 25172504,
-        "CodigoCategoria": "25172500",
-        "Categoria": "Vehículos y equipamiento en general / Componentes para vehículos en general / Neumáticos y cámaras de neumáticos",
-        "NombreProducto": "Neumáticos para camionetas o automóviles",
-        "Descripcion": "ADQUISICIÓN DE NEUMÁTICOS PARA VEHÍCULOS DEL ÁREA DE EDUCACIÓN, PARA MAYOR DETALLE REMÍTASE A LA RESOLUCIÓN EXENTA ADJUNTA N°173 CON FECHA 28 DE ABRIL DE 2026.",
-        "UnidadMedida": "Unidad no definida",
-        "Cantidad": 1,
-        "Adjudicacion": null
+        "Nombre": "Auditado Automáticamente"
       }
     ],
     "cantidadItems": 1,
@@ -4308,7 +3123,13 @@
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T21:01:56.564Z"
+    "updatedAt": "2026-04-28T22:02:10.954Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1643-41-LP26": {
     "id": "1643-41-LP26",
@@ -4352,26 +3173,7 @@
     ],
     "items": [
       {
-        "Correlativo": 1,
-        "CodigoProducto": 72102201,
-        "CodigoCategoria": "72102200",
-        "Categoria": "Servicios de construcción y mantenimiento / Servicios de atención, mantenimiento y reparaciones de edificios / Servicios eléctricos",
-        "NombreProducto": "Instalación o servicio de sistemas de energía eléctrica",
-        "Descripcion": "Servicio de mantenciones preventivas y correctivas para grupos electrógenos",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 2,
-        "CodigoProducto": 72102201,
-        "CodigoCategoria": "72102200",
-        "Categoria": "Servicios de construcción y mantenimiento / Servicios de atención, mantenimiento y reparaciones de edificios / Servicios eléctricos",
-        "NombreProducto": "Instalación o servicio de sistemas de energía eléctrica",
-        "Descripcion": "Implementación sistema básico de telemetría",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 1,
-        "Adjudicacion": null
+        "Nombre": "Auditado Automáticamente"
       }
     ],
     "cantidadItems": 2,
@@ -4379,7 +3181,13 @@
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T21:01:57.056Z"
+    "updatedAt": "2026-04-28T22:02:21.827Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "1904-1-LE26": {
     "id": "1904-1-LE26",
@@ -5774,47 +4582,19 @@
     "requirements": [
       "Inscripción ChileProveedores"
     ],
-    "items": [
-      {
-        "Correlativo": 1,
-        "CodigoProducto": 52151506,
-        "CodigoCategoria": "52151500",
-        "Categoria": "Muebles, accesorios, electrodomésticos y productos electrónicos / Utensilios y baterías de cocina, vajillas y otros productos de uso doméstico / Utensilios de cocina domésticos desechables",
-        "NombreProducto": "Contenedores de comida domésticos de usar y tirar",
-        "Descripcion": "CONTENEDORES DE 240 LITROS",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 20,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 2,
-        "CodigoProducto": 52151506,
-        "CodigoCategoria": "52151500",
-        "Categoria": "Muebles, accesorios, electrodomésticos y productos electrónicos / Utensilios y baterías de cocina, vajillas y otros productos de uso doméstico / Utensilios de cocina domésticos desechables",
-        "NombreProducto": "Contenedores de comida domésticos de usar y tirar",
-        "Descripcion": "CONTENEDORES 1.100 LITROS",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 40,
-        "Adjudicacion": null
-      },
-      {
-        "Correlativo": 3,
-        "CodigoProducto": 52151506,
-        "CodigoCategoria": "52151500",
-        "Categoria": "Muebles, accesorios, electrodomésticos y productos electrónicos / Utensilios y baterías de cocina, vajillas y otros productos de uso doméstico / Utensilios de cocina domésticos desechables",
-        "NombreProducto": "Contenedores de comida domésticos de usar y tirar",
-        "Descripcion": "CONTENEDORES 120 LITROS",
-        "UnidadMedida": "Unidad",
-        "Cantidad": 300,
-        "Adjudicacion": null
-      }
-    ],
+    "items": [],
     "cantidadItems": 3,
     "url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1171085-9-LE26",
     "matchScore": 0,
     "matchReasons": [],
     "isOutsideRubro": false,
-    "updatedAt": "2026-04-28T21:26:39.375Z"
+    "updatedAt": "2026-04-28T22:21:27.272Z",
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "isFullyAnalyzed": true
   },
   "2147-29-LE26": {
     "id": "2147-29-LE26",
@@ -7274,6 +6054,2283 @@
       }
     ],
     "updatedAt": "2026-04-28T21:53:50.497Z",
+    "isFullyAnalyzed": true
+  },
+  "1063538-24-LR26": {
+    "id": "1063538-24-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:01:01.090Z",
+    "isFullyAnalyzed": true
+  },
+  "1062018-13-LP26": {
+    "id": "1062018-13-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:01:04.656Z",
+    "isFullyAnalyzed": true
+  },
+  "1079576-10-LP26": {
+    "id": "1079576-10-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:01:12.163Z",
+    "isFullyAnalyzed": true
+  },
+  "1079576-15-LE26": {
+    "id": "1079576-15-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:01:12.571Z",
+    "isFullyAnalyzed": true
+  },
+  "1099402-18-LE26": {
+    "id": "1099402-18-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:01:22.056Z",
+    "isFullyAnalyzed": true
+  },
+  "1147293-4-LE26": {
+    "id": "1147293-4-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:01:23.060Z",
+    "isFullyAnalyzed": true
+  },
+  "1208097-2-LE26": {
+    "id": "1208097-2-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:01:32.675Z",
+    "isFullyAnalyzed": true
+  },
+  "1230848-6-LP26": {
+    "id": "1230848-6-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:01:33.481Z",
+    "isFullyAnalyzed": true
+  },
+  "1348-2-LE26": {
+    "id": "1348-2-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:01:42.386Z",
+    "isFullyAnalyzed": true
+  },
+  "1260-9-LR26": {
+    "id": "1260-9-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:01:42.636Z",
+    "isFullyAnalyzed": true
+  },
+  "1353712-7-LE26": {
+    "id": "1353712-7-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:01:51.388Z",
+    "isFullyAnalyzed": true
+  },
+  "1369-4-O126": {
+    "id": "1369-4-O126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:01:52.616Z",
+    "isFullyAnalyzed": true
+  },
+  "1395-29-L126": {
+    "id": "1395-29-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:02:01.217Z",
+    "isFullyAnalyzed": true
+  },
+  "1422825-13-LE26": {
+    "id": "1422825-13-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:02:02.139Z",
+    "isFullyAnalyzed": true
+  },
+  "1395865-5-L126": {
+    "id": "1395865-5-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:02:03.141Z",
+    "isFullyAnalyzed": true
+  },
+  "1426096-3-LE26": {
+    "id": "1426096-3-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:02:11.697Z",
+    "isFullyAnalyzed": true
+  },
+  "1428275-3-LE26": {
+    "id": "1428275-3-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:02:12.279Z",
+    "isFullyAnalyzed": true
+  },
+  "1459-5-LP26": {
+    "id": "1459-5-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:02:20.814Z",
+    "isFullyAnalyzed": true
+  },
+  "1614-3-LE26": {
+    "id": "1614-3-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:02:21.803Z",
+    "isFullyAnalyzed": true
+  },
+  "1643-42-LE26": {
+    "id": "1643-42-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:02:30.628Z",
+    "isFullyAnalyzed": true
+  },
+  "1660-73-LE26": {
+    "id": "1660-73-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:02:31.422Z",
+    "isFullyAnalyzed": true
+  },
+  "1692-17-LE26": {
+    "id": "1692-17-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:02:31.772Z",
+    "isFullyAnalyzed": true
+  },
+  "1702-12-LE26": {
+    "id": "1702-12-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:02:40.485Z",
+    "isFullyAnalyzed": true
+  },
+  "1001546-3-LE26": {
+    "id": "1001546-3-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:02:41.317Z",
+    "isFullyAnalyzed": true
+  },
+  "1000-6-LE26": {
+    "id": "1000-6-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:02:41.458Z",
+    "isFullyAnalyzed": true
+  },
+  "1031849-6-LE26": {
+    "id": "1031849-6-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:02:50.199Z",
+    "isFullyAnalyzed": true
+  },
+  "1057049-182-LE25": {
+    "id": "1057049-182-LE25",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:02:51.256Z",
+    "isFullyAnalyzed": true
+  },
+  "1057374-13-L126": {
+    "id": "1057374-13-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:02:51.335Z",
+    "isFullyAnalyzed": true
+  },
+  "1057422-12-LP26": {
+    "id": "1057422-12-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:03:00.478Z",
+    "isFullyAnalyzed": true
+  },
+  "1057489-126-LE26": {
+    "id": "1057489-126-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:03:10.502Z",
+    "isFullyAnalyzed": true
+  },
+  "1057489-117-B226": {
+    "id": "1057489-117-B226",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:03:45.598Z",
+    "isFullyAnalyzed": true
+  },
+  "2793-5-LR26": {
+    "id": "2793-5-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:05:54.145Z",
+    "isFullyAnalyzed": true
+  },
+  "2322-33-LE26": {
+    "id": "2322-33-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:06:22.920Z",
+    "isFullyAnalyzed": true
+  },
+  "2658-127-L126": {
+    "id": "2658-127-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:06:32.589Z",
+    "isFullyAnalyzed": true
+  },
+  "4127-22-LE26": {
+    "id": "4127-22-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:07:07.282Z",
+    "isFullyAnalyzed": true
+  },
+  "4497-4-LE26": {
+    "id": "4497-4-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:07:17.380Z",
+    "isFullyAnalyzed": true
+  },
+  "4999-1-LE26": {
+    "id": "4999-1-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:07:21.531Z",
+    "isFullyAnalyzed": true
+  },
+  "621-429-LP26": {
+    "id": "621-429-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:07:38.435Z",
+    "isFullyAnalyzed": true
+  },
+  "3624-10-LE26": {
+    "id": "3624-10-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:08:01.138Z",
+    "isFullyAnalyzed": true
+  },
+  "3813-18-LE26": {
+    "id": "3813-18-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:08:11.921Z",
+    "isFullyAnalyzed": true
+  },
+  "4238-19-LE26": {
+    "id": "4238-19-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:08:27.246Z",
+    "isFullyAnalyzed": true
+  },
+  "4732-10-LE26": {
+    "id": "4732-10-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:08:40.313Z",
+    "isFullyAnalyzed": true
+  },
+  "522-11-LE26": {
+    "id": "522-11-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:08:46.983Z",
+    "isFullyAnalyzed": true
+  },
+  "605-5-LE26": {
+    "id": "605-5-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:09:00.205Z",
+    "isFullyAnalyzed": true
+  },
+  "707426-9-L126": {
+    "id": "707426-9-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:09:12.347Z",
+    "isFullyAnalyzed": true
+  },
+  "3573-24-LE26": {
+    "id": "3573-24-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:09:19.509Z",
+    "isFullyAnalyzed": true
+  },
+  "3614-1-LE26": {
+    "id": "3614-1-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:09:20.972Z",
+    "isFullyAnalyzed": true
+  },
+  "4192-46-LP25": {
+    "id": "4192-46-LP25",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:09:49.557Z",
+    "isFullyAnalyzed": true
+  },
+  "4888-9-LE26": {
+    "id": "4888-9-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:09:56.228Z",
+    "isFullyAnalyzed": true
+  },
+  "507428-26-LE26": {
+    "id": "507428-26-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:10:07.824Z",
+    "isFullyAnalyzed": true
+  },
+  "5413-29-LP26": {
+    "id": "5413-29-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:10:23.274Z",
+    "isFullyAnalyzed": true
+  },
+  "5783-5-LE26": {
+    "id": "5783-5-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:10:31.029Z",
+    "isFullyAnalyzed": true
+  },
+  "739-2-LP26": {
+    "id": "739-2-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:10:36.883Z",
+    "isFullyAnalyzed": true
+  },
+  "85-6-LR26": {
+    "id": "85-6-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:10:48.119Z",
+    "isFullyAnalyzed": true
+  },
+  "2785-34-LE26": {
+    "id": "2785-34-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:11:27.350Z",
+    "isFullyAnalyzed": true
+  },
+  "2986-15-LE26": {
+    "id": "2986-15-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:11:34.028Z",
+    "isFullyAnalyzed": true
+  },
+  "2145-28-LP26": {
+    "id": "2145-28-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:11:53.345Z",
+    "isFullyAnalyzed": true
+  },
+  "2723-24-LE26": {
+    "id": "2723-24-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:12:21.803Z",
+    "isFullyAnalyzed": true
+  },
+  "3634-8-LP26": {
+    "id": "3634-8-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:12:40.036Z",
+    "isFullyAnalyzed": true
+  },
+  "3686-24-LP25": {
+    "id": "3686-24-LP25",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:12:46.403Z",
+    "isFullyAnalyzed": true
+  },
+  "702988-10-LE26": {
+    "id": "702988-10-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:13:01.016Z",
+    "isFullyAnalyzed": true
+  },
+  "938-10-LE26": {
+    "id": "938-10-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:13:16.167Z",
+    "isFullyAnalyzed": true
+  },
+  "1035-8-LE26": {
+    "id": "1035-8-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:13:26.828Z",
+    "isFullyAnalyzed": true
+  },
+  "1057508-36-LP26": {
+    "id": "1057508-36-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:13:43.059Z",
+    "isFullyAnalyzed": true
+  },
+  "1079486-12-LE26": {
+    "id": "1079486-12-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:13:52.922Z",
+    "isFullyAnalyzed": true
+  },
+  "1080089-23-LE26": {
+    "id": "1080089-23-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:14:00.695Z",
+    "isFullyAnalyzed": true
+  },
+  "1079596-14-LE26": {
+    "id": "1079596-14-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:14:00.786Z",
+    "isFullyAnalyzed": true
+  },
+  "1084156-19-LR26": {
+    "id": "1084156-19-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:14:10.680Z",
+    "isFullyAnalyzed": true
+  },
+  "1149-3-LP26": {
+    "id": "1149-3-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:14:19.542Z",
+    "isFullyAnalyzed": true
+  },
+  "3908-19-L126": {
+    "id": "3908-19-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:15:01.171Z",
+    "isFullyAnalyzed": true
+  },
+  "4030-14-L126": {
+    "id": "4030-14-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:15:08.171Z",
+    "isFullyAnalyzed": true
+  },
+  "4123-1-LE26": {
+    "id": "4123-1-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:15:15.540Z",
+    "isFullyAnalyzed": true
+  },
+  "5240-25-LP26": {
+    "id": "5240-25-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:15:34.677Z",
+    "isFullyAnalyzed": true
+  },
+  "5240-47-LP26": {
+    "id": "5240-47-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:15:36.363Z",
+    "isFullyAnalyzed": true
+  },
+  "5538-4-LP26": {
+    "id": "5538-4-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:15:45.392Z",
+    "isFullyAnalyzed": true
+  },
+  "621-431-LR26": {
+    "id": "621-431-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:15:53.875Z",
+    "isFullyAnalyzed": true
+  },
+  "677-1-LE26": {
+    "id": "677-1-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:16:01.404Z",
+    "isFullyAnalyzed": true
+  },
+  "750-4-L126": {
+    "id": "750-4-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:16:06.996Z",
+    "isFullyAnalyzed": true
+  },
+  "938614-25-LP26": {
+    "id": "938614-25-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:16:13.082Z",
+    "isFullyAnalyzed": true
+  },
+  "3820-2-LP26": {
+    "id": "3820-2-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:16:33.454Z",
+    "isFullyAnalyzed": true
+  },
+  "4284-68-E226": {
+    "id": "4284-68-E226",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:16:43.453Z",
+    "isFullyAnalyzed": true
+  },
+  "4371-7-LP26": {
+    "id": "4371-7-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:16:50.311Z",
+    "isFullyAnalyzed": true
+  },
+  "5240-28-LP26": {
+    "id": "5240-28-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:17:00.470Z",
+    "isFullyAnalyzed": true
+  },
+  "621-1286-LR25": {
+    "id": "621-1286-LR25",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:17:12.483Z",
+    "isFullyAnalyzed": true
+  },
+  "635-51-LR26": {
+    "id": "635-51-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:17:19.898Z",
+    "isFullyAnalyzed": true
+  },
+  "741-6-LE26": {
+    "id": "741-6-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:17:32.233Z",
+    "isFullyAnalyzed": true
+  },
+  "1627-67-LE26": {
+    "id": "1627-67-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:17:42.615Z",
+    "isFullyAnalyzed": true
+  },
+  "2153-33-LE26": {
+    "id": "2153-33-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:17:58.370Z",
+    "isFullyAnalyzed": true
+  },
+  "2307-11-LE26": {
+    "id": "2307-11-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:18:14.826Z",
+    "isFullyAnalyzed": true
+  },
+  "2385-19-LE26": {
+    "id": "2385-19-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:18:21.773Z",
+    "isFullyAnalyzed": true
+  },
+  "2410-143-LE25": {
+    "id": "2410-143-LE25",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:18:32.541Z",
+    "isFullyAnalyzed": true
+  },
+  "29-21-LP26": {
+    "id": "29-21-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:18:51.659Z",
+    "isFullyAnalyzed": true
+  },
+  "3516-27-LE26": {
+    "id": "3516-27-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:19:04.092Z",
+    "isFullyAnalyzed": true
+  },
+  "3595-8-LE26": {
+    "id": "3595-8-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:19:16.225Z",
+    "isFullyAnalyzed": true
+  },
+  "3695-12-LE26": {
+    "id": "3695-12-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:19:26.655Z",
+    "isFullyAnalyzed": true
+  },
+  "4081-17-LE26": {
+    "id": "4081-17-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:19:33.529Z",
+    "isFullyAnalyzed": true
+  },
+  "5067-276-LE25": {
+    "id": "5067-276-LE25",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:19:56.987Z",
+    "isFullyAnalyzed": true
+  },
+  "621-424-LR26": {
+    "id": "621-424-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:20:13.923Z",
+    "isFullyAnalyzed": true
+  },
+  "742475-1-LE26": {
+    "id": "742475-1-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:20:22.613Z",
+    "isFullyAnalyzed": true
+  },
+  "812799-23-LP26": {
+    "id": "812799-23-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:20:33.228Z",
+    "isFullyAnalyzed": true
+  },
+  "1057501-187-CO26": {
+    "id": "1057501-187-CO26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:20:55.922Z",
+    "isFullyAnalyzed": true
+  },
+  "1057539-259-LP25": {
+    "id": "1057539-259-LP25",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:21:03.131Z",
+    "isFullyAnalyzed": true
+  },
+  "1109692-2-LR26": {
+    "id": "1109692-2-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:21:12.079Z",
+    "isFullyAnalyzed": true
+  },
+  "1210489-4-LP26": {
+    "id": "1210489-4-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:21:27.486Z",
+    "isFullyAnalyzed": true
+  },
+  "1233615-42-LE26": {
+    "id": "1233615-42-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:21:38.072Z",
+    "isFullyAnalyzed": true
+  },
+  "1242028-8-L126": {
+    "id": "1242028-8-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:21:40.858Z",
+    "isFullyAnalyzed": true
+  },
+  "1395-25-L126": {
+    "id": "1395-25-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:21:49.505Z",
+    "isFullyAnalyzed": true
+  },
+  "1511-27-LE26": {
+    "id": "1511-27-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:22:02.553Z",
+    "isFullyAnalyzed": true
+  },
+  "1588-4-LE26": {
+    "id": "1588-4-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:22:09.294Z",
+    "isFullyAnalyzed": true
+  },
+  "2274-11-L126": {
+    "id": "2274-11-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:22:35.232Z",
+    "isFullyAnalyzed": true
+  },
+  "2401-64-L126": {
+    "id": "2401-64-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:22:50.410Z",
+    "isFullyAnalyzed": true
+  },
+  "2483-57-LE26": {
+    "id": "2483-57-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:22:58.282Z",
+    "isFullyAnalyzed": true
+  },
+  "2658-95-L126": {
+    "id": "2658-95-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:23:06.207Z",
+    "isFullyAnalyzed": true
+  },
+  "2723-22-LE26": {
+    "id": "2723-22-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:23:12.916Z",
+    "isFullyAnalyzed": true
+  },
+  "2917-9-L126": {
+    "id": "2917-9-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:23:22.270Z",
+    "isFullyAnalyzed": true
+  },
+  "3228-4-L126": {
+    "id": "3228-4-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:23:28.534Z",
+    "isFullyAnalyzed": true
+  },
+  "3447-45-L126": {
+    "id": "3447-45-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [
+      {
+        "dateType": "Fecha de cierre de recepción de la oferta",
+        "dateTime": "07-04-2026 16:00:00"
+      },
+      {
+        "dateType": "Fecha de Publicación",
+        "dateTime": "24-03-2026 15:34:08"
+      },
+      {
+        "dateType": "Fecha inicio de preguntas",
+        "dateTime": "24-03-2026 15:34:08"
+      },
+      {
+        "dateType": "Fecha final de preguntas",
+        "dateTime": "27-03-2026 16:00:00"
+      },
+      {
+        "dateType": "Fecha de publicación de respuestas",
+        "dateTime": "31-03-2026 16:00:00"
+      },
+      {
+        "dateType": "Fecha de acto de apertura técnica",
+        "dateTime": "07-04-2026 16:01:00"
+      },
+      {
+        "dateType": "Fecha de acto de apertura económica (referencial)",
+        "dateTime": "07-04-2026 16:01:00"
+      },
+      {
+        "dateType": "Fecha de Adjudicación",
+        "dateTime": "28-04-2026 11:43:47"
+      }
+    ],
+    "items": [],
+    "updatedAt": "2026-04-28T22:23:41.934Z",
+    "isFullyAnalyzed": true
+  },
+  "3477-55-LE26": {
+    "id": "3477-55-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:23:42.444Z",
+    "isFullyAnalyzed": true
+  },
+  "3505-5-LE26": {
+    "id": "3505-5-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:23:50.900Z",
+    "isFullyAnalyzed": true
+  },
+  "3686-9-CO26": {
+    "id": "3686-9-CO26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:23:59.703Z",
+    "isFullyAnalyzed": true
+  },
+  "3693-69-LE26": {
+    "id": "3693-69-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:23:59.878Z",
+    "isFullyAnalyzed": true
+  },
+  "377-40-LP26": {
+    "id": "377-40-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:24:08.639Z",
+    "isFullyAnalyzed": true
+  },
+  "3902-21-LE26": {
+    "id": "3902-21-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:24:26.405Z",
+    "isFullyAnalyzed": true
+  },
+  "4329-5-LE26": {
+    "id": "4329-5-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:24:37.082Z",
+    "isFullyAnalyzed": true
+  },
+  "4650-6-LP26": {
+    "id": "4650-6-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:24:43.114Z",
+    "isFullyAnalyzed": true
+  },
+  "5048-58-O125": {
+    "id": "5048-58-O125",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:24:48.276Z",
+    "isFullyAnalyzed": true
+  },
+  "621-361-LR26": {
+    "id": "621-361-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:25:05.164Z",
+    "isFullyAnalyzed": true
+  },
+  "705290-18-LP26": {
+    "id": "705290-18-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:25:15.790Z",
+    "isFullyAnalyzed": true
+  },
+  "752-8-LE26": {
+    "id": "752-8-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:25:22.569Z",
+    "isFullyAnalyzed": true
+  },
+  "768-5-LR26": {
+    "id": "768-5-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:25:28.559Z",
+    "isFullyAnalyzed": true
+  },
+  "889473-104-R126": {
+    "id": "889473-104-R126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:25:39.859Z",
+    "isFullyAnalyzed": true
+  },
+  "1002588-57-L126": {
+    "id": "1002588-57-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:25:48.677Z",
+    "isFullyAnalyzed": true
+  },
+  "1048-11-LE26": {
+    "id": "1048-11-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:26:04.212Z",
+    "isFullyAnalyzed": true
+  },
+  "1057472-40-LE26": {
+    "id": "1057472-40-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:26:07.986Z",
+    "isFullyAnalyzed": true
+  },
+  "1057501-272-LP26": {
+    "id": "1057501-272-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:26:21.637Z",
+    "isFullyAnalyzed": true
+  },
+  "1057511-13-LE26": {
+    "id": "1057511-13-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:26:22.944Z",
+    "isFullyAnalyzed": true
+  },
+  "1068829-46-O125": {
+    "id": "1068829-46-O125",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:26:47.872Z",
+    "isFullyAnalyzed": true
+  },
+  "1350296-42-L126": {
+    "id": "1350296-42-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:26:53.721Z",
+    "isFullyAnalyzed": true
+  },
+  "1287766-3-LE26": {
+    "id": "1287766-3-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:26:53.839Z",
+    "isFullyAnalyzed": true
+  },
+  "1431841-19-LE26": {
+    "id": "1431841-19-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:27:08.144Z",
+    "isFullyAnalyzed": true
+  },
+  "1485465-1-L126": {
+    "id": "1485465-1-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:27:14.696Z",
+    "isFullyAnalyzed": true
+  },
+  "2263-43-LE26": {
+    "id": "2263-43-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:27:59.930Z",
+    "isFullyAnalyzed": true
+  },
+  "2342-14-CO26": {
+    "id": "2342-14-CO26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:28:13.416Z",
+    "isFullyAnalyzed": true
+  },
+  "2428-27-LE26": {
+    "id": "2428-27-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:28:22.226Z",
+    "isFullyAnalyzed": true
+  },
+  "2320-8-LE26": {
+    "id": "2320-8-LE26",
+    "budget": 0,
+    "guarantees": "No detailed in provided text",
+    "experience": "No detailed in provided text",
+    "certifications": "No detailed in provided text",
+    "siteVisit": "No detailed in provided text",
+    "keyDates": [
+      "Fecha de Publicación: 27-02-2026 11:10:57",
+      "Fecha inicio de preguntas: 27-02-2026 11:30:00",
+      "Fecha final de preguntas: 02-03-2026 15:30:00",
+      "Fecha de publicación de respuestas: 03-03-2026 17:30:00",
+      "Fecha de cierre de recepción de la oferta: 09-03-2026 15:30:00",
+      "Fecha de acto de apertura técnica: 09-03-2026 15:30:00",
+      "Fecha de acto de apertura económica (referencial): 09-03-2026 15:30:00",
+      "Fecha de Adjudicación: 28-04-2026 13:12:05"
+    ],
+    "items": [],
+    "updatedAt": "2026-04-28T22:28:23.265Z",
+    "isFullyAnalyzed": true
+  },
+  "2446-114-LE26": {
+    "id": "2446-114-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:28:23.962Z",
+    "isFullyAnalyzed": true
+  },
+  "2467-167-L125": {
+    "id": "2467-167-L125",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:28:36.932Z",
+    "isFullyAnalyzed": true
+  },
+  "2658-124-L126": {
+    "id": "2658-124-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:28:43.112Z",
+    "isFullyAnalyzed": true
+  },
+  "2688-15-LE26": {
+    "id": "2688-15-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:29:00.973Z",
+    "isFullyAnalyzed": true
+  },
+  "2905-12-LP26": {
+    "id": "2905-12-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:29:06.050Z",
+    "isFullyAnalyzed": true
+  },
+  "2788-17-LE26": {
+    "id": "2788-17-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:29:07.292Z",
+    "isFullyAnalyzed": true
+  },
+  "2981-107-LE26": {
+    "id": "2981-107-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:29:15.327Z",
+    "isFullyAnalyzed": true
+  },
+  "3536-7-L126": {
+    "id": "3536-7-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:29:30.624Z",
+    "isFullyAnalyzed": true
+  },
+  "434-63-LE26": {
+    "id": "434-63-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:29:56.127Z",
+    "isFullyAnalyzed": true
+  },
+  "5184-26-LE26": {
+    "id": "5184-26-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:30:14.424Z",
+    "isFullyAnalyzed": true
+  },
+  "618923-7-LE26": {
+    "id": "618923-7-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:30:23.679Z",
+    "isFullyAnalyzed": true
+  },
+  "6-59-O125": {
+    "id": "6-59-O125",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:30:29.161Z",
+    "isFullyAnalyzed": true
+  },
+  "729-72-LE26": {
+    "id": "729-72-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "No se especifica experiencia requerida directamente al proveedor en el contenido proporcionado. El énfasis está en las especificaciones técnicas del producto (repuestos originales, críticos) y la presentación de documentación específica (Certificado de Trazabilidad).",
+    "certifications": [
+      "Certificado de Trazabilidad de este rodamiento"
+    ],
+    "siteVisit": "No se menciona visita a terreno u otro tipo de visita obligatoria o facultativa en el contenido proporcionado.",
+    "keyDates": [
+      {
+        "name": "Fecha de Publicación",
+        "date": "07-04-2026 21:59:00"
+      },
+      {
+        "name": "Fecha inicio de preguntas",
+        "date": "07-04-2026 23:59:00"
+      },
+      {
+        "name": "Fecha final de preguntas",
+        "date": "10-04-2026 23:59:00"
+      },
+      {
+        "name": "Fecha de publicación de respuestas",
+        "date": "15-04-2026 23:59:00"
+      },
+      {
+        "name": "Fecha de cierre de recepción de la oferta",
+        "date": "28-04-2026 11:09:00"
+      },
+      {
+        "name": "Fecha de acto de apertura técnica",
+        "date": "28-04-2026 11:10:00"
+      },
+      {
+        "name": "Fecha de acto de apertura económica (referencial)",
+        "date": "28-04-2026 11:10:00"
+      },
+      {
+        "name": "Fecha de Adjudicación",
+        "date": "28-05-2026 11:10:00"
+      }
+    ],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:30:52.381Z",
+    "isFullyAnalyzed": true
+  },
+  "1003-5-LP26": {
+    "id": "1003-5-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-28T22:30:52.609Z",
+    "isFullyAnalyzed": true
+  },
+  "1057384-58-L126": {
+    "id": "1057384-58-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:31:02.053Z",
+    "isFullyAnalyzed": true
+  },
+  "1057492-66-LR26": {
+    "id": "1057492-66-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:31:06.314Z",
+    "isFullyAnalyzed": true
+  },
+  "1099402-16-LE26": {
+    "id": "1099402-16-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:31:31.569Z",
+    "isFullyAnalyzed": true
+  },
+  "1211839-30-LE26": {
+    "id": "1211839-30-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:31:40.982Z",
+    "isFullyAnalyzed": true
+  },
+  "1380-83-LP26": {
+    "id": "1380-83-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:31:53.768Z",
+    "isFullyAnalyzed": true
+  },
+  "1057428-5-LE26": {
+    "id": "1057428-5-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:32:08.675Z",
+    "isFullyAnalyzed": true
+  },
+  "1057540-39-LE26": {
+    "id": "1057540-39-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:32:20.935Z",
+    "isFullyAnalyzed": true
+  },
+  "1108338-14-LE26": {
+    "id": "1108338-14-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:32:35.153Z",
+    "isFullyAnalyzed": true
+  },
+  "1173933-3-LE26": {
+    "id": "1173933-3-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:32:40.870Z",
+    "isFullyAnalyzed": true
+  },
+  "1057489-116-LE26": {
+    "id": "1057489-116-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:33:02.819Z",
+    "isFullyAnalyzed": true
+  },
+  "1058088-6-LP26": {
+    "id": "1058088-6-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:33:09.930Z",
+    "isFullyAnalyzed": true
+  },
+  "1079694-20-LE26": {
+    "id": "1079694-20-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-28T22:33:14.084Z",
     "isFullyAnalyzed": true
   }
 }

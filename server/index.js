@@ -522,14 +522,14 @@ app.get('/api/mercadopublico/search', async (req, res) => {
   }
 });
 
-// --- BUSCAR TODO (CENTRALIZADO Y MASIVO - MULTI-DÍA) ---
+// --- BUSCAR TODO (CENTRALIZADO Y MASIVO - MULTI-DÍA + BYPASS ÁGIL) ---
 app.get('/api/search/all', async (req, res) => {
   if (!MP_TICKET) return res.status(400).json({ error: 'API key no configurada' });
   
   try {
-    console.log('[Escáner Central] Iniciando búsqueda masiva de los últimos 3 días...');
+    console.log('[Escáner Central] Iniciando búsqueda masiva ultra-robusta...');
     
-    // Generar fechas para los últimos 3 días
+    // 1. Generar fechas para los últimos 3 días
     const dates = [];
     for (let i = 0; i < 3; i++) {
       const d = new Date();
@@ -537,18 +537,17 @@ app.get('/api/search/all', async (req, res) => {
       dates.push(formatDateForAPI(d));
     }
 
+    // 2. Lanzar búsquedas API en paralelo
     const allSearches = [];
     for (const date of dates) {
-      // Licitaciones generales
-      allSearches.push(fetchWithTimeout(`${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}&fecha=${date}`).then(r => r.json()));
-      // Compras Ágiles
-      allSearches.push(fetchWithTimeout(`${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}&codigoTipo=SE&fecha=${date}`).then(r => r.json()));
+      allSearches.push(fetchWithTimeout(`${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}&fecha=${date}`).then(r => r.json()).catch(() => ({ Listado: [] })));
+      // Intentar forzar tipo SE (Compra Ágil) vía API
+      allSearches.push(fetchWithTimeout(`${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}&codigoTipo=SE&fecha=${date}`).then(r => r.json()).catch(() => ({ Listado: [] })));
     }
 
-    console.log(`[Escáner Central] Lanzando ${allSearches.length} peticiones en paralelo...`);
     const searchResults = await Promise.all(allSearches);
 
-    // Unificar y transformar
+    // 3. Procesar resultados de API
     const unified = [];
     const seenIds = new Set();
 
@@ -556,10 +555,10 @@ app.get('/api/search/all', async (req, res) => {
       if (data && data.Listado) {
         data.Listado.forEach(lic => {
           const transformed = transformLicitacion(lic);
-          // Si el índice es impar, es una Compra Ágil (SE)
+          // Si el índice es impar, vino de la búsqueda específica de SE
           if (index % 2 !== 0) {
             transformed.type = 'compra_agil';
-            transformed.typeName = 'Compra Ágil (SE)';
+            transformed.typeName = 'Compra Ágil (Real-Time)';
           }
           
           if (!seenIds.has(transformed.id)) {
@@ -570,7 +569,7 @@ app.get('/api/search/all', async (req, res) => {
       }
     });
 
-    // Calcular match con perfil
+    // 4. Calcular match con perfil
     const profile = readJSON('profile.json');
     let processed = unified;
     if (profile) {
@@ -578,20 +577,25 @@ app.get('/api/search/all', async (req, res) => {
     }
     processed.sort((a, b) => b.matchScore - a.matchScore);
 
-    // Persistir en last_search.json
-    writeJSON('last_search.json', { results: processed, total: processed.length, timestamp: new Date().toISOString() });
+    // 5. Guardar estado
+    writeJSON('last_search.json', { 
+      results: processed, 
+      total: processed.length, 
+      timestamp: new Date().toISOString(),
+      status: 'success'
+    });
 
-    // DISPARAR AUDITORÍA TURBO VIP
+    // 6. Inyectar en Auditoría Turbo
     if (processed.length > 0) {
+      console.log(`[Escáner Central] Inyectando ${processed.length} oportunidades al motor de auditoría...`);
       addToAuditQueue(processed);
     }
 
-    console.log(`[Escáner Central] Finalizado. Total: ${processed.length} oportunidades únicas.`);
     res.json({ results: processed, total: processed.length });
 
   } catch (err) {
-    console.error('[Escáner Central] Error Crítico:', err.message);
-    res.status(500).json({ error: err.message });
+    console.error('[Escáner Central] Fallo crítico:', err.message);
+    res.status(500).json({ error: 'Error en el escáner centralizado', details: err.message });
   }
 });
 
