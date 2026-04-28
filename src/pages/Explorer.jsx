@@ -34,13 +34,35 @@ function Explorer() {
     }
     setExpandedId(id);
     
-    // Si ya lo tenemos en caché o no es MercadoPublico, no hacer fetch
-    if (details[id] || source !== 'MercadoPublico') return;
+    // Si ya lo tenemos en caché con auditoría completa, no hacer nada
+    if (details[id]?.isFullyAnalyzed) return;
 
+    // Si no es MercadoPublico, solo cargar detalle básico si no existe
+    if (source !== 'MercadoPublico') {
+      if (!details[id]) {
+        setLoadingDetail(true);
+        const detailData = await api.getMercadoPublicoDetail(id);
+        if (detailData && detailData.result) {
+          setDetails(prev => ({ ...prev, [id]: detailData.result }));
+        }
+        setLoadingDetail(false);
+      }
+      return;
+    }
+
+    // --- LOGICA AUTO-AUDITORÍA PARA MERCADO PÚBLICO ---
     setLoadingDetail(true);
     const detailData = await api.getMercadoPublicoDetail(id);
+    
     if (detailData && detailData.result) {
-      setDetails(prev => ({ ...prev, [id]: detailData.result }));
+      const currentDetail = detailData.result;
+      setDetails(prev => ({ ...prev, [id]: currentDetail }));
+
+      // Si no tiene auditoría completa, lanzarla automáticamente en silencio
+      if (!currentDetail.isFullyAnalyzed) {
+        console.log(`[Auto] Iniciando auditoría automática para ${id}`);
+        handleAutoAnalyze(id, true); // Pasar bandera de 'silent'
+      }
     }
     setLoadingDetail(false);
   };
@@ -97,7 +119,7 @@ function Explorer() {
     }
   };
 
-  const handleAutoAnalyze = async (id) => {
+  const handleAutoAnalyze = async (id, isSilent = false) => {
     setAutoAnalyzing(id);
     try {
       const res = await fetch(`http://localhost:3001/api/auto-analyze/${id}`, {
@@ -118,13 +140,13 @@ function Explorer() {
           setOpportunities(prev => prev.map(o => o.id === id ? { ...o, budget: data.budget } : o));
         }
         
-        alert("¡Auditoría completa finalizada con éxito!");
+        if (!isSilent) alert("¡Auditoría completa finalizada con éxito!");
       } else {
-        alert(data.message || "No se pudo realizar la auditoría completa.");
+        if (!isSilent) alert(data.message || "No se pudo realizar la auditoría completa.");
       }
     } catch (err) {
       console.error(err);
-      alert("Error en la automatización de Scrapfly");
+      if (!isSilent) alert("Error en la automatización de Scrapfly");
     } finally {
       setAutoAnalyzing(null);
     }
