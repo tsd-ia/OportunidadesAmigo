@@ -131,7 +131,7 @@ export async function getStatus() {
 
 export async function sendChatMessage(message, context) {
   try {
-    const response = await fetch(`${API_URL}/chat`, {
+    const response = await fetch(`${API_BASE}/chat`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message, context }),

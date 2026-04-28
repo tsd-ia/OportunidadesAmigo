@@ -23,6 +23,15 @@ function Explorer() {
   const [analyzingPdf, setAnalyzingPdf] = useState(null);
   const [autoAnalyzing, setAutoAnalyzing] = useState(null);
 
+  const loadSavedData = async () => {
+    setLoading(true);
+    const data = await api.getOpportunities();
+    if (data && data.results) {
+      setOpportunities(data.results);
+    }
+    setLoading(false);
+  };
+
   useEffect(() => {
     loadSavedData();
   }, []);
@@ -67,14 +76,6 @@ function Explorer() {
     setLoadingDetail(false);
   };
 
-  const loadSavedData = async () => {
-    setLoading(true);
-    const data = await api.getOpportunities();
-    if (data && data.results) {
-      setOpportunities(data.results);
-    }
-    setLoading(false);
-  };
 
   const handleScan = async () => {
     setSearching(true);
@@ -235,15 +236,14 @@ function Explorer() {
           <h1 className="page-title">Explorador de Oportunidades</h1>
           <p className="page-subtitle">{filtered.length} oportunidades encontradas</p>
         </div>
-        <button 
-          onClick={performSearch} 
-          disabled={searching}
-          className="btn btn--primary"
-          style={{ display: 'flex', gap: 8, alignItems: 'center' }}
-        >
-          <RefreshCw size={16} className={searching ? "spinner" : ""} />
-          {searching ? 'Buscando datos reales...' : 'Escanear Ahora'}
-        </button>
+          <button 
+            onClick={handleScan} 
+            disabled={searching}
+            className="btn btn--primary btn--icon"
+            style={{ padding: '8px 20px', borderRadius: '12px' }}
+          >
+            {searching ? <RefreshCw size={18} className="spinner" /> : <><RefreshCw size={18} /> Escanear Ahora</>}
+          </button>
       </div>
 
       {/* Dashboard de Regiones */}
@@ -362,7 +362,7 @@ function Explorer() {
               : "No hay oportunidades que coincidan con los filtros."}
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: 12 }}>
-            <button onClick={performSearch} className="btn btn--primary">Realizar escaneo web</button>
+            <button onClick={handleScan} className="btn btn--primary">Realizar escaneo web</button>
             {activeSources.compraagil && (
               <button 
                 onClick={handleScanAgiles} 
