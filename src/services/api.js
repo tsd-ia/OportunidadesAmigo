@@ -61,6 +61,16 @@ export async function searchAll() {
   }
 }
 
+export async function searchComprasAgiles() {
+  try {
+    const res = await fetch(`${API_BASE}/mercadopublico/search-agiles`);
+    return await res.json();
+  } catch {
+    return { results: [], total: 0, error: 'Backend no disponible' };
+  }
+}
+
+
 export async function getMercadoPublicoDetail(codigo) {
   try {
     const res = await fetch(`${API_BASE}/mercadopublico/detail/${codigo}`);

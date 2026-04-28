@@ -469,11 +469,13 @@ app.get('/api/mercadopublico/search', async (req, res) => {
   }
 
   try {
-    const { keyword, estado, fecha, region } = req.query;
+    const { keyword, estado, fecha, region, tipo } = req.query;
     let url = `${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}`;
 
     if (keyword) url += `&palabra_clave=${encodeURIComponent(keyword)}`;
     if (estado) url += `&estado=${estado}`;
+    if (tipo) url += `&codigoTipo=${tipo}`; // SE para Compra Ágil
+
     // Si no se pasa fecha ni keyword, buscar por fecha de hoy para obtener resultados
     if (fecha) {
       url += `&fecha=${fecha}`;
@@ -519,6 +521,49 @@ app.get('/api/mercadopublico/search', async (req, res) => {
     res.status(500).json({ error: 'Error al consultar MercadoPublico', details: err.message });
   }
 });
+
+// --- BUSCAR COMPRAS ÁGILES (VIP) ---
+app.get('/api/mercadopublico/search-agiles', async (req, res) => {
+  if (!MP_TICKET) return res.status(400).json({ error: 'API key no configurada' });
+  try {
+    // Buscar tipo SE (Compra Ágil) de hoy
+    const url = `${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}&codigoTipo=SE&fecha=${formatDateForAPI()}`;
+    console.log(`[VIP] Buscando Compras Ágiles: ${url.replace(MP_TICKET, '***')}`);
+    
+    const response = await fetchWithTimeout(url);
+    const data = await response.json();
+    
+    if (!data.Listado) return res.json({ results: [], total: 0 });
+    
+    const results = data.Listado.map(transformLicitacion);
+    
+    // Disparar auditoría turbo VIP inmediatamente
+    if (results.length > 0) {
+      addToAuditQueue(results);
+    }
+    
+    res.json({ results, total: results.length });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// --- BUSCAR TODO (FALLBACK) ---
+app.get('/api/search/all', async (req, res) => {
+  // Por ahora redirigir a la búsqueda normal de hoy
+  try {
+    const url = `${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}&fecha=${formatDateForAPI()}`;
+    const response = await fetchWithTimeout(url);
+    const data = await response.json();
+    if (!data.Listado) return res.json({ results: [] });
+    const results = data.Listado.map(transformLicitacion);
+    if (results.length > 0) addToAuditQueue(results);
+    res.json({ results });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 
 // --- DETALLE DE LICITACIÓN ---
 app.get('/api/mercadopublico/detail/:codigo', async (req, res) => {

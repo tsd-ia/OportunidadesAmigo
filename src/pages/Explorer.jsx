@@ -76,7 +76,7 @@ function Explorer() {
     setLoading(false);
   };
 
-  const performSearch = async () => {
+  const handleScan = async () => {
     setSearching(true);
     const data = await api.searchAll();
     if (data && data.results) {
@@ -84,6 +84,21 @@ function Explorer() {
     }
     setSearching(false);
   };
+
+  const handleScanAgiles = async () => {
+    setSearching(true);
+    const data = await api.searchComprasAgiles();
+    if (data && data.results) {
+      // Combinar con las existentes sin duplicar
+      setOpportunities(prev => {
+        const existingIds = new Set(prev.map(o => o.id));
+        const news = data.results.filter(o => !existingIds.has(o.id));
+        return [...news, ...prev];
+      });
+    }
+    setSearching(false);
+  };
+
 
   const handlePdfUpload = async (e, id) => {
     e.stopPropagation();
@@ -341,8 +356,24 @@ function Explorer() {
         </div>
       ) : filtered.length === 0 ? (
         <div className="card" style={{ textAlign: 'center', padding: 40 }}>
-          <p style={{ color: 'var(--text-muted)', marginBottom: 16 }}>No hay oportunidades que coincidan con los filtros.</p>
-          <button onClick={performSearch} className="btn btn--primary">Realizar escaneo web</button>
+          <p style={{ color: 'var(--text-muted)', marginBottom: 16 }}>
+            {activeSources.compraagil && !activeSources.mercadopublico 
+              ? "No hay Compras Ágiles cargadas en el sistema." 
+              : "No hay oportunidades que coincidan con los filtros."}
+          </p>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: 12 }}>
+            <button onClick={performSearch} className="btn btn--primary">Realizar escaneo web</button>
+            {activeSources.compraagil && (
+              <button 
+                onClick={handleScanAgiles} 
+                className="btn btn--primary" 
+                style={{ background: 'var(--accent-color)' }}
+                disabled={searching}
+              >
+                {searching ? <RefreshCw size={16} className="spinner" /> : 'Buscar Compras Ágiles Ahora'}
+              </button>
+            )}
+          </div>
         </div>
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
