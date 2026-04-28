@@ -234,19 +234,22 @@ function Explorer() {
       {/* Dashboard de Regiones */}
       <div style={{ 
         display: 'flex', 
-        gap: 10, 
-        overflowX: 'auto', 
-        paddingBottom: 15, 
+        gap: 8, 
+        flexWrap: 'wrap', // Evitar que se corra el contenido
         marginBottom: 20,
-        scrollbarWidth: 'none'
+        width: '100%'
       }}>
         {Object.entries(
           filtered.reduce((acc, o) => {
-            // Limpiar nombres de región largos
+            // Unificación Agresiva de Nombres
             let reg = o.region || 'Metropolitana';
-            if (reg.includes('Región de')) reg = reg.replace('Región de ', '');
-            if (reg.includes('Región del')) reg = reg.replace('Región del ', '');
-            if (reg.includes('Libertador General Bernardo O\'Higgins')) reg = 'O\'Higgins';
+            reg = reg.replace(/Región de |Región del |Región /g, '').trim();
+            if (reg.includes('Metropolitana') || reg.includes('Santiago')) reg = 'Metropolitana';
+            if (reg.includes('Valpara')) reg = 'Valparaíso';
+            if (reg.includes('Biob')) reg = 'Biobío';
+            if (reg.includes('Higgins')) reg = 'O\'Higgins';
+            if (reg.includes('Arica')) reg = 'Arica y Parinacota';
+            if (reg.includes('Magallanes')) reg = 'Magallanes';
             
             acc[reg] = (acc[reg] || 0) + 1;
             return acc;
@@ -254,17 +257,17 @@ function Explorer() {
         ).sort((a, b) => b[1] - a[1]).map(([reg, count]) => (
           <div key={reg} style={{ 
             background: 'var(--card-bg)', 
-            padding: '8px 16px', 
-            borderRadius: 20, 
+            padding: '6px 12px', 
+            borderRadius: 16, 
             border: '1px solid var(--border)',
-            fontSize: '0.8rem',
-            whiteSpace: 'nowrap',
+            fontSize: '0.75rem',
             display: 'flex',
             alignItems: 'center',
-            gap: 8,
-            boxShadow: 'var(--shadow-sm)'
+            gap: 6,
+            boxShadow: 'var(--shadow-sm)',
+            transition: 'all 0.2s ease'
           }}>
-            <MapPin size={14} style={{ color: 'var(--accent)' }} />
+            <MapPin size={12} style={{ color: 'var(--accent)' }} />
             <strong>{reg}:</strong> 
             <span style={{ color: 'var(--accent)', fontWeight: 'bold' }}>{count}</span>
           </div>
