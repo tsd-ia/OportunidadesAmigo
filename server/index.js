@@ -93,6 +93,135 @@ function getFromMemory(id) {
   return db[id] || null;
 }
 
+// ============================================================
+// COLA DE AUDITORÍA AUTOMÁTICA (Background Scanner)
+// ============================================================
+let auditQueue = [];
+let isProcessingQueue = false;
+
+async function executeAudit(codigo) {
+  let browser;
+  try {
+    console.log(`[Auditoría] Iniciando extracción para ${codigo}...`);
+    browser = await puppeteer.launch({ 
+      headless: "new",
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
+    const page = await browser.newPage();
+    await page.setViewport({ width: 1280, height: 800 });
+    
+    // 1. Ir a la ficha
+    const url = `https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=${codigo}`;
+    await page.goto(url, { waitUntil: 'networkidle2' });
+
+    // 2. Click en anexos
+    const attachmentsBtn = await page.$('#imgAdjuntos');
+    if (!attachmentsBtn) throw new Error('No se encontró el botón de anexos');
+    await attachmentsBtn.click();
+    await new Promise(r => setTimeout(r, 3000));
+    
+    const targets = await browser.targets();
+    const popupTarget = targets.find(t => t.url().includes('ViewAttachment.aspx'));
+    const attachmentsPage = popupTarget ? await popupTarget.page() : page;
+    await attachmentsPage.waitForSelector('body');
+    const html = await attachmentsPage.content();
+    
+    // 3. Captcha
+    if (html.includes('Captcha.aspx')) {
+      const captchaImg = await attachmentsPage.$('img[src*="Captcha.aspx"]');
+      if (captchaImg) {
+        const screenshotB64 = await captchaImg.screenshot({ encoding: 'base64' });
+        const geminiResponse = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contents: [{
+              parts: [
+                { text: "Dime el código de 5 o 6 letras/números que aparece en esta imagen de captcha de Mercado Público. Responde SOLO el código, nada más." },
+                { inline_data: { mime_type: "image/png", data: screenshotB64 } }
+              ]
+            }]
+          })
+        });
+        const geminiData = await geminiResponse.json();
+        const solvedCaptcha = geminiData.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || "";
+        if (solvedCaptcha) await attachmentsPage.type('input[name*="ctl10"]', solvedCaptcha);
+      }
+    }
+
+    // 4. Gemini Auditoría
+    const tableText = await attachmentsPage.evaluate(() => document.body.innerText);
+    const detailText = await page.evaluate(() => document.body.innerText);
+    const auditPrompt = `Actúa como un auditor experto en licitaciones de Mercado Público Chile. Analiza este contenido extraído de la ficha y anexos de la licitación ${codigo}. Extrae: budget (solo número), guarantees (lista), experience (texto), certifications (lista), siteVisit (texto), keyDates (lista). Responde SOLO un objeto JSON. TEXTO FICHA: ${detailText.substring(0, 3000)} TEXTO ANEXOS: ${tableText.substring(0, 5000)}`;
+
+    const geminiRes = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: auditPrompt }] }] })
+    });
+
+    const geminiData = await geminiRes.json();
+    let auditResults = { budget: 0, guarantees: [], experience: "", certifications: [], siteVisit: "", keyDates: [] };
+    try {
+      const jsonText = geminiData.candidates?.[0]?.content?.parts?.[0]?.text?.replace(/```json|```/g, '').trim();
+      auditResults = JSON.parse(jsonText);
+    } catch (e) {
+      const text = geminiData.candidates?.[0]?.content?.parts?.[0]?.text || '';
+      auditResults.budget = parseInt(text.replace(/\D/g, ''), 10) || 0;
+    }
+
+    await browser.close();
+
+    const finalResult = {
+      id: codigo,
+      budget: auditResults.budget || 0,
+      guarantees: auditResults.guarantees || [],
+      experience: auditResults.experience || "",
+      certifications: auditResults.certifications || [],
+      siteVisit: auditResults.siteVisit || "",
+      keyDates: auditResults.keyDates || [],
+      items: tableText.includes('Producto') ? [{ Nombre: 'Auditado Automáticamente' }] : [],
+      updatedAt: new Date().toISOString(),
+      isFullyAnalyzed: true
+    };
+    saveToMemory(finalResult);
+    return finalResult;
+
+  } catch (err) {
+    if (browser) await browser.close();
+    throw err;
+  }
+}
+
+async function processAuditQueue() {
+  if (isProcessingQueue || auditQueue.length === 0) return;
+  isProcessingQueue = true;
+  console.log(`[Escáner] Iniciando procesamiento de cola (${auditQueue.length} pendientes)...`);
+  
+  while (auditQueue.length > 0) {
+    const id = auditQueue.shift();
+    const cached = getFromMemory(id);
+    if (!cached || !cached.isFullyAnalyzed) {
+      console.log(`[Escáner] Procesando automáticamente: ${id}`);
+      try {
+        await executeAudit(id);
+        await new Promise(r => setTimeout(r, 5000));
+      } catch (err) {
+        console.error(`[Escáner] Error en ${id}:`, err.message);
+      }
+    }
+  }
+  isProcessingQueue = false;
+}
+
+function addToAuditQueue(ids) {
+  const newIds = ids.filter(id => !auditQueue.includes(id));
+  auditQueue = [...auditQueue, ...newIds];
+  processAuditQueue();
+}
+
+
+
 // Fetch con timeout
 async function fetchWithTimeout(url, timeout = 15000) {
   const controller = new AbortController();
