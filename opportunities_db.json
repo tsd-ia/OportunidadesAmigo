@@ -10728,5 +10728,709 @@
     ],
     "updatedAt": "2026-04-29T02:00:23.786Z",
     "isFullyAnalyzed": true
+  },
+  "1002-32-LP26": {
+    "id": "1002-32-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:56:53.201Z",
+    "isFullyAnalyzed": true
+  },
+  "1001-2-LP26": {
+    "id": "1001-2-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:56:53.364Z",
+    "isFullyAnalyzed": true
+  },
+  "1029-10-LP26": {
+    "id": "1029-10-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:56:53.449Z",
+    "isFullyAnalyzed": true
+  },
+  "1057898-42-LP26": {
+    "id": "1057898-42-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:57:05.931Z",
+    "isFullyAnalyzed": true
+  },
+  "1057402-45-LP26": {
+    "id": "1057402-45-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:57:06.654Z",
+    "isFullyAnalyzed": true
+  },
+  "1058085-72-LP26": {
+    "id": "1058085-72-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:57:08.317Z",
+    "isFullyAnalyzed": true
+  },
+  "1058090-9-LP26": {
+    "id": "1058090-9-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:57:16.139Z",
+    "isFullyAnalyzed": true
+  },
+  "1075337-19-LP26": {
+    "id": "1075337-19-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:57:17.801Z",
+    "isFullyAnalyzed": true
+  },
+  "1075337-69-LR25": {
+    "id": "1075337-69-LR25",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:57:17.963Z",
+    "isFullyAnalyzed": true
+  },
+  "1079454-2-LP26": {
+    "id": "1079454-2-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:57:25.865Z",
+    "isFullyAnalyzed": true
+  },
+  "1079659-25-LE26": {
+    "id": "1079659-25-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:57:27.205Z",
+    "isFullyAnalyzed": true
+  },
+  "1079694-15-LE26": {
+    "id": "1079694-15-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:57:28.556Z",
+    "isFullyAnalyzed": true
+  },
+  "1219241-3-LR26": {
+    "id": "1219241-3-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:57:35.134Z",
+    "isFullyAnalyzed": true
+  },
+  "1233613-18-LP26": {
+    "id": "1233613-18-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:57:36.168Z",
+    "isFullyAnalyzed": true
+  },
+  "1298354-4-LE26": {
+    "id": "1298354-4-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:57:36.900Z",
+    "isFullyAnalyzed": true
+  },
+  "1380-87-LP26": {
+    "id": "1380-87-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:57:45.069Z",
+    "isFullyAnalyzed": true
+  },
+  "1375761-25-LP26": {
+    "id": "1375761-25-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:57:48.882Z",
+    "isFullyAnalyzed": true
+  },
+  "1477751-1-LE26": {
+    "id": "1477751-1-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:57:53.660Z",
+    "isFullyAnalyzed": true
+  },
+  "1499887-6-LP26": {
+    "id": "1499887-6-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:57:56.827Z",
+    "isFullyAnalyzed": true
+  },
+  "1500781-3-LP26": {
+    "id": "1500781-3-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:58:02.305Z",
+    "isFullyAnalyzed": true
+  },
+  "1642-11-LP26": {
+    "id": "1642-11-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:58:03.777Z",
+    "isFullyAnalyzed": true
+  },
+  "1725-49-LE26": {
+    "id": "1725-49-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:58:07.197Z",
+    "isFullyAnalyzed": true
+  },
+  "2099-20-LE26": {
+    "id": "2099-20-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:58:12.780Z",
+    "isFullyAnalyzed": true
+  },
+  "2176-13-LP26": {
+    "id": "2176-13-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:58:13.930Z",
+    "isFullyAnalyzed": true
+  },
+  "2196-10-LE26": {
+    "id": "2196-10-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:58:17.918Z",
+    "isFullyAnalyzed": true
+  },
+  "2322-34-LE26": {
+    "id": "2322-34-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:58:23.007Z",
+    "isFullyAnalyzed": true
+  },
+  "2411-3-L126": {
+    "id": "2411-3-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:58:23.229Z",
+    "isFullyAnalyzed": true
+  },
+  "2445-45-L126": {
+    "id": "2445-45-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:58:28.341Z",
+    "isFullyAnalyzed": true
+  },
+  "2660-34-LE26": {
+    "id": "2660-34-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:58:33.602Z",
+    "isFullyAnalyzed": true
+  },
+  "2656-24-LE26": {
+    "id": "2656-24-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:58:33.634Z",
+    "isFullyAnalyzed": true
+  },
+  "2663-36-LE26": {
+    "id": "2663-36-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:58:38.454Z",
+    "isFullyAnalyzed": true
+  },
+  "2686-59-LP26": {
+    "id": "2686-59-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:58:43.769Z",
+    "isFullyAnalyzed": true
+  },
+  "2705-29-B226": {
+    "id": "2705-29-B226",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:58:43.840Z",
+    "isFullyAnalyzed": true
+  },
+  "2709-29-LP26": {
+    "id": "2709-29-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:58:56.291Z",
+    "isFullyAnalyzed": true
+  },
+  "2735-58-LP26": {
+    "id": "2735-58-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:59:01.736Z",
+    "isFullyAnalyzed": true
+  },
+  "2723-36-LE26": {
+    "id": "2723-36-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:59:02.970Z",
+    "isFullyAnalyzed": true
+  },
+  "2785-36-LE26": {
+    "id": "2785-36-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:59:06.279Z",
+    "isFullyAnalyzed": true
+  },
+  "2793-52-LE26": {
+    "id": "2793-52-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:59:11.556Z",
+    "isFullyAnalyzed": true
+  },
+  "2909-21-LE26": {
+    "id": "2909-21-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-30T18:59:13.510Z",
+    "isFullyAnalyzed": true
+  },
+  "2933-29-LE26": {
+    "id": "2933-29-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-30T18:59:20.612Z",
+    "isFullyAnalyzed": true
+  },
+  "2943-6-LP26": {
+    "id": "2943-6-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-30T18:59:22.700Z",
+    "isFullyAnalyzed": true
+  },
+  "1017312-22-LP25": {
+    "id": "1017312-22-LP25",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-30T18:59:25.230Z",
+    "isFullyAnalyzed": true
+  },
+  "1057389-14-LP26": {
+    "id": "1057389-14-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:59:31.242Z",
+    "isFullyAnalyzed": true
+  },
+  "1057461-17-L126": {
+    "id": "1057461-17-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:59:35.451Z",
+    "isFullyAnalyzed": true
+  },
+  "1057509-45-LE26": {
+    "id": "1057509-45-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:59:40.903Z",
+    "isFullyAnalyzed": true
   }
 }

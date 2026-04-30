@@ -618,6 +618,47 @@ app.get('/api/search/all', async (req, res) => {
   }
 });
 
+// --- BUSCAR ESPECÍFICAMENTE COMPRAS ÁGILES (SCRAPER BYPASS) ---
+app.get('/api/mercadopublico/search-agiles', async (req, res) => {
+  try {
+    console.log('[Scraper Bypass] Iniciando búsqueda dedicada de Compras Ágiles...');
+    const scraped = await scrapeAgiles();
+    
+    if (scraped.length === 0) {
+      return res.json({ results: [], total: 0, message: 'No se encontraron resultados en el portal.' });
+    }
+
+    const profile = readJSON('profile.json');
+    let processed = scraped;
+    if (profile) {
+      processed = scraped.map(r => calculateMatch(r, profile));
+    }
+    processed.sort((a, b) => b.matchScore - a.matchScore);
+
+    // Guardar en memoria para que aparezcan al recargar
+    const existing = readJSON('last_search.json') || { results: [], total: 0 };
+    const seenIds = new Set(existing.results.map(o => o.id));
+    
+    const uniqueNews = processed.filter(o => !seenIds.has(o.id));
+    existing.results = [...uniqueNews, ...existing.results];
+    existing.total = existing.results.length;
+    existing.timestamp = new Date().toISOString();
+    
+    writeJSON('last_search.json', existing);
+
+    // Inyectar en Auditoría Turbo
+    if (uniqueNews.length > 0) {
+      console.log(`[Scraper Bypass] Inyectando ${uniqueNews.length} nuevas oportunidades a la cola.`);
+      addToAuditQueue(uniqueNews);
+    }
+
+    res.json({ results: processed, total: processed.length, source: 'scraper_bypass' });
+  } catch (err) {
+    console.error('[Scraper Bypass] Error:', err.message);
+    res.status(500).json({ error: 'Error en el scraper de Compras Ágiles', details: err.message });
+  }
+});
+
 
 // --- DETALLE DE LICITACIÓN ---
 app.get('/api/mercadopublico/detail/:codigo', async (req, res) => {
