@@ -11,6 +11,7 @@ import { createRequire } from 'module';
 
 const require = createRequire(import.meta.url);
 const pdfParse = require('pdf-parse');
+const { scrapeAgiles } = require('./agiles_scraper.cjs');
 
 import puppeteer from 'puppeteer-extra';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
@@ -537,15 +538,24 @@ app.get('/api/search/all', async (req, res) => {
       dates.push(formatDateForAPI(d));
     }
 
-    // 2. Lanzar búsquedas API en paralelo
+    // 2. Lanzar búsquedas API en paralelo + Scraper de Emergencia
     const allSearches = [];
     for (const date of dates) {
       allSearches.push(fetchWithTimeout(`${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}&fecha=${date}`).then(r => r.json()).catch(() => ({ Listado: [] })));
       // Intentar forzar tipo SE (Compra Ágil) vía API
       allSearches.push(fetchWithTimeout(`${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}&codigoTipo=SE&fecha=${date}`).then(r => r.json()).catch(() => ({ Listado: [] })));
     }
+    
+    // Inyectar scraper de emergencia (Bypass)
+    const scraperPromise = scrapeAgiles().catch(err => {
+      console.error('[Scraper] Error en bypass:', err.message);
+      return [];
+    });
 
-    const searchResults = await Promise.all(allSearches);
+    const [searchResults, scrapedAgiles] = await Promise.all([
+      Promise.all(allSearches),
+      scraperPromise
+    ]);
 
     // 3. Procesar resultados de API
     const unified = [];
@@ -566,6 +576,15 @@ app.get('/api/search/all', async (req, res) => {
             unified.push(transformed);
           }
         });
+      }
+    });
+
+    // 3.1 Añadir resultados del Scraper de Emergencia
+    scrapedAgiles.forEach(item => {
+      if (!seenIds.has(item.id)) {
+        seenIds.add(item.id);
+        unified.push(item);
+        console.log(`[Bypass] Agregada Compra Ágil desde scraper: ${item.id}`);
       }
     });
 
