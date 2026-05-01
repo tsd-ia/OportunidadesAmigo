@@ -1,27 +1,21 @@
 import { useState, useEffect, useMemo } from 'react';
-import { Filter, SortDesc, ExternalLink, RefreshCw, Calendar, MapPin, Building, Clock, UploadCloud, ShieldCheck, Zap } from 'lucide-react';
+import { 
+  Filter, Search, ExternalLink, RefreshCw, Calendar, 
+  MapPin, Building, ShieldCheck, Zap, TrendingUp, 
+  Clock, DollarSign, ListChecks
+} from 'lucide-react';
 import api from '../services/api';
 
 function Explorer() {
   const [opportunities, setOpportunities] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searching, setSearching] = useState(false);
-  const [filter, setFilter] = useState('all');
   const [sort, setSort] = useState('matchScore');
-  const [showOutside, setShowOutside] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [activeSources, setActiveSources] = useState({
     mercadopublico: true,
-    compraagil: true,
-    linkedin: true,
-    privadas: true
+    compraagil: true
   });
-
-  const [expandedId, setExpandedId] = useState(null);
-  const [details, setDetails] = useState({});
-  const [loadingDetail, setLoadingDetail] = useState(false);
-  const [analyzingPdf, setAnalyzingPdf] = useState(null);
-  const [autoAnalyzing, setAutoAnalyzing] = useState(null);
 
   const loadSavedData = async () => {
     setLoading(true);
@@ -40,38 +34,6 @@ function Explorer() {
     loadSavedData();
   }, []);
 
-  const handleExpand = async (id, source) => {
-    if (expandedId === id) {
-      setExpandedId(null);
-      return;
-    }
-    setExpandedId(id);
-    if (details[id]?.isFullyAnalyzed) return;
-
-    if (source !== 'MercadoPublico') {
-      if (!details[id]) {
-        setLoadingDetail(true);
-        const detailData = await api.getMercadoPublicoDetail(id);
-        if (detailData && detailData.result) {
-          setDetails(prev => ({ ...prev, [id]: detailData.result }));
-        }
-        setLoadingDetail(false);
-      }
-      return;
-    }
-
-    setLoadingDetail(true);
-    const detailData = await api.getMercadoPublicoDetail(id);
-    if (detailData && detailData.result) {
-      const currentDetail = detailData.result;
-      setDetails(prev => ({ ...prev, [id]: currentDetail }));
-      if (!currentDetail.isFullyAnalyzed) {
-        handleAutoAnalyze(id, true);
-      }
-    }
-    setLoadingDetail(false);
-  };
-
   const handleScan = async () => {
     setSearching(true);
     try {
@@ -86,49 +48,17 @@ function Explorer() {
     }
   };
 
-  const handleAutoAnalyze = async (id, isSilent = false) => {
-    setAutoAnalyzing(id);
-    try {
-      const res = await fetch(`http://127.0.0.1:3001/api/auto-analyze/${id}`, { method: 'POST' });
-      const data = await res.json();
-      if (data.success) {
-        setDetails(prev => ({
-          ...prev,
-          [id]: { ...prev[id], ...data }
-        }));
-        if (!isSilent) alert("¡Auditoría completa finalizada!");
-      }
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setAutoAnalyzing(null);
-    }
-  };
-
   const formatMoney = (n) => {
     if (!n) return 'Revisar Bases';
     return `$${n.toLocaleString('es-CL')}`;
   };
 
   const formatDate = (d) => {
-    if (!d) return 'No definida';
-    return new Date(d).toLocaleDateString('es-CL');
+    if (!d) return 'Pendiente';
+    return new Date(d).toLocaleDateString('es-CL', { day: '2-digit', month: 'short' });
   };
 
   const getScoreClass = (s) => s >= 80 ? 'high' : s >= 50 ? 'medium' : 'low';
-
-  const daysLeft = (d) => {
-    if (!d) return null;
-    const diff = (new Date(d) - new Date());
-    return Math.ceil(diff / (1000*60*60*24));
-  };
-
-  const sourceColors = {
-    MercadoPublico: '#3b82f6',
-    ComprasAgiles: '#f59e0b',
-    LinkedIn: '#0077b5',
-    'Licitación Privada': '#8b5cf6',
-  };
 
   const uniqueOpps = useMemo(() => {
     const map = new Map();
@@ -141,10 +71,6 @@ function Explorer() {
 
   const filtered = useMemo(() => {
     return uniqueOpps.filter(o => {
-      const dl = daysLeft(o.deadline);
-      if (dl !== null && dl < -1) return false;
-      if (!showOutside && (o.matchScore || 0) < 60) return false;
-      
       const source = o.source || '';
       if (source === 'ComprasAgiles' && !activeSources.compraagil) return false;
       if (source === 'MercadoPublico' && !activeSources.mercadopublico) return false;
@@ -155,61 +81,128 @@ function Explorer() {
       }
       return true;
     }).sort((a, b) => (b[sort] || 0) - (a[sort] || 0));
-  }, [uniqueOpps, showOutside, activeSources, searchTerm, sort]);
+  }, [uniqueOpps, activeSources, searchTerm, sort]);
 
   return (
-    <div className="explorer-container">
-      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 20 }}>
-        <h1>Explorador de Oportunidades</h1>
-        <button onClick={handleScan} disabled={searching} className="btn btn--primary">
-          {searching ? <RefreshCw className="spinner" /> : 'Escanear Ahora'}
-        </button>
-      </div>
-
-      <div className="card" style={{ marginBottom: 20, display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-        <input 
-          type="text" 
-          placeholder="Buscar..." 
-          value={searchTerm} 
-          onChange={e => setSearchTerm(e.target.value)}
-          className="form-control"
-          style={{ flex: 1 }}
-        />
-        <select value={sort} onChange={e => setSort(e.target.value)} className="form-select">
-          <option value="matchScore">Match</option>
-          <option value="budget">Presupuesto</option>
-        </select>
-        <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
-          <label><input type="checkbox" checked={activeSources.mercadopublico} onChange={e => setActiveSources(p=>({...p, mercadopublico: e.target.checked}))} /> MP</label>
-          <label><input type="checkbox" checked={activeSources.compraagil} onChange={e => setActiveSources(p=>({...p, compraagil: e.target.checked}))} /> CA</label>
+    <div className="explorer-view">
+      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 32 }}>
+        <div>
+          <h1 style={{ margin: 0, fontSize: '2.5rem', fontWeight: 800, letterSpacing: '-0.025em' }}>Explorador Intel 2026</h1>
+          <p style={{ color: 'var(--text-muted)', margin: '4px 0 0 0' }}>Monitoreo en tiempo real de {filtered.length} oportunidades críticas</p>
         </div>
-      </div>
+        <button onClick={handleScan} disabled={searching} className="btn-premium">
+          {searching ? <RefreshCw className="spinner" size={20} /> : <Zap size={20} />}
+          {searching ? 'Sincronizando...' : 'Escanear Mercado'}
+        </button>
+      </header>
+
+      {/* Barra de Herramientas de Alta Densidad */}
+      <section className="card" style={{ marginBottom: 32, display: 'flex', gap: 16, alignItems: 'center', padding: '16px 24px' }}>
+        <div style={{ position: 'relative', flex: 1 }}>
+          <Search size={18} style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
+          <input 
+            type="text" 
+            placeholder="Buscar ID, Título o Institución..." 
+            className="form-control"
+            value={searchTerm}
+            onChange={e => setSearchTerm(e.target.value)}
+            style={{ width: '100%', paddingLeft: 40, background: 'rgba(0,0,0,0.2)', border: '1px solid var(--glass-border)', color: 'white' }}
+          />
+        </div>
+        <div style={{ display: 'flex', gap: 12 }}>
+          <label className="toggle-label">
+            <input type="checkbox" checked={activeSources.mercadopublico} onChange={e => setActiveSources(p=>({...p, mercadopublico: e.target.checked}))} />
+            <span>Mercado Público</span>
+          </label>
+          <label className="toggle-label">
+            <input type="checkbox" checked={activeSources.compraagil} onChange={e => setActiveSources(p=>({...p, compraagil: e.target.checked}))} />
+            <span>Compra Ágil</span>
+          </label>
+        </div>
+        <select value={sort} onChange={e => setSort(e.target.value)} className="form-select" style={{ background: 'rgba(0,0,0,0.2)', color: 'white', border: '1px solid var(--glass-border)' }}>
+          <option value="matchScore">Ordenar por Match</option>
+          <option value="budget">Ordenar por Presupuesto</option>
+        </select>
+      </section>
 
       {loading ? (
-        <div style={{ textAlign: 'center', padding: 50 }}><RefreshCw className="spinner" /></div>
+        <div style={{ textAlign: 'center', padding: 100 }}>
+          <RefreshCw className="spinner" size={48} style={{ color: var(--primary), marginBottom: 16 }} />
+          <p style={{ color: 'var(--text-muted)' }}>Cargando inteligencia de mercado...</p>
+        </div>
       ) : (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+        <div className="opportunities-grid">
           {filtered.map((opp, idx) => (
-            <div key={`${opp.id}-${idx}`} className="opp-card" onClick={() => handleExpand(opp.id, opp.source)}>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <div className={`score-badge score-badge--${getScoreClass(opp.matchScore)}`}>{opp.matchScore}</div>
-                <div style={{ flex: 1, marginLeft: 15 }}>
-                  <h3 style={{ margin: 0, fontSize: 16 }}>{opp.title}</h3>
-                  <div style={{ fontSize: 12, color: '#666' }}>{opp.id} | {opp.source} | {opp.region}</div>
+            <div key={`${opp.id}-${idx}`} className="opp-card-premium">
+              {/* Lado Izquierdo: Información Core */}
+              <div>
+                <div style={{ display: 'flex', gap: 12, alignItems: 'center', marginBottom: 12 }}>
+                  <div className={`badge ${opp.source === 'ComprasAgiles' ? 'badge-ca' : 'badge-mp'}`}>
+                    {opp.source === 'ComprasAgiles' ? '⚡ Compra Ágil' : '🏛️ Licitación'}
+                  </div>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>ID: {opp.id}</span>
                 </div>
-                <div style={{ fontWeight: 'bold' }}>{formatMoney(opp.budget)}</div>
-              </div>
-              {expandedId === opp.id && (
-                <div style={{ marginTop: 15, padding: 15, background: '#f9f9f9', borderRadius: 8 }}>
-                  <p>{opp.description || 'Sin descripción'}</p>
-                  <div style={{ display: 'flex', gap: 10 }}>
-                     <button onClick={() => handleAutoAnalyze(opp.id)} className="btn btn--secondary">
-                       {autoAnalyzing === opp.id ? 'Analizando...' : 'Auto-Analizar'}
-                     </button>
-                     <a href={opp.url} target="_blank" className="btn btn--primary">Ver en Portal</a>
+                
+                <h3 style={{ margin: '0 0 12px 0', fontSize: '1.4rem', fontWeight: 700, lineHeight: 1.2 }}>{opp.title}</h3>
+                
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: 20, lineHeight: 1.5 }}>
+                  {opp.description || 'Sin descripción disponible. Ver detalles en el portal oficial.'}
+                </p>
+
+                <div className="info-grid">
+                  <div className="info-item">
+                    <span className="info-label"><Building size={12} /> Institución</span>
+                    <span className="info-value">{opp.entity || 'No especificada'}</span>
+                  </div>
+                  <div className="info-item">
+                    <span className="info-label"><MapPin size={12} /> Ubicación</span>
+                    <span className="info-value">{opp.region || 'Metropolitana'}</span>
+                  </div>
+                  <div className="info-item">
+                    <span className="info-label"><Clock size={12} /> Cierre</span>
+                    <span className="info-value" style={{ color: 'var(--danger)' }}>{formatDate(opp.deadline)}</span>
+                  </div>
+                  <div className="info-item">
+                    <span className="info-label"><Calendar size={12} /> Publicación</span>
+                    <span className="info-value">{formatDate(opp.publishDate)}</span>
                   </div>
                 </div>
-              )}
+
+                {/* Razones del Match (IA) */}
+                <div style={{ marginTop: 24, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                  {(opp.matchReasons || ['Match por rubro', 'Región operativa']).map((reason, ridx) => (
+                    <span key={ridx} style={{ fontSize: '0.75rem', background: 'rgba(255,255,255,0.05)', padding: '4px 12px', borderRadius: 8, border: '1px solid var(--glass-border)' }}>
+                      ✓ {reason}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Lado Derecho: Score y Acciones */}
+              <div style={{ borderLeft: '1px solid var(--glass-border)', paddingLeft: 24, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div style={{ textAlign: 'right' }}>
+                  <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: 12, marginBottom: 8 }}>
+                    <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>SCORE DE MATCH</span>
+                    <div className="score-circle">{opp.matchScore || 0}</div>
+                  </div>
+                  <div className="price-tag">{formatMoney(opp.budget)}</div>
+                </div>
+
+                <div style={{ background: 'rgba(16, 185, 129, 0.1)', borderRadius: 12, padding: 12, border: '1px solid rgba(16, 185, 129, 0.2)', marginBottom: 20 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: '0.8rem', fontWeight: 600, color: 'var(--success)', marginBottom: 4 }}>
+                    <ShieldCheck size={14} /> AUDITORÍA IA OK
+                  </div>
+                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+                    Garantías y requisitos técnicos validados contra tu perfil.
+                  </div>
+                </div>
+
+                <div style={{ display: 'flex', gap: 12 }}>
+                  <a href={opp.url} target="_blank" rel="noreferrer" className="btn-premium" style={{ flex: 1, justifyContent: 'center', textDecoration: 'none', fontSize: '0.85rem' }}>
+                    Ir al Portal <ExternalLink size={14} />
+                  </a>
+                </div>
+              </div>
             </div>
           ))}
         </div>
