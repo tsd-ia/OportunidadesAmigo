@@ -84,7 +84,7 @@ function Dashboard() {
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
             {topOpps.map(opp => (
-              <div key={opp.id} className="opp-card" style={{ padding: 14 }}>
+              <div key={Math.random()} className="opp-card" style={{ padding: 14 }}>
                 <div className="opp-card__header" style={{ marginBottom: 8 }}>
                   <div className={`score-badge score-badge--${getScoreClass(opp.matchScore)}`}>
                     {opp.matchScore}

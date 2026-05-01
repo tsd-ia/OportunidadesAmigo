@@ -53,10 +53,21 @@ const DB_PATH = join(__dirname, '..', 'opportunities_db.json');
 function readDB() {
   try {
     if (!existsSync(DB_PATH)) return {};
-    return JSON.parse(readFileSync(DB_PATH, 'utf8'));
+    const content = readFileSync(DB_PATH, 'utf8');
+    return JSON.parse(content);
   } catch (e) {
     console.error('[Cerebro] Error leyendo memoria:', e.message);
     return {};
+  }
+}
+
+let opportunitiesDB = readDB();
+
+function saveDB() {
+  try {
+    writeFileSync(DB_PATH, JSON.stringify(opportunitiesDB, null, 2));
+  } catch (e) {
+    console.error('[Cerebro] Error guardando memoria:', e.message);
   }
 }
 
@@ -1059,66 +1070,84 @@ app.get('/api/search/all', async (req, res) => {
   }
 });
 
-// --- OPORTUNIDADES GUARDADAS ---
+// --- OPORTUNIDADES GUARDADAS (Cerebro Central) ---
 app.get('/api/opportunities', (req, res) => {
-  const data = readJSON('last_search.json');
-  if (!data) return res.json({ results: [], total: 0 });
-  res.json(data);
-});
-
-// --- AI CHAT (GEMINI) ---
-app.post('/api/chat', async (req, res) => {
-  const { message, context } = req.body;
-  const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey) {
-    return res.json({ text: "Lo siento jefe, la API Key de Gemini no está configurada en el .env." });
-  }
-  
   try {
-    const prompt = `Actúa como "OportunidadesAmigo", un asesor experto y directo (en español) para un contratista en Chile. 
-El usuario ha escaneado licitaciones. Aquí tienes un resumen de las mejores oportunidades actuales (JSON truncado):
-${JSON.stringify((context || []).slice(0, 15).map(o => ({ titulo: o.title, monto: o.budget, region: o.region, cierre: o.deadline })))}
-
-Pregunta del usuario: ${message}`;
-
-    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        contents: [{ role: 'user', parts: [{ text: prompt }] }],
-        systemInstruction: { role: 'system', parts: [{ text: "Eres técnico, vas al grano, recomiendas oportunidades y respondes dudas sobre licitaciones de MercadoPúblico." }] }
-      })
-    });
-    
-    const data = await response.json();
-    if (data.error) throw new Error(data.error.message);
-    const text = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Sin respuesta del modelo.';
-    res.json({ text });
+    const opportunities = Object.values(opportunitiesDB);
+    // Ordenar por match score si existe, sino por fecha
+    opportunities.sort((a, b) => (b.matchScore || 0) - (a.matchScore || 0));
+    res.json({ results: opportunities, total: opportunities.length });
   } catch (err) {
-    console.error('Error Gemini:', err.message);
-    res.json({ text: "Hubo un error al conectar con Gemini: " + err.message });
+    res.status(500).json({ error: 'Error al leer el cerebro de datos' });
   }
 });
 
-// --- WEBHOOK PARA N8N ---
-// n8n envía oportunidades encontradas a este endpoint
-app.post('/api/webhook/opportunities', (req, res) => {
-  const existing = readJSON('last_search.json') || { results: [], total: 0 };
-  const newOpps = Array.isArray(req.body) ? req.body : [req.body];
+// --- BÚSQUEDA CENTRALIZADA (API + SCRAPER) ---
+app.get('/api/search/all', async (req, res) => {
+  try {
+    console.log('[API] Iniciando búsqueda masiva unificada...');
+    const profile = readJSON('profile.json');
+    
+    // 1. Obtener de API Mercado Público (Hoy y Ayer)
+    const dates = [formatDateForAPI(), formatDateForAPI(new Date(Date.now() - 86400000))];
+    const apiSearches = dates.map(date => 
+      fetchWithTimeout(`${MP_BASE}/licitaciones.json?ticket=${MP_TICKET}&fecha=${date}`)
+        .then(r => r.json()).catch(() => ({ Listado: [] }))
+    );
 
-  const profile = readJSON('profile.json');
-  const processed = newOpps.map(opp => {
-    if (profile) return calculateMatch(opp, profile);
-    return opp;
-  });
+    // 2. Obtener de Scraper de Emergencia
+    const [apiResults, scrapedAgiles] = await Promise.all([
+      Promise.all(apiSearches),
+      scrapeAgiles().catch(() => [])
+    ]);
 
-  existing.results = [...processed, ...existing.results];
-  existing.total = existing.results.length;
-  existing.timestamp = new Date().toISOString();
+    // 3. Procesar y Unificar
+    const newItems = [];
+    const seenIds = new Set();
 
-  writeJSON('last_search.json', existing);
-  console.log(`[Webhook] Recibidas ${newOpps.length} nuevas oportunidades`);
-  res.json({ success: true, received: newOpps.length });
+    // Procesar API
+    apiResults.forEach(data => {
+      if (data.Listado) {
+        data.Listado.forEach(lic => {
+          const id = lic.CodigoExterno || lic.Codigo;
+          if (!seenIds.has(id)) {
+            seenIds.add(id);
+            let opp = transformLicitacion(lic);
+            if (profile) opp = calculateMatch(opp, profile);
+            newItems.push(opp);
+          }
+        });
+      }
+    });
+
+    // Procesar Scraper
+    scrapedAgiles.forEach(opp => {
+      if (!seenIds.has(opp.id)) {
+        seenIds.add(opp.id);
+        if (profile) opp = calculateMatch(opp, profile);
+        newItems.push(opp);
+      }
+    });
+
+    // 4. Persistir en el Cerebro Central (opportunities_db.json)
+    newItems.forEach(item => {
+      // Si ya existe, solo actualizamos si hay más info, si no, lo dejamos
+      if (!opportunitiesDB[item.id]) {
+        opportunitiesDB[item.id] = item;
+      }
+    });
+    saveDB();
+
+    // 5. Inyectar en Auditoría Turbo
+    if (newItems.length > 0) {
+      addToAuditQueue(newItems);
+    }
+
+    res.json({ results: Object.values(opportunitiesDB), total: Object.keys(opportunitiesDB).length });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Error en búsqueda centralizada' });
+  }
 });
 
 // --- CONFIGURACIÓN DE FUENTES ---

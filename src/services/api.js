@@ -1,5 +1,5 @@
 // Servicio API - conecta frontend con backend Express
-const API_BASE = 'http://localhost:3001/api';
+const API_BASE = 'http://127.0.0.1:3001/api';
 
 // Verificar si el backend está disponible
 async function checkBackend() {

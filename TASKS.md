@@ -10,7 +10,11 @@
 - [x] Corregir ReferenceError 'dl' en Explorer.jsx
 - [x] Implementar Scraper de Emergencia para sección Compra Ágil (Bypass API)
 
-## Fase 2: Automatización y Alertas
+- [x] Blindaje de React Keys (ID + Index) y eliminación de colapsos de UI.
+- [x] Corrección de ReferenceErrors (opportunitiesDB & searchTerm).
+- [x] Sincronización Backend-Frontend vía 127.0.0.1 (Anti-bloqueo).
+
+## Fase 2: Automatización y Alertas (PRÓXIMO PASO)
 - [ ] Configurar alertas vía WhatsApp/Telegram mediante n8n
 - [ ] Automatización de "Suscripción a rubros"
 - [ ] Dashboard de estadísticas de adjudicación
