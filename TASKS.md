@@ -1,6 +1,6 @@
 # Roadmap OportunidadesAmigo - 2026
 
-## Fase 1: Estabilización y Auditoría Turbo
+## Fase 1: Estabilización y Auditoría Automática (COMPLETADO)
 - [x] Unificar escáner en /api/search/all (Centralización)
 - [x] Priorización de Compras Ágiles en la cola de auditoría
 - [x] Reparar UI del Explorador (Fix Hooks & Render & ReferenceErrors)
@@ -9,7 +9,6 @@
 - [x] Relajar filtros de visibilidad por fecha en el Frontend
 - [x] Corregir ReferenceError 'dl' en Explorer.jsx
 - [x] Implementar Scraper de Emergencia para sección Compra Ágil (Bypass API)
-- [ ] Integrar LinkedIn y Privadas (Fuentes reales)
 
 ## Fase 2: Automatización y Alertas
 - [ ] Configurar alertas vía WhatsApp/Telegram mediante n8n

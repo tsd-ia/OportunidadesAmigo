@@ -1,6 +1,18 @@
 {
-  "3902-22-LE26": {
-    "id": "3902-22-LE26",
+  "3250-283-COT26": {
+    "id": "3250-283-COT26",
+    "title": "CAPUERTOMAU - ADQUISICIÓN DE ELEMENTOS INSUMOS E.P.P. SANITARIOS UU.MM. PM-2510",
+    "budget": 70000,
+    "deadline": "2026-05-01T22:00:00",
+    "source": "ComprasAgiles"
+  },
+  "1691-665-COT26": {
+    "id": "1691-665-COT26",
+    "title": "TRM-SOL.COMPRA N°2125 REP.BODEGA-KIT CANULAS DE CPAP N° 1 FR SILICONA DESECHABLE",
+    "budget": 321000,
+    "deadline": "2026-05-01T22:00:00",
+    "source": "ComprasAgiles"
+  },
     "budget": 0,
     "guarantees": [],
     "experience": "Experiencia de la empresa en cantidad de proyectos realizados, referidos a obras de igual o similar naturaleza (construcción de nichos, obras de albañilería estructural, construcción de edificaciones menores de uso público, entre otras).",
@@ -11431,6 +11443,439 @@
       }
     ],
     "updatedAt": "2026-04-30T18:59:40.903Z",
+    "isFullyAnalyzed": true
+  },
+  "1057509-83-LE26": {
+    "id": "1057509-83-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:59:45.241Z",
+    "isFullyAnalyzed": true
+  },
+  "1057543-20-L126": {
+    "id": "1057543-20-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:59:50.229Z",
+    "isFullyAnalyzed": true
+  },
+  "1057438-8-LE26": {
+    "id": "1057438-8-LE26",
+    "budget": 1.0574388263004202e+121,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:59:52.911Z",
+    "isFullyAnalyzed": true
+  },
+  "1057545-37-LE26": {
+    "id": "1057545-37-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T18:59:54.414Z",
+    "isFullyAnalyzed": true
+  },
+  "1063487-8-O126": {
+    "id": "1063487-8-O126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-30T18:59:59.865Z",
+    "isFullyAnalyzed": true
+  },
+  "1063538-73-LE26": {
+    "id": "1063538-73-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T19:00:02.275Z",
+    "isFullyAnalyzed": true
+  },
+  "1069-19-LE26": {
+    "id": "1069-19-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-30T19:00:04.058Z",
+    "isFullyAnalyzed": true
+  },
+  "1075963-127-LE26": {
+    "id": "1075963-127-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-30T19:00:11.739Z",
+    "isFullyAnalyzed": true
+  },
+  "1057402-68-LE26": {
+    "id": "1057402-68-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-30T19:10:33.178Z",
+    "isFullyAnalyzed": true
+  },
+  "1057492-70-LP26": {
+    "id": "1057492-70-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-30T19:10:38.595Z",
+    "isFullyAnalyzed": true
+  },
+  "1499-100-LP26": {
+    "id": "1499-100-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-30T19:10:55.137Z",
+    "isFullyAnalyzed": true
+  },
+  "1953-74-LR25": {
+    "id": "1953-74-LR25",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-30T19:11:01.090Z",
+    "isFullyAnalyzed": true
+  },
+  "1746-16-LE26": {
+    "id": "1746-16-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [],
+    "updatedAt": "2026-04-30T19:11:09.440Z",
+    "isFullyAnalyzed": true
+  },
+  "1031849-7-LE26": {
+    "id": "1031849-7-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T20:51:51.334Z",
+    "isFullyAnalyzed": true
+  },
+  "1002584-3-LE26": {
+    "id": "1002584-3-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T20:51:51.490Z",
+    "isFullyAnalyzed": true
+  },
+  "1057049-99-LP26": {
+    "id": "1057049-99-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [
+      {
+        "type": "Publicación",
+        "date": "10-04-2026 12:47:52"
+      },
+      {
+        "type": "Inicio de preguntas",
+        "date": "10-04-2026 15:01:00"
+      },
+      {
+        "type": "Fin de preguntas",
+        "date": "15-04-2026 12:00:00"
+      },
+      {
+        "type": "Publicación de respuestas",
+        "date": "21-04-2026 15:00:00"
+      },
+      {
+        "type": "Cierre de recepción de ofertas",
+        "date": "30-04-2026 15:30:00"
+      },
+      {
+        "type": "Acto de apertura técnica",
+        "date": "30-04-2026 15:31:00"
+      },
+      {
+        "type": "Acto de apertura económica (referencial)",
+        "date": "30-04-2026 15:31:00"
+      },
+      {
+        "type": "Adjudicación",
+        "date": "29-06-2026 12:00:00"
+      }
+    ],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T20:51:59.265Z",
+    "isFullyAnalyzed": true
+  },
+  "1057384-57-L126": {
+    "id": "1057384-57-L126",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T20:52:00.791Z",
+    "isFullyAnalyzed": true
+  },
+  "1057402-65-LP26": {
+    "id": "1057402-65-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T20:52:02.159Z",
+    "isFullyAnalyzed": true
+  },
+  "1057430-31-LE26": {
+    "id": "1057430-31-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T20:52:09.615Z",
+    "isFullyAnalyzed": true
+  },
+  "1057448-15-LE26": {
+    "id": "1057448-15-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T20:52:10.876Z",
+    "isFullyAnalyzed": true
+  },
+  "1057480-9-LR26": {
+    "id": "1057480-9-LR26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T20:52:11.891Z",
+    "isFullyAnalyzed": true
+  },
+  "1057489-74-LP26": {
+    "id": "1057489-74-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T20:52:19.838Z",
+    "isFullyAnalyzed": true
+  },
+  "1057491-75-LE26": {
+    "id": "1057491-75-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T20:52:20.531Z",
+    "isFullyAnalyzed": true
+  },
+  "1057498-21-LP26": {
+    "id": "1057498-21-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T20:52:21.829Z",
+    "isFullyAnalyzed": true
+  },
+  "1057501-662-LP25": {
+    "id": "1057501-662-LP25",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T20:52:30.338Z",
+    "isFullyAnalyzed": true
+  },
+  "1057547-34-LP26": {
+    "id": "1057547-34-LP26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T20:52:31.843Z",
+    "isFullyAnalyzed": true
+  },
+  "1057550-23-LE26": {
+    "id": "1057550-23-LE26",
+    "budget": 0,
+    "guarantees": [],
+    "experience": "",
+    "certifications": [],
+    "siteVisit": "",
+    "keyDates": [],
+    "items": [
+      {
+        "Nombre": "Auditado Automáticamente"
+      }
+    ],
+    "updatedAt": "2026-04-30T20:52:32.025Z",
     "isFullyAnalyzed": true
   }
 }

@@ -127,31 +127,27 @@ async function executeAudit(codigo) {
     await attachmentsPage.waitForSelector('body');
     const html = await attachmentsPage.content();
     
-    // 3. Captcha
-    if (html.includes('Captcha.aspx')) {
-      const captchaImg = await attachmentsPage.$('img[src*="Captcha.aspx"]');
-      if (captchaImg) {
-        const screenshotB64 = await captchaImg.screenshot({ encoding: 'base64' });
-        const geminiResponse = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            contents: [{
-              parts: [
-                { text: "Dime el código de 5 o 6 letras/números que aparece en esta imagen de captcha de Mercado Público. Responde SOLO el código, nada más." },
-                { inline_data: { mime_type: "image/png", data: screenshotB64 } }
-              ]
-            }]
-          })
-        });
-        const geminiData = await geminiResponse.json();
-        const solvedCaptcha = geminiData.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || "";
-        if (solvedCaptcha) await attachmentsPage.type('input[name*="ctl10"]', solvedCaptcha);
-      }
+    // 3. Captcha con Scrapfly (Solución Definitiva 2026)
+    const SCRAPFLY_KEY = process.env.SCRAPFLY_KEY || 'scp-live-d365b15c93544bce8fff4b8131dccd1b';
+    
+    console.log(`[Scrapfly] Solicitando bypass de captcha para anexos de ${codigo}...`);
+    const scrapflyUrl = `https://api.scrapfly.io/scrape?key=${SCRAPFLY_KEY}&url=${encodeURIComponent(url.replace('DetailsAcquisition.aspx', 'ViewAttachment.aspx'))}&asp=true&render_js=true&country=cl&proxy_pool=public_residential_pool`;
+    
+    const scrapflyRes = await fetch(scrapflyUrl);
+    const scrapflyData = await scrapflyRes.json();
+    
+    let tableText = "";
+    if (scrapflyData.result && scrapflyData.result.content) {
+      // Usar el contenido renderizado por Scrapfly (que ya saltó el captcha)
+      tableText = scrapflyData.result.content;
+      console.log('[Scrapfly] Contenido de anexos obtenido exitosamente.');
+    } else {
+      console.warn('[Scrapfly] Falló el bypass, intentando fallback a Puppeteer local...');
+      const html = await attachmentsPage.content();
+      tableText = html;
     }
-
-    // 4. Gemini Auditoría
-    const tableText = await attachmentsPage.evaluate(() => document.body.innerText);
+    
+    // 4. Gemini Auditoría (Usando el contenido limpio)
     const detailText = await page.evaluate(() => document.body.innerText);
     const auditPrompt = `Actúa como un auditor experto en licitaciones de Mercado Público Chile. Analiza este contenido extraído de la ficha y anexos de la licitación ${codigo}. Extrae: budget (solo número), guarantees (lista), experience (texto), certifications (lista), siteVisit (texto), keyDates (lista). Responde SOLO un objeto JSON. TEXTO FICHA: ${detailText.substring(0, 3000)} TEXTO ANEXOS: ${tableText.substring(0, 5000)}`;
 
