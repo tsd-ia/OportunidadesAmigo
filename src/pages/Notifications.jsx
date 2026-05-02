@@ -1,58 +1,61 @@
+import { Bell, Clock, CheckCircle, AlertCircle } from 'lucide-react';
 import { useState } from 'react';
-import { Check, Bell, Trash2 } from 'lucide-react';
 
 const initialNotifications = [
-  { id: 1, icon: '🔥', title: 'Nueva licitación con 95% de match', text: 'Remodelación Oficinas Corporativas 500m2 en Las Condes — $85.000.000. ¡Encaja perfecto con tu perfil!', time: 'Hace 5 min', read: false, type: 'match' },
-  { id: 2, icon: '⚡', title: 'Compra ágil disponible', text: 'Arriendo Retroexcavadora 3 meses en Viña del Mar — $12.000.000. Respuesta rápida requerida.', time: 'Hace 20 min', read: false, type: 'urgent' },
-  { id: 3, icon: '💡', title: 'Oportunidad fuera de rubro', text: 'Servicio de Mantención de Jardines — $8.000.000. Sin requisitos técnicos, solo patente municipal.', time: 'Hace 1 hora', read: false, type: 'suggestion' },
-  { id: 4, icon: '🤖', title: 'Búsqueda automática completada', text: 'Se encontraron 6 nuevas oportunidades en MercadoPublico, ComprasÁgiles y LinkedIn.', time: 'Hace 2 horas', read: true, type: 'system' },
-  { id: 5, icon: '⏰', title: 'Licitación por vencer', text: 'Arriendo Retroexcavadora vence en 6 días. ¿Ya preparaste tu oferta?', time: 'Hace 3 horas', read: true, type: 'warning' },
-  { id: 6, icon: '📄', title: 'Documento por vencer', text: 'Tu Patente Municipal vence en 15 días. Renuévala para no perder oportunidades.', time: 'Ayer', read: true, type: 'warning' },
+  { id: 1, title: 'Nueva Compra Ágil', message: 'Se detectó una oportunidad en tu rubro: 4828-28-COT26', time: 'hace 5 min', type: 'new' },
+  { id: 2, title: 'Cierre Próximo', message: 'La licitación 3250-283-COT26 cierra en 2 horas', time: 'hace 10 min', type: 'warning' },
+  { id: 3, title: 'Adjudicación Detectada', message: 'Se ha publicado el resultado de la licitación 4567-12-LP25', time: 'hace 1 hora', type: 'success' },
 ];
 
 function Notifications() {
-  const [notifs, setNotifs] = useState(initialNotifications);
-  const [filter, setFilter] = useState('all');
+  const [notifications, setNotifications] = useState(initialNotifications);
 
-  const markAllRead = () => setNotifs(n => n.map(x => ({ ...x, read: true })));
-  const deleteNotif = (id) => setNotifs(n => n.filter(x => x.id !== id));
-  const markRead = (id) => setNotifs(n => n.map(x => x.id === id ? { ...x, read: true } : x));
-
-  const unread = notifs.filter(n => !n.read).length;
-  const filtered = filter === 'all' ? notifs : notifs.filter(n => !n.read);
+  const getIcon = (type) => {
+    switch (type) {
+      case 'new': return <Bell className="text-blue-500" />;
+      case 'warning': return <AlertCircle className="text-amber-500" />;
+      case 'success': return <CheckCircle className="text-emerald-500" />;
+      default: return <Bell />;
+    }
+  };
 
   return (
-    <div>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 24 }}>
-        <div>
-          <h1 className="page-title">Notificaciones</h1>
-          <p className="page-subtitle">{unread} sin leer</p>
-        </div>
-        <div style={{ display: 'flex', gap: 8 }}>
-          <button className={`btn btn--sm ${filter === 'all' ? 'btn--primary' : 'btn--secondary'}`} onClick={() => setFilter('all')}>Todas</button>
-          <button className={`btn btn--sm ${filter === 'unread' ? 'btn--primary' : 'btn--secondary'}`} onClick={() => setFilter('unread')}>Sin leer</button>
-          <button className="btn btn--sm btn--secondary" onClick={markAllRead}><Check size={14} /> Marcar leídas</button>
-        </div>
+    <div className="notifications-view" style={{ padding: 32 }}>
+      <div style={{ marginBottom: 32 }}>
+        <h1 style={{ fontSize: '2.5rem', fontWeight: 800 }}>Centro de Alertas</h1>
+        <p style={{ color: '#94a3b8' }}>Gestión de notificaciones en tiempo real</p>
       </div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-        {filtered.map(n => (
-          <div key={n.id} className={`notif-item ${!n.read ? 'notif-item--unread' : ''}`} onClick={() => markRead(n.id)} style={{ cursor: 'pointer' }}>
-            <div className="notif-item__icon">{n.icon}</div>
-            <div className="notif-item__content">
-              <div className="notif-item__title">{n.title}</div>
-              <div className="notif-item__text">{n.text}</div>
-              <div className="notif-item__time">{n.time}</div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+        {notifications.length > 0 ? (
+          notifications.map((n, idx) => (
+            <div 
+              key={`notif-${n.id}-${idx}`} 
+              style={{ 
+                background: 'rgba(30, 41, 59, 0.7)', 
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                padding: 24, 
+                borderRadius: 16,
+                display: 'flex',
+                gap: 20,
+                alignItems: 'center'
+              }}
+            >
+              <div style={{ padding: 12, borderRadius: 12, background: 'rgba(255,255,255,0.05)' }}>
+                {getIcon(n.type)}
+              </div>
+              <div style={{ flex: 1 }}>
+                <div style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: 4 }}>{n.title}</div>
+                <div style={{ color: '#94a3b8', fontSize: '0.95rem' }}>{n.message}</div>
+                <div style={{ color: '#6366f1', fontSize: '0.8rem', marginTop: 8, fontWeight: 600 }}>{n.time}</div>
+              </div>
             </div>
-            <button className="btn btn--sm btn--secondary" onClick={(e) => { e.stopPropagation(); deleteNotif(n.id); }} style={{ padding: 6 }}>
-              <Trash2 size={14} />
-            </button>
-          </div>
-        ))}
-        {filtered.length === 0 && (
-          <div className="card" style={{ textAlign: 'center', padding: 40 }}>
-            <Bell size={40} color="var(--text-muted)" style={{ marginBottom: 12 }} />
-            <div style={{ color: 'var(--text-muted)' }}>No hay notificaciones</div>
+          ))
+        ) : (
+          <div style={{ textAlign: 'center', padding: 100 }}>
+            <Bell size={48} color="#94a3b8" style={{ marginBottom: 16, opacity: 0.3 }} />
+            <div style={{ color: '#94a3b8' }}>No hay notificaciones activas</div>
           </div>
         )}
       </div>

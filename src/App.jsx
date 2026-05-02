@@ -7,7 +7,7 @@ import {
 import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
 import SearchConfig from './pages/SearchConfig';
-import Explorer from './pages/Explorer';
+import IntelExplorer from './pages/IntelExplorer';
 import Assistant from './pages/Assistant';
 import N8nPanel from './pages/N8nPanel';
 import Notifications from './pages/Notifications';
@@ -101,7 +101,7 @@ function App() {
               <Route path="/" element={<Dashboard />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/search" element={<SearchConfig />} />
-              <Route path="/explorer" element={<Explorer />} />
+              <Route path="/explorer" element={<IntelExplorer />} />
               <Route path="/assistant" element={<Assistant />} />
               <Route path="/n8n" element={<N8nPanel />} />
               <Route path="/notifications" element={<Notifications />} />
