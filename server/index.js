@@ -1185,6 +1185,22 @@ app.post('/api/notifications', (req, res) => {
   res.json({ success: true });
 });
 
+// --- OPORTUNIDADES (BASE DE DATOS UNIFICADA) ---
+app.get('/api/opportunities', (req, res) => {
+  try {
+    const db = readDB(); // Usar readDB que apunta a la raíz
+    const results = Object.values(db).filter(item => typeof item === 'object' && item !== null && item.id);
+    res.json({ 
+      results, 
+      count: results.length,
+      lastUpdate: new Date().toISOString() 
+    });
+  } catch (err) {
+    console.error("Error en /api/opportunities:", err);
+    res.status(500).json({ error: 'Error procesando base de datos' });
+  }
+});
+
 // ============================================================
 // INICIAR
 // ============================================================

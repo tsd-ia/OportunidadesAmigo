@@ -1,20 +1,20 @@
-# Roadmap OportunidadesAmigo - 2026
+# Roadmap de OportunidadesAmigo - 2026
 
-## Fase 1: Estabilización y Auditoría Automática (COMPLETADO)
-- [x] Unificar escáner en /api/search/all (Centralización)
-- [x] Priorización de Compras Ágiles en la cola de auditoría
-- [x] Reparar UI del Explorador (Fix Hooks & Render & ReferenceErrors)
-- [x] Escáner Multi-día (Barrido de 3 días atrás)
-- [x] Detección inteligente de códigos -SE (Buscando en IDs)
-- [x] Relajar filtros de visibilidad por fecha en el Frontend
-- [x] Corregir ReferenceError 'dl' en Explorer.jsx
-- [x] Implementar Scraper de Emergencia para sección Compra Ágil (Bypass API)
+## Tareas Completadas ✅
+- [x] **Estabilización Nuclear:** Eliminación de la "Pantalla Blanca" mediante blindaje de llaves reactivas.
+- [x] **Rediseño Premium V3:** Implementación de interfaz de alta densidad "sin clics".
+- [x] **EliteExplorer HFT:** Creación de terminal industrial para manejo masivo de licitaciones (500+ registros).
+- [x] **Saneamiento de Datos:** Deduplicación física de la base de datos `opportunities_db.json`.
+- [x] **Bypass de Rendimiento:** Optimización de renderizado con `useRef` y limitación inteligente de resultados.
+- [x] **Producción Inmutable:** Compilación y verificación de bundle de producción libre de caché.
 
-- [x] Blindaje de React Keys (ID + Index) y eliminación de colapsos de UI.
-- [x] Corrección de ReferenceErrors (opportunitiesDB & searchTerm).
-- [x] Sincronización Backend-Frontend vía 127.0.0.1 (Anti-bloqueo).
+## Tareas en Progreso 🚀
+- [ ] **Fase 2 - Automatización:** Integración de notificaciones push (WhatsApp/Telegram) vía n8n.
+- [ ] **Suscripción a Rubros:** Filtro dinámico basado en perfil de empresa.
 
-## Fase 2: Automatización y Alertas (PRÓXIMO PASO)
-- [ ] Configurar alertas vía WhatsApp/Telegram mediante n8n
-- [ ] Automatización de "Suscripción a rubros"
-- [ ] Dashboard de estadísticas de adjudicación
+## Pendientes ⏳
+- [ ] **Logger de Errores:** Implementar diagnóstico post-mortem en frontend.
+- [ ] **Filtros de Región:** Añadir mapa de calor de oportunidades por zona geográfica.
+
+---
+**ESTADO DEL SISTEMA:** 🟢 OPERATIVO - BUILD 2026-V3-ELITE-STABLE

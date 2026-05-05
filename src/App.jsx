@@ -1,115 +1,117 @@
-import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Routes, Route, NavLink, useLocation } from 'react-router-dom';
 import { 
-  LayoutDashboard, User, Search, Compass, MessageSquare, 
-  Settings, Bell, Menu, X, Zap 
+  LayoutDashboard, 
+  Search, 
+  Bell, 
+  User, 
+  Settings, 
+  Database,
+  BrainCircuit,
+  LogOut,
+  Menu,
+  Zap
 } from 'lucide-react';
+
 import Dashboard from './pages/Dashboard';
+import EliteExplorer from './pages/EliteExplorer';
+import Notifications from './pages/Notifications';
 import Profile from './pages/Profile';
 import SearchConfig from './pages/SearchConfig';
-import IntelExplorer from './pages/IntelExplorer';
-import Assistant from './pages/Assistant';
 import N8nPanel from './pages/N8nPanel';
-import Notifications from './pages/Notifications';
+
 import './App.css';
 
 const navItems = [
   { path: '/', icon: LayoutDashboard, label: 'Dashboard' },
-  { path: '/profile', icon: User, label: 'Mi Perfil' },
-  { path: '/search', icon: Search, label: 'Configurador' },
-  { path: '/explorer', icon: Compass, label: 'Explorador' },
-  { path: '/assistant', icon: MessageSquare, label: 'Asistente' },
-  { path: '/n8n', icon: Zap, label: 'Panel n8n' },
+  { path: '/explorer', icon: Zap, label: 'Explorador Intel' },
   { path: '/notifications', icon: Bell, label: 'Alertas' },
+  { path: '/config', icon: Settings, label: 'Configuración' },
+  { path: '/profile', icon: User, label: 'Perfil Empresa' },
+  { path: '/n8n', icon: Database, label: 'N8n Automator' },
 ];
 
 function App() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [notifications] = useState(3);
+  const location = useLocation();
+  const [sidebarOpen, setSidebarOpen] = useState(true);
 
   return (
-    <Router>
-      <div className="app-container">
-        {/* Sidebar */}
-        <aside className={`sidebar ${sidebarOpen ? 'sidebar--open' : ''}`}>
-          <div className="sidebar__header">
-            <div className="sidebar__logo">
-              <div className="sidebar__logo-icon">🎯</div>
-              <div className="sidebar__logo-text">
-                <span className="sidebar__logo-title">Oportunidades</span>
-                <span className="sidebar__logo-subtitle">Amigo</span>
-              </div>
-            </div>
-            <button className="sidebar__close" onClick={() => setSidebarOpen(false)}>
-              <X size={20} />
-            </button>
+    <div className="app-container">
+      {/* Sidebar de Alta Densidad */}
+      <aside className={`sidebar ${sidebarOpen ? 'open' : 'closed'}`}>
+        <div className="sidebar__logo" style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '20px 0', marginBottom: 20 }}>
+          <div style={{ width: 40, height: 40, background: 'linear-gradient(135deg, #6366f1, #a855f7)', borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 0 20px rgba(99, 102, 241, 0.4)' }}>
+            <BrainCircuit color="white" size={24} />
           </div>
-
-          <nav className="sidebar__nav">
-            {navItems.map(item => (
-              <NavLink
-                key={item.path}
-                to={item.path}
-                end={item.path === '/'}
-                className={({ isActive }) => `sidebar__link ${isActive ? 'sidebar__link--active' : ''}`}
-                onClick={() => setSidebarOpen(false)}
-              >
-                <item.icon size={20} />
-                <span>{item.label}</span>
-                {item.path === '/notifications' && notifications > 0 && (
-                  <span className="sidebar__badge">{notifications}</span>
-                )}
-              </NavLink>
-            ))}
-          </nav>
-
-          <div className="sidebar__footer">
-            <div className="sidebar__status">
-              <div className="sidebar__status-dot"></div>
-              <span>n8n Conectado</span>
-            </div>
-            <div className="sidebar__version">v1.0.0 — Bot Activo</div>
+          <div style={{ fontWeight: 900, fontSize: '1.2rem', letterSpacing: '-0.05em' }}>
+            TITAN <span style={{ color: '#6366f1' }}>AMIGO</span>
           </div>
-        </aside>
+        </div>
 
-        {/* Overlay para mobile */}
-        {sidebarOpen && <div className="sidebar__overlay" onClick={() => setSidebarOpen(false)} />}
+        <nav className="sidebar__nav" style={{ flex: 1 }}>
+          {navItems.map((item, idx) => (
+            <NavLink 
+              key={`nav-${item.path}-${idx}`}
+              to={item.path} 
+              className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
+              style={{ 
+                display: 'flex', 
+                alignItems: 'center', 
+                gap: 12, 
+                padding: '14px 20px', 
+                borderRadius: 12, 
+                color: location.pathname === item.path ? 'white' : '#94a3b8',
+                background: location.pathname === item.path ? 'rgba(99, 102, 241, 0.1)' : 'transparent',
+                marginBottom: 4,
+                textDecoration: 'none',
+                transition: 'all 0.2s',
+                fontWeight: location.pathname === item.path ? 700 : 500
+              }}
+            >
+              <item.icon size={20} color={location.pathname === item.path ? '#6366f1' : '#64748b'} />
+              <span>{item.label}</span>
+            </NavLink>
+          ))}
+        </nav>
 
-        {/* Main content */}
-        <main className="main-content">
-          <header className="topbar">
-            <button className="topbar__menu" onClick={() => setSidebarOpen(true)}>
-              <Menu size={24} />
-            </button>
-            <div className="topbar__search">
-              <Search size={18} />
-              <input type="text" placeholder="Buscar oportunidades..." />
+        <div className="sidebar__footer" style={{ borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: 20 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 20px', borderRadius: 12, background: 'rgba(255,255,255,0.03)' }}>
+            <div style={{ width: 32, height: 32, borderRadius: '50%', background: '#6366f1', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '0.8rem' }}>DF</div>
+            <div style={{ flex: 1, fontSize: '0.85rem' }}>
+              <div style={{ fontWeight: 700 }}>Diego F.</div>
+              <div style={{ color: '#64748b', fontSize: '0.75rem' }}>Admin Premium</div>
             </div>
-            <div className="topbar__actions">
-              <button className="topbar__notification">
-                <Bell size={20} />
-                {notifications > 0 && <span className="topbar__notification-badge">{notifications}</span>}
-              </button>
-              <div className="topbar__avatar">
-                <Settings size={18} />
-              </div>
-            </div>
-          </header>
-
-          <div className="page-content">
-            <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/search" element={<SearchConfig />} />
-              <Route path="/explorer" element={<IntelExplorer />} />
-              <Route path="/assistant" element={<Assistant />} />
-              <Route path="/n8n" element={<N8nPanel />} />
-              <Route path="/notifications" element={<Notifications />} />
-            </Routes>
+            <LogOut size={16} color="#64748b" style={{ cursor: 'pointer' }} />
           </div>
-        </main>
-      </div>
-    </Router>
+        </div>
+      </aside>
+
+      {/* Area de Contenido */}
+      <main className="main-content" style={{ flex: 1, background: '#0f172a', height: '100vh', overflowY: 'auto' }}>
+        <header className="topbar" style={{ padding: '20px 32px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'rgba(15, 23, 42, 0.8)', backdropFilter: 'blur(10px)', borderBottom: '1px solid rgba(255,255,255,0.05)', position: 'sticky', top: 0, zIndex: 100 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+            <Menu size={24} style={{ cursor: 'pointer', color: '#64748b' }} onClick={() => setSidebarOpen(!sidebarOpen)} />
+            <div style={{ color: '#64748b', fontSize: '0.9rem' }}>Explorador / <span style={{ color: 'white', fontWeight: 600 }}>Vista Inteligente</span></div>
+          </div>
+          <div style={{ display: 'flex', gap: 20 }}>
+             <div style={{ padding: 8, background: 'rgba(255,255,255,0.03)', borderRadius: 8, color: '#f59e0b', fontSize: '0.8rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: 6 }}>
+               <Zap size={14} /> MODO HFT ACTIVO
+             </div>
+          </div>
+        </header>
+
+        <div style={{ padding: 32 }}>
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/explorer" element={<EliteExplorer />} />
+            <Route path="/notifications" element={<Notifications />} />
+            <Route path="/config" element={<SearchConfig />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/n8n" element={<N8nPanel />} />
+          </Routes>
+        </div>
+      </main>
+    </div>
   );
 }
 
